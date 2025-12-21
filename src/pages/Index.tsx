@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Microscope, Brain, Users } from "lucide-react";
+import { ArrowRight, Microscope, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 
@@ -12,21 +12,21 @@ const Index = () => {
         <div className="container mx-auto px-6 py-24 md:py-32 relative">
           <div className="max-w-3xl animate-fade-in">
             <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-4">
-              Product Manager | Veterinary Technology
+              Product Manager
             </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground leading-tight mb-6">
-              Building AI products that{" "}
-              <span className="text-primary italic">give veterinarians their time back</span>
+              Building products that{" "}
+              <span className="text-primary italic">solve real problems for real people</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-              Hi, I'm Jen Rumery. I'm a product manager who bridges AI product development, 
-              deep user research, and 15+ years of veterinary technology expertise to ship 
-              products that actually work in real clinical workflows. I build 0-to-1, iterate 
-              fast, and stay close to the veterinarians who use what I create.
+              Hi, I'm Jen Rumery. I'm a product manager who builds 0-to-1 through deep user 
+              research and systematic methodology. I ship products fast, stay close to users, 
+              and bridge technical execution with strategic vision. My background spans 15+ years 
+              in healthcare technology, but my approach works across industries.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="font-body">
-                <Link to="/work">
+                <Link to="/case-studies">
                   See My Work <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -43,9 +43,9 @@ const Index = () => {
         <div className="container mx-auto px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
-              { number: "15+", label: "Years in Vet Tech", icon: Microscope },
-              { number: "14+", label: "Practices Researched", icon: Users },
-              { number: "3", label: "AI Products Built", icon: Brain },
+              { number: "15+", label: "Years Experience", icon: Microscope },
+              { number: "14+", label: "User Studies", icon: Users },
+              { number: "0-to-1", label: "Builder", icon: Zap },
             ].map((stat, index) => (
               <div
                 key={stat.label}
@@ -73,28 +73,28 @@ const Index = () => {
               What I Do
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-6">
-              I build AI products for veterinary workflows
+              I build products through systematic user research
             </h2>
             <div className="space-y-4 font-body text-lg text-muted-foreground leading-relaxed">
               <p>
-                I've spent the last 15 years in veterinary technology—starting as an 
-                implementation specialist at IDEXX, growing into a Product Manager for 
-                enterprise practice management systems, then intentionally moving to a 
-                startup to build faster and stay closer to users.
+                I've spent 15+ years building products in healthcare technology—from enterprise 
+                systems at IDEXX to 0-to-1 AI products at a high-growth startup. I intentionally 
+                moved from enterprise to startup to build faster and stay closer to the people 
+                using what I create.
               </p>
               <p>
-                At Shepherd, I built three AI products from zero-to-one: TranscribeAI 
-                (speech-to-text SOAP notes), SummarizeAI (patient history summarization), 
-                and DiagnoseAI (clinical decision support). I also manage the OpenAPI 
-                platform that powers 20+ partner integrations across the veterinary 
-                ecosystem.
+                What makes me different is my systematic approach to understanding users. I 
+                developed a proprietary UX teardown methodology that maps complete user journeys, 
+                identifies friction patterns, and translates insights into prioritized roadmaps. 
+                This approach uncovered that 50% of users were facing blocking technical issues—the 
+                kind of insight that fundamentally shifts product strategy.
               </p>
               <p>
-                What makes me different: I combine deep ethnographic user research 
-                (systematic workflow studies across 14+ practices), hands-on AI product 
-                development (OpenAI APIs, prompt engineering, beta programs), and true 
-                domain expertise in veterinary clinical workflows. I don't just build 
-                features—I understand how veterinarians actually work.
+                I'm a builder who combines deep ethnographic research, hands-on technical 
+                execution, and strategic thinking. I've shipped AI products using OpenAI APIs, 
+                managed platforms with 20+ partner integrations, and led cross-functional teams 
+                across time zones. I don't just build features—I solve actual problems for actual 
+                people.
               </p>
             </div>
           </div>
@@ -107,14 +107,14 @@ const Index = () => {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
             <div>
               <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-2">
-                Recent Projects
+                Featured Work
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground">
-                Products I've Shipped
+                Recent Projects
               </h2>
             </div>
             <Link
-              to="/work"
+              to="/case-studies"
               className="font-body text-sm font-medium text-primary hover:underline mt-4 md:mt-0"
             >
               View All Projects →
@@ -124,23 +124,37 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "SummarizeAI: Patient History at a Glance",
-                company: "Shepherd Veterinary Software",
+                title: "AI Product from Concept to Production",
+                company: "0-to-1 Product Launch",
                 description:
-                  "Built AI-powered patient summarization from concept through beta launch. Reduces time searching through medical records, giving veterinarians comprehensive clinical context in seconds.",
+                  "Built AI-powered patient summarization from concept through beta launch, coordinating cross-functional teams and establishing structured beta programs that gathered real-world feedback.",
                 tags: ["AI Product", "0-to-1", "Beta Launch"],
               },
               {
                 title: "UX Teardown Methodology",
-                company: "Shepherd Veterinary Software",
+                company: "Product Research",
                 description:
-                  "Developed systematic research approach that uncovered 50% of practices facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
+                  "Developed systematic research approach across 14+ user studies that uncovered 50% of users facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
                 tags: ["User Research", "Product Strategy", "Methodology"],
+              },
+              {
+                title: "OpenAPI Platform Management",
+                company: "Platform & Integrations",
+                description:
+                  "Managed 20+ partner integrations, enhanced API documentation with developer-friendly Swagger UI, and advocated for technical infrastructure improvements including ERD creation.",
+                tags: ["Platform PM", "Integrations", "Developer Experience"],
+              },
+              {
+                title: "Cross-Functional Product Leadership",
+                company: "Product Execution",
+                description:
+                  "Led distributed teams across US and international time zones, coordinated between technical advisors and engineering, and shipped products on aggressive timelines while maintaining quality.",
+                tags: ["Leadership", "Execution", "Cross-Functional"],
               },
             ].map((project, index) => (
               <Link
                 key={project.title}
-                to="/work"
+                to="/case-studies"
                 className="group block p-8 bg-card border border-border rounded-lg hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -173,12 +187,11 @@ const Index = () => {
       <section className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 py-20 text-center">
           <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
-            Looking for a builder who bridges AI, research, and domain expertise?
+            Looking for a builder who combines research with execution?
           </h2>
           <p className="font-body text-lg opacity-90 mb-8 max-w-xl mx-auto">
             I'm currently exploring opportunities where I can leverage my unique combination 
-            of AI product development, systematic user research, and deep veterinary 
-            technology expertise.
+            of systematic user research, 0-to-1 product building, and hands-on technical execution.
           </p>
           <Button
             asChild
