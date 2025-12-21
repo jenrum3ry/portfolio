@@ -5,8 +5,8 @@ const caseStudies = [
   {
     id: 1,
     title: "UX Teardown Methodology",
-    company: "Veterinary Software Startup",
-    year: "2024",
+    platform: "Veterinary Practice Management Software",
+    year: "2025",
     description:
       "Developed systematic research approach across 14+ user studies that uncovered 50% of users facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
     challenge:
@@ -16,7 +16,7 @@ const caseStudies = [
     results: [
       "Discovered 50% of practices had blocking reliability issues (not feature requests)",
       "Identified 3 distinct customer segments with different needs",
-      "Shifted entire 2025-2026 roadmap from feature polish to foundational improvements",
+      "Shifted product roadmap from feature polish to foundational improvements",
       "Built repeatable research framework adopted across product organization",
     ],
     tags: ["User Research", "Product Strategy", "Methodology"],
