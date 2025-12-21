@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="font-display text-xl font-semibold text-foreground mb-4">
-              Sarah Chen
+              Jennifer Rumery
             </h3>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               Product Manager passionate about building user-centered products 
@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="font-body text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} Sarah Chen. All rights reserved.
+            © {new Date().getFullYear()} Jennifer Rumery. All rights reserved.
           </p>
         </div>
       </div>
