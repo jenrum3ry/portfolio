@@ -5,7 +5,7 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "Sarah is one of the best product managers I've worked with. She has an exceptional ability to translate complex business requirements into elegant user experiences. Her strategic thinking and execution are unmatched.",
+      "Jen is one of the best product managers I've worked with. She has an exceptional ability to translate complex business requirements into elegant user experiences. Her strategic thinking and execution are unmatched.",
     author: "Michael Rodriguez",
     role: "VP of Engineering",
     company: "TechCorp",
@@ -13,7 +13,7 @@ const testimonials = [
   {
     id: 2,
     quote:
-      "Working with Sarah transformed how we approach product development. She brought structure, clarity, and a relentless focus on customer outcomes. Our team's velocity doubled under her leadership.",
+      "Working with Jennifer transformed how we approach product development. She brought structure, clarity, and a relentless focus on customer outcomes. Our team's velocity doubled under her leadership.",
     author: "Jennifer Liu",
     role: "CEO",
     company: "DataFlow",
@@ -21,7 +21,7 @@ const testimonials = [
   {
     id: 3,
     quote:
-      "Sarah's ability to balance user needs with business goals is remarkable. She doesn't just build features—she builds products that customers love and that drive real business results.",
+      "Jen's ability to balance user needs with business goals is remarkable. She doesn't just build features—she builds products that customers love and that drive real business results.",
     author: "David Park",
     role: "Head of Product",
     company: "ShopEase",
@@ -29,7 +29,7 @@ const testimonials = [
   {
     id: 4,
     quote:
-      "I've seen Sarah turn around struggling products and launch new ones from scratch. Her combination of analytical rigor and creative problem-solving makes her invaluable.",
+      "I've seen Jen turn around struggling products and launch new ones from scratch. Her combination of analytical rigor and creative problem-solving makes her invaluable.",
     author: "Amanda Foster",
     role: "COO",
     company: "StartupXYZ",
@@ -37,7 +37,7 @@ const testimonials = [
   {
     id: 5,
     quote:
-      "Sarah mentored me during my transition into product management. Her guidance on stakeholder management and prioritization frameworks has been instrumental in my growth.",
+      "Jen mentored me during my transition into product management. Her guidance on stakeholder management and prioritization frameworks has been instrumental in my growth.",
     author: "Chris Taylor",
     role: "Senior PM",
     company: "TechCorp",
@@ -45,7 +45,7 @@ const testimonials = [
   {
     id: 6,
     quote:
-      "What sets Sarah apart is her genuine curiosity about users. She spends more time talking to customers than anyone I know, and it shows in the products she delivers.",
+      "What sets Jen apart is her genuine curiosity about users. She spends more time talking to customers than anyone I know, and it shows in the products she delivers.",
     author: "Rachel Green",
     role: "UX Research Lead",
     company: "DataFlow",
