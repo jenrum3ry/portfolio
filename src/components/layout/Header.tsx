@@ -20,7 +20,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="font-display text-2xl font-semibold text-foreground">
-            Sarah Chen
+            Jennifer Rumery
           </Link>
 
           {/* Desktop Navigation */}
