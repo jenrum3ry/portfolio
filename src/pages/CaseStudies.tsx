@@ -4,58 +4,24 @@ import { ArrowRight } from "lucide-react";
 const caseStudies = [
   {
     id: 1,
-    title: "Redesigning Enterprise Onboarding",
-    company: "TechCorp",
-    year: "2023",
+    title: "UX Teardown Methodology",
+    company: "Veterinary Software Startup",
+    year: "2024",
     description:
-      "Reduced time-to-value by 60% through a complete overhaul of the enterprise onboarding experience, resulting in improved customer satisfaction and retention.",
+      "Developed systematic research approach across 14+ user studies that uncovered 50% of users facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
     challenge:
-      "Enterprise customers were taking 45+ days to fully onboard, leading to churn and low engagement.",
+      "AI-powered clinical documentation tools were launching across 1,300+ veterinary practices with unknown adoption patterns. The product team needed to understand why some practices thrived while others struggled, but traditional user surveys weren't revealing the root causes.",
     solution:
-      "Implemented a personalized, milestone-based onboarding flow with proactive guidance and self-serve resources.",
+      "Applied a systematic, ethnographic research approach combining journey mapping, visual annotation, pattern analysis, and heat mapping across 14+ veterinary practices. The process involved mapping complete workflows (60+ screens across 7 workflow stages), color-coded tagging for friction points, and structured data capture that translated directly into actionable product roadmaps.",
     results: [
-      "60% reduction in time-to-value",
-      "35% increase in 90-day retention",
-      "NPS improved from 32 to 67",
+      "Discovered 50% of practices had blocking reliability issues (not feature requests)",
+      "Identified 3 distinct customer segments with different needs",
+      "Shifted entire 2025-2026 roadmap from feature polish to foundational improvements",
+      "Built repeatable research framework adopted across product organization",
     ],
-    tags: ["B2B SaaS", "Onboarding", "UX"],
+    tags: ["User Research", "Product Strategy", "Methodology"],
   },
-  {
-    id: 2,
-    title: "Launching a Self-Serve Analytics Platform",
-    company: "DataFlow",
-    year: "2022",
-    description:
-      "Built and launched a self-serve analytics tool that increased user engagement by 150% and opened a new market segment.",
-    challenge:
-      "Users relied heavily on support teams for basic analytics queries, creating bottlenecks and limiting scale.",
-    solution:
-      "Created an intuitive, no-code analytics builder with templates, natural language queries, and collaborative features.",
-    results: [
-      "150% increase in daily active users",
-      "$2M ARR from new SMB segment",
-      "40% reduction in support tickets",
-    ],
-    tags: ["Analytics", "Product Launch", "Growth"],
-  },
-  {
-    id: 3,
-    title: "Mobile-First Checkout Optimization",
-    company: "ShopEase",
-    year: "2021",
-    description:
-      "Redesigned the mobile checkout experience, increasing conversion rates by 28% and reducing cart abandonment.",
-    challenge:
-      "Mobile conversion was 40% lower than desktop, with high drop-off at the checkout stage.",
-    solution:
-      "Streamlined the checkout to 3 steps, added express payment options, and implemented progressive trust signals.",
-    results: [
-      "28% increase in mobile conversion",
-      "22% reduction in cart abandonment",
-      "$4.2M additional annual revenue",
-    ],
-    tags: ["E-commerce", "Mobile", "Conversion"],
-  },
+  // Add more case studies here later
 ];
 
 const CaseStudies = () => {
@@ -66,7 +32,7 @@ const CaseStudies = () => {
         <div className="container mx-auto px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-4">
-              Portfolio
+              PORTFOLIO
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
               Case Studies
@@ -125,7 +91,7 @@ const CaseStudies = () => {
                   <div className="space-y-4 mb-6">
                     <div>
                       <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
-                        The Challenge
+                        THE CHALLENGE
                       </h3>
                       <p className="font-body text-sm text-muted-foreground">
                         {study.challenge}
@@ -133,7 +99,7 @@ const CaseStudies = () => {
                     </div>
                     <div>
                       <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
-                        The Solution
+                        THE SOLUTION
                       </h3>
                       <p className="font-body text-sm text-muted-foreground">
                         {study.solution}
@@ -143,16 +109,16 @@ const CaseStudies = () => {
 
                   <div className="bg-card border border-border rounded-lg p-4">
                     <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-3">
-                      Key Results
+                      KEY RESULTS
                     </h3>
                     <ul className="space-y-2">
                       {study.results.map((result) => (
                         <li
                           key={result}
-                          className="flex items-center gap-2 font-body text-sm text-foreground"
+                          className="flex items-start gap-2 font-body text-sm text-foreground"
                         >
-                          <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
-                          {result}
+                          <ArrowRight className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                          <span>{result}</span>
                         </li>
                       ))}
                     </ul>
