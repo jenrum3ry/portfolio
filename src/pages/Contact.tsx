@@ -77,10 +77,10 @@ const Contact = () => {
                       Email
                     </h3>
                     <a
-                      href="mailto:sarah@example.com"
+                      href="mailto:jennifer-rumery@outlook.com"
                       className="font-body text-muted-foreground hover:text-primary transition-colors"
                     >
-                      sarah@example.com
+                      jennifer-rumery@outlook.com
                     </a>
                   </div>
                 </div>
@@ -94,12 +94,12 @@ const Contact = () => {
                       LinkedIn
                     </h3>
                     <a
-                      href="https://linkedin.com/in/sarahchen"
+                      href="https://www.linkedin.com/in/jennifer-rumery/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-body text-muted-foreground hover:text-primary transition-colors"
                     >
-                      linkedin.com/in/sarahchen
+                      linkedin.com/in/jennifer-rumery/
                     </a>
                   </div>
                 </div>
