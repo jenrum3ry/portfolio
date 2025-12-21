@@ -19,7 +19,7 @@ const Index = () => {
               <span className="text-primary italic">people love</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-              Hi, I'm Sarah Chen. I'm a product manager with 7+ years of experience 
+              Hi, I'm Jen Rumery. I'm a product manager with 15+ years of experience 
               building B2B SaaS products that drive growth and delight users.
             </p>
             <div className="flex flex-wrap gap-4">
