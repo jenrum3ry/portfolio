@@ -84,10 +84,11 @@ const Index = () => {
               </p>
               <p>
                 What makes me different is my systematic approach to understanding users. I 
-                developed a proprietary UX teardown methodology that maps complete user journeys, 
-                identifies friction patterns, and translates insights into prioritized roadmaps. 
-                This approach uncovered that 50% of users were facing blocking technical issues—the 
-                kind of insight that fundamentally shifts product strategy.
+                adapted ethnographic research methods and visual analysis frameworks into a 
+                structured process that maps complete user journeys, identifies friction 
+                patterns, and translates insights into prioritized roadmaps. This approach 
+                uncovered that 50% of users were facing blocking technical issues—the kind of 
+                insight that fundamentally shifts product strategy.
               </p>
               <p>
                 I'm a builder who combines deep ethnographic research, hands-on technical 
@@ -124,18 +125,18 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "AI Product from Concept to Production",
-                company: "0-to-1 Product Launch",
-                description:
-                  "Built AI-powered patient summarization from concept through beta launch, coordinating cross-functional teams and establishing structured beta programs that gathered real-world feedback.",
-                tags: ["AI Product", "0-to-1", "Beta Launch"],
-              },
-              {
                 title: "UX Teardown Methodology",
                 company: "Product Research",
                 description:
                   "Developed systematic research approach across 14+ user studies that uncovered 50% of users facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
                 tags: ["User Research", "Product Strategy", "Methodology"],
+              },
+              {
+                title: "AI Product from Concept to Production",
+                company: "0-to-1 Product Launch",
+                description:
+                  "Built AI-powered patient summarization from concept through beta launch, coordinating cross-functional teams and establishing structured beta programs that gathered real-world feedback.",
+                tags: ["AI Product", "0-to-1", "Beta Launch"],
               },
               {
                 title: "OpenAPI Platform Management",
