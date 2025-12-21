@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Microscope, Users, Zap } from "lucide-react";
+import { ArrowRight, Microscope, Users, Zap, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 
@@ -98,6 +98,133 @@ const Index = () => {
                 people.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education & Credentials Section */}
+      <section className="bg-card border-y border-border py-16 md:py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-12">
+              <Award className="h-6 w-6 text-primary" />
+              <div>
+                <p className="font-body text-sm font-medium text-primary uppercase tracking-widest">
+                  Education & Credentials
+                </p>
+                <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+                  Professional Qualifications
+                </h2>
+              </div>
+            </div>
+
+            {/* MBA Section */}
+            <div className="mb-12">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                MBA, University of Wisconsin-Madison
+              </h3>
+              <p className="font-body text-sm text-muted-foreground mb-6">
+                2022 - 2024
+              </p>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                  {
+                    name: "Strategic Growth",
+                    assertionId: "icHl4vFGSTO0dvBlMgOvNA",
+                  },
+                  {
+                    name: "Strategic Innovation",
+                    assertionId: "vbQmr7DaSJanmgI0ndgEqw",
+                  },
+                  {
+                    name: "Consulting",
+                    assertionId: "G99EBvJ0S0uxrWst2v7P6w",
+                  },
+                  {
+                    name: "Business Analytics",
+                    assertionId: "GI3U8UwhSY2Mn_7y7jwlCw",
+                  }
+                ].map((badge, index) => (
+                  
+                    key={badge.name}
+                    href={`https://api.badgr.io/public/assertions/${badge.assertionId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col items-center text-center p-4 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="w-24 h-24 mb-3 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
+                      <img
+                        src={`https://api.badgr.io/public/assertions/${badge.assertionId}/image`}
+                        alt={`${badge.name} Badge`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                        loading="lazy"
+                      />
+                    </div>
+                    <p className="font-body text-sm font-medium text-foreground">
+                      {badge.name}
+                    </p>
+                    <p className="font-body text-xs text-muted-foreground mt-1">
+                      UW-Madison Verified
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Professional Certification Section */}
+            <div className="pt-8 border-t border-border mb-8">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                Professional Certification
+              </h3>
+              <p className="font-body text-sm text-muted-foreground mb-6">
+                Scrum Alliance
+              </p>
+
+              
+                href="https://www.scrumalliance.org/community/profile/jrumery3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex flex-col items-center text-center p-6 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
+                style={{ animationDelay: "400ms" }}
+              >
+                <div className="w-32 h-32 mb-4 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
+                  <img
+                    src="https://www.scrumalliance.org/badges/sa-adv_cspo-600.png"
+                    alt="Advanced Certified Scrum Product Owner Badge"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="font-body text-base font-medium text-foreground mb-1">
+                  Advanced Certified Scrum Product Owner®
+                </p>
+                <p className="font-body text-xs text-muted-foreground mb-1">
+                  A-CSPO | Certificate ID: 001212862
+                </p>
+                <p className="font-body text-xs text-muted-foreground">
+                  Active through July 2026
+                </p>
+              </a>
+            </div>
+
+            {/* Undergraduate Education */}
+            <div className="pt-8 border-t border-border">
+              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                Undergraduate Education
+              </h3>
+              <p className="font-body text-base text-foreground">
+                BS, Health/Healthcare Administration & Management
+              </p>
+              <p className="font-body text-sm text-muted-foreground">
+                California College San Diego | 2005 - 2009
+              </p>
+            </div>
+
+            <p className="font-body text-sm text-muted-foreground text-center mt-8">
+              Click badges to view verification details
+            </p>
           </div>
         </div>
       </section>
