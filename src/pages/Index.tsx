@@ -146,7 +146,7 @@ const Index = () => {
                     assertionId: "GI3U8UwhSY2Mn_7y7jwlCw",
                   }
                 ].map((badge, index) => (
-                  
+                  <a
                     key={badge.name}
                     href={`https://api.badgr.io/public/assertions/${badge.assertionId}`}
                     target="_blank"
@@ -182,7 +182,7 @@ const Index = () => {
                 Scrum Alliance
               </p>
 
-              
+              <a
                 href="https://www.scrumalliance.org/community/profile/jrumery3"
                 target="_blank"
                 rel="noopener noreferrer"
