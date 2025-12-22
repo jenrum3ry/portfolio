@@ -55,10 +55,10 @@ const CaseStudies = () => {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 pb-16 border-b border-border last:border-b-0 last:pb-0 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                {/* UX Teardown Image */}
+                {/* UX Teardown Image - FIXED PATH */}
                 <div className="bg-card border border-border rounded-lg overflow-hidden">
                   <img 
-                    src="/UX_Teardown_Example.png" 
+                    src="UX_Teardown_Example.png" 
                     alt="Office Visit Journey UX Teardown showing 5 workflow stages with color-coded sections, annotated screens, and identified friction points"
                     className="w-full h-full object-cover"
                   />
