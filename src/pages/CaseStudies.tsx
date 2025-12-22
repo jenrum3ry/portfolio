@@ -55,16 +55,13 @@ const CaseStudies = () => {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 pb-16 border-b border-border last:border-b-0 last:pb-0 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                {/* Image Placeholder */}
-                <div className="bg-card border border-border rounded-lg aspect-video flex items-center justify-center">
-                  <div className="text-center">
-                    <p className="font-display text-2xl text-muted-foreground">
-                      {study.company}
-                    </p>
-                    <p className="font-body text-sm text-muted-foreground/60">
-                      {study.year}
-                    </p>
-                  </div>
+                {/* UX Teardown Image */}
+                <div className="bg-card border border-border rounded-lg overflow-hidden">
+                  <img 
+                    src="/UX_Teardown_Example.png" 
+                    alt="Office Visit Journey UX Teardown showing 5 workflow stages with color-coded sections, annotated screens, and identified friction points"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Content */}
