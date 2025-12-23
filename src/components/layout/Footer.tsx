@@ -23,7 +23,7 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              {["Case Studies", "Testimonials", "Blog", "Contact"].map((link) => (
+              {["Case Studies", "Blog", "Contact"].map((link) => (
                 <li key={link}>
                   <Link
                     to={`/${link.toLowerCase().replace(" ", "-")}`}
@@ -42,7 +42,7 @@ const Footer = () => {
               Connect
             </h4>
             <div className="flex gap-4">
-              <a
+              
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -50,7 +50,7 @@ const Footer = () => {
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a
+              
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -58,7 +58,7 @@ const Footer = () => {
               >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a
+              
                 href="mailto:hello@example.com"
                 className="p-2 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
