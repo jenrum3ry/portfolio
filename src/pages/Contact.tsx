@@ -1,211 +1,107 @@
-import { useState } from "react";
-import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, Linkedin, MapPin, Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, Linkedin, ExternalLink } from 'lucide-react';
 
-const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Since no backend, just show success message
-    toast({
-      title: "Message received!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", company: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
+export default function Contact() {
   return (
-    <Layout>
-      {/* Hero */}
-      <section className="bg-secondary/30">
-        <div className="container mx-auto px-6 py-20 md:py-28">
-          <div className="max-w-3xl">
-            <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-4">
-              Get in Touch
-            </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
-              Contact
-            </h1>
-            <p className="font-body text-lg text-muted-foreground leading-relaxed">
-              I'm always interested in hearing about new opportunities, 
-              collaborations, or just connecting with fellow product people.
-            </p>
-          </div>
+    <div className="min-h-screen bg-[#FAF8F5]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-4">
+            Let's Connect
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            I'm always interested in discussing product strategy, user research 
+            methodologies, or opportunities in AI and healthcare technology.
+          </p>
         </div>
-      </section>
 
-      {/* Contact Content */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            {/* Contact Info */}
-            <div className="opacity-0 animate-fade-in">
-              <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-6">
-                Let's connect
-              </h2>
-              <p className="font-body text-muted-foreground leading-relaxed mb-8">
-                Whether you're looking for a product leader for your team, 
-                want to discuss a potential collaboration, or just want to 
-                chat about product management, I'd love to hear from you.
-              </p>
-
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-secondary rounded-lg">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-1">
-                      Email
-                    </h3>
-                    <a
-                      href="mailto:jennifer-rumery@outlook.com"
-                      className="font-body text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      jennifer-rumery@outlook.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-secondary rounded-lg">
-                    <Linkedin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-1">
-                      LinkedIn
-                    </h3>
-                    <a
-                      href="https://www.linkedin.com/in/jennifer-rumery/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-body text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      linkedin.com/in/jennifer-rumery/
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-secondary rounded-lg">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-1">
-                      Location
-                    </h3>
-                    <p className="font-body text-muted-foreground">
-                      San Francisco, CA (Open to remote)
-                    </p>
-                  </div>
-                </div>
+        {/* Contact Cards */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {/* Email Card */}
+          <a
+            href="mailto:jennifer-rumery@outlook.com"
+            className="group bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all border border-gray-200 hover:border-[#B8733E]"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-[#B8733E]/10 rounded-lg group-hover:bg-[#B8733E]/20 transition-colors">
+                <Mail className="w-6 h-6 text-[#B8733E]" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-[#B8733E] transition-colors">
+                  Email
+                </h3>
+                <p className="text-gray-600 text-sm mb-2">
+                  Best for detailed inquiries or opportunities
+                </p>
+                <p className="text-[#B8733E] font-medium text-sm">
+                  jennifer-rumery@outlook.com
+                </p>
               </div>
             </div>
+          </a>
 
-            {/* Contact Form */}
-            <div
-              className="opacity-0 animate-fade-in"
-              style={{ animationDelay: "150ms" }}
-            >
-              <form
-                onSubmit={handleSubmit}
-                className="bg-card border border-border rounded-lg p-6 md:p-8"
-              >
-                <h2 className="font-display text-xl font-semibold text-foreground mb-6">
-                  Send a message
-                </h2>
-
-                <div className="space-y-5">
-                  <div>
-                    <Label htmlFor="name" className="font-body text-sm">
-                      Name
-                    </Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your name"
-                      required
-                      className="mt-1.5 font-body"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="email" className="font-body text-sm">
-                      Email
-                    </Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="you@example.com"
-                      required
-                      className="mt-1.5 font-body"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="company" className="font-body text-sm">
-                      Company (optional)
-                    </Label>
-                    <Input
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      placeholder="Your company"
-                      className="mt-1.5 font-body"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message" className="font-body text-sm">
-                      Message
-                    </Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="How can I help you?"
-                      rows={5}
-                      required
-                      className="mt-1.5 font-body resize-none"
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full font-body">
-                    Send Message <Send className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-              </form>
+          {/* LinkedIn Card */}
+          <a
+            href="https://www.linkedin.com/in/jennifer-rumery/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all border border-gray-200 hover:border-[#B8733E]"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-[#B8733E]/10 rounded-lg group-hover:bg-[#B8733E]/20 transition-colors">
+                <Linkedin className="w-6 h-6 text-[#B8733E]" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-[#B8733E] transition-colors flex items-center gap-2">
+                  LinkedIn
+                  <ExternalLink className="w-4 h-4" />
+                </h3>
+                <p className="text-gray-600 text-sm mb-2">
+                  Professional background and network
+                </p>
+                <p className="text-[#B8733E] font-medium text-sm">
+                  /in/jennifer-rumery
+                </p>
+              </div>
             </div>
+          </a>
+        </div>
+
+        {/* Additional Info */}
+        <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+          <h2 className="text-2xl font-serif text-gray-900 mb-4">
+            What I'm Looking For
+          </h2>
+          <div className="space-y-4 text-gray-700">
+            <p>
+              I'm currently exploring <strong>senior product management opportunities</strong> where 
+              I can apply my experience in AI products, platform development, and user research 
+              to solve meaningful problems.
+            </p>
+            <p>
+              My ideal role involves:
+            </p>
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>Strategic product leadership with cross-functional teams</li>
+              <li>Building AI-powered products that improve people's workflows</li>
+              <li>User research and data-driven decision making</li>
+              <li>0-to-1 product development or platform architecture</li>
+              <li>Healthcare technology or similarly impactful domains</li>
+            </ul>
+            <p className="pt-4">
+              Even if you're not hiring, I'm always happy to connect with fellow product 
+              leaders and discuss interesting product challenges.
+            </p>
           </div>
         </div>
-      </section>
-    </Layout>
-  );
-};
 
-export default Contact;
+        {/* Response Time */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-500">
+            I typically respond to emails within 24-48 hours
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
