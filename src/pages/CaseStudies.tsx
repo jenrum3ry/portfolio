@@ -20,8 +20,32 @@ const caseStudies = [
       "Built repeatable research framework adopted across product organization",
     ],
     tags: ["User Research", "Product Strategy", "Methodology"],
+    image: "UX_Teardown_Example.png",
+    imageAlt: "Office Visit Journey UX Teardown showing 5 workflow stages with color-coded sections, annotated screens, and identified friction points"
   },
-  // Add more case studies here later
+  {
+    id: 2,
+    title: "Cornerstone Help Hub - Cloud Migration & Virtual Assistant",
+    platform: "Enterprise Veterinary Practice Management Software",
+    year: "2022-2023",
+    description:
+      "Led strategic migration of 1000+ legacy help paths to modern cloud-based hub with integrated virtual assistant. Achieved 90% user adoption of self-service support, reducing call volume while improving user experience.",
+    challenge:
+      "Cornerstone's server-based architecture locked help documentation inside the software's F1 system. Every content update required a full software release cycle, creating months-long lag between identifying user confusion and publishing updated help. With over 1000 F1 help paths requiring migration, the team needed a strategic approach that balanced velocity, quality, and user impact.",
+    solution:
+      "Built modern cloud-based help hub with integrated virtual assistant using data-driven content prioritization. Analyzed a full year of support call volume and chat transcripts, applying 80/20 prioritization framework: first wave addressed the 80% most common support questions, second wave tackled the remaining 20%. Coordinated across 6+ teams—customer support, education, development, and training—to execute strategic migration in 12 months.",
+    results: [
+      "90% virtual assistant adoption as first support touchpoint",
+      "Migrated 1000+ help paths from legacy system in 12 months",
+      "Decoupled content updates from software release cycle",
+      "Built multi-channel support flow: virtual assistant → chat → phone",
+      "Reduced routine support call volume through self-service deflection",
+      "Established 80/20 prioritization framework adopted organization-wide",
+    ],
+    tags: ["Product Strategy", "Content Strategy", "Cross-Functional Leadership"],
+    image: "Cornerstone_Help_Hub.png",
+    imageAlt: "Cornerstone Help Hub modern interface showing searchable help center with category navigation and virtual assistant"
+  },
 ];
 
 const CaseStudies = () => {
@@ -55,11 +79,11 @@ const CaseStudies = () => {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 pb-16 border-b border-border last:border-b-0 last:pb-0 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                {/* UX Teardown Image - FIXED: No cropping, full image visible */}
+                {/* Image - FIXED: No cropping, full image visible */}
                 <div className="bg-card border border-border rounded-lg overflow-hidden flex items-center justify-center p-4">
                   <img 
-                    src="UX_Teardown_Example.png" 
-                    alt="Office Visit Journey UX Teardown showing 5 workflow stages with color-coded sections, annotated screens, and identified friction points"
+                    src={study.image}
+                    alt={study.imageAlt}
                     className="w-full h-auto object-contain"
                   />
                 </div>
