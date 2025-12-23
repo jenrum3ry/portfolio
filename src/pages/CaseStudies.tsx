@@ -44,7 +44,8 @@ const caseStudies = [
     ],
     tags: ["Product Strategy", "Platform Development", "Cross-Functional Leadership"],
     image: "Cornerstone_Help_Hub.png",
-    imageAlt: "Cornerstone Help Hub modern interface showing searchable help center with category navigation and virtual assistant"
+    imageAlt: "Cornerstone Help Hub modern interface showing searchable help center with category navigation and virtual assistant",
+    liveUrl: "https://cornerstonehelphub.com"
   },
 ];
 
@@ -108,6 +109,18 @@ const CaseStudies = () => {
                   <p className="font-body text-muted-foreground leading-relaxed mb-6">
                     {study.description}
                   </p>
+
+                  {study.liveUrl && (
+                    <a
+                      href={study.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-body font-medium text-primary border border-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+                    >
+                      View Live Site
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  )}
 
                   <div className="space-y-4 mb-6">
                     <div>
