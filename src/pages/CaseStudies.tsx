@@ -29,20 +29,20 @@ const caseStudies = [
     platform: "Enterprise Veterinary Practice Management Software",
     year: "2022-2023",
     description:
-      "Led strategic migration of 1000+ legacy help paths to modern cloud-based hub with integrated virtual assistant. Achieved 90% user adoption of self-service support, reducing call volume while improving user experience.",
+      "Led greenfield development of cloud-based help platform from concept through production deployment, serving 1,300+ veterinary practices. Achieved 90% virtual assistant adoption and migrated 1,000+ legacy help paths in 12 months.",
     challenge:
-      "Cornerstone's server-based architecture locked help documentation inside the software's F1 system. Every content update required a full software release cycle, creating months-long lag between identifying user confusion and publishing updated help. With over 1000 F1 help paths requiring migration, the team needed a strategic approach that balanced velocity, quality, and user impact.",
+      "Cornerstone's server-based architecture locked help documentation inside the software's F1 system. Every content update required a full software release cycle, creating months-long lag between identifying user confusion and publishing updated help. With over 1,000 F1 help paths requiring migration, the team needed a strategic approach that balanced velocity, quality, and user impact.",
     solution:
-      "Built modern cloud-based help hub with integrated virtual assistant using data-driven content prioritization. Analyzed a full year of support call volume and chat transcripts, applying 80/20 prioritization framework: first wave addressed the 80% most common support questions, second wave tackled the remaining 20%. Coordinated across 6+ teams—customer support, education, development, and training—to execute strategic migration in 12 months.",
+      "Led end-to-end platform development from concept to production integration. Built modern cloud-based help hub (cornerstonehelphub.com) with integrated virtual assistant using data-driven prioritization. Analyzed full year of support data (call volume, chat transcripts, user feedback) and applied 80/20 framework: first wave addressed 80% of support volume, second wave completed comprehensive migration. Validated approach with early adopter beta program before coordinating cross-functional rollout across customer support, education, development, training, customer success, and content teams to execute 12-month strategic migration.",
     results: [
       "90% virtual assistant adoption as first support touchpoint",
-      "Migrated 1000+ help paths from legacy system in 12 months",
-      "Decoupled content updates from software release cycle",
+      "Migrated 1,000+ help paths from server-based system in 12 months",
+      "Decoupled content updates from software release cycle (hours vs. months)",
       "Built multi-channel support flow: virtual assistant → chat → phone",
       "Reduced routine support call volume through self-service deflection",
       "Established 80/20 prioritization framework adopted organization-wide",
     ],
-    tags: ["Product Strategy", "Content Strategy", "Cross-Functional Leadership"],
+    tags: ["Product Strategy", "Platform Development", "Cross-Functional Leadership"],
     image: "Cornerstone_Help_Hub.png",
     imageAlt: "Cornerstone Help Hub modern interface showing searchable help center with category navigation and virtual assistant"
   },
