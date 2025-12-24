@@ -80,11 +80,11 @@ const BlogPost = () => {
               className="prose prose-xl max-w-none
                 prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground prose-headings:tracking-tight
                 prose-h1:hidden
-                prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:mb-6 prose-h2:mt-16 prose-h2:leading-tight
+                prose-h2:text-4xl md:prose-h2:text-5xl prose-h2:mb-8 prose-h2:mt-20 prose-h2:leading-tight prose-h2:scroll-mt-20
                 prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-10
                 prose-p:font-body prose-p:text-foreground/80 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-[1.125rem] md:prose-p:text-[1.1875rem]
                 prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-a:transition-all
-                prose-strong:text-foreground prose-strong:font-bold
+                prose-strong:text-foreground prose-strong:font-bold prose-strong:block prose-strong:mt-8 prose-strong:mb-2
                 prose-ul:my-8 prose-ul:font-body
                 prose-li:text-foreground/80 prose-li:my-3 prose-li:text-[1.125rem] prose-li:leading-relaxed
                 prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-foreground/70 prose-blockquote:my-8"
