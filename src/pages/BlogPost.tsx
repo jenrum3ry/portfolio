@@ -77,17 +77,17 @@ const BlogPost = () => {
 
             {/* Content */}
             <div
-              className="prose prose-lg max-w-none
-                prose-headings:font-display prose-headings:font-semibold prose-headings:text-foreground
-                prose-h1:text-4xl prose-h1:mb-8 prose-h1:mt-12
-                prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-12 prose-h2:leading-tight
-                prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-8
-                prose-p:font-body prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg
-                prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+              className="prose prose-xl max-w-none
+                prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground prose-headings:tracking-tight
+                prose-h1:hidden
+                prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:mb-6 prose-h2:mt-16 prose-h2:leading-tight
+                prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-10
+                prose-p:font-body prose-p:text-foreground/80 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-[1.125rem] md:prose-p:text-[1.1875rem]
+                prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-a:transition-all
                 prose-strong:text-foreground prose-strong:font-bold
-                prose-ul:font-body prose-ul:text-muted-foreground prose-ul:my-6
-                prose-li:text-muted-foreground prose-li:my-2 prose-li:text-lg
-                prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground prose-blockquote:my-8"
+                prose-ul:my-8 prose-ul:font-body
+                prose-li:text-foreground/80 prose-li:my-3 prose-li:text-[1.125rem] prose-li:leading-relaxed
+                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-foreground/70 prose-blockquote:my-8"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </div>
