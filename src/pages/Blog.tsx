@@ -5,6 +5,16 @@ import { ArrowRight, Calendar } from "lucide-react";
 const posts = [
   {
     id: 1,
+    slug: "being-wrong-faster",
+    title: "The PM's Real Job: Being Wrong Faster",
+    excerpt:
+      "The best PMs aren't the ones who are right most often. They're the ones who figure out they're wrong the fastest.",
+    date: "December 24, 2024",
+    readTime: "12 min read",
+    category: "Strategy",
+  },
+  {
+    id: 2,
     slug: "art-of-prioritization",
     title: "The Art of Prioritization: Beyond the RICE Framework",
     excerpt:
@@ -14,7 +24,7 @@ const posts = [
     category: "Strategy",
   },
   {
-    id: 2,
+    id: 3,
     slug: "user-research-at-scale",
     title: "Running User Research at Scale Without Breaking the Bank",
     excerpt:
@@ -22,36 +32,6 @@ const posts = [
     date: "December 1, 2024",
     readTime: "6 min read",
     category: "Research",
-  },
-  {
-    id: 3,
-    slug: "cross-functional-alignment",
-    title: "Cross-Functional Alignment: A PM's Secret Weapon",
-    excerpt:
-      "How to build genuine alignment across engineering, design, and business teams—without endless meetings.",
-    date: "November 18, 2024",
-    readTime: "10 min read",
-    category: "Leadership",
-  },
-  {
-    id: 4,
-    slug: "metrics-that-matter",
-    title: "Metrics That Matter: Moving Beyond Vanity Numbers",
-    excerpt:
-      "A framework for choosing product metrics that drive real business outcomes and help you make better decisions.",
-    date: "November 5, 2024",
-    readTime: "7 min read",
-    category: "Analytics",
-  },
-  {
-    id: 5,
-    slug: "saying-no-gracefully",
-    title: "Saying No Gracefully: A PM's Guide to Stakeholder Management",
-    excerpt:
-      "How to decline feature requests, push back on timelines, and maintain strong relationships in the process.",
-    date: "October 22, 2024",
-    readTime: "5 min read",
-    category: "Communication",
   },
 ];
 
@@ -63,7 +43,7 @@ const Blog = () => {
         <div className="container mx-auto px-6 py-20 md:py-28">
           <div className="max-w-3xl">
             <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-4">
-              Insights
+              INSIGHTS
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
               Blog
