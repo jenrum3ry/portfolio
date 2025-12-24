@@ -9,7 +9,7 @@ import NotFound from "@/pages/NotFound";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/case-studies" element={<CaseStudies />} />
