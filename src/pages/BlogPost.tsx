@@ -31,24 +31,24 @@ const BlogPost = () => {
   return (
     <Layout>
       {/* Back Link */}
-      <section className="bg-secondary/30 py-6">
+      <section className="bg-secondary/30 py-8 border-b border-border">
         <div className="container mx-auto px-6">
           <Link
             to="/blog"
-            className="inline-flex items-center font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+            className="inline-flex items-center font-body text-sm text-muted-foreground hover:text-primary transition-colors group"
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
+            <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
             Back to Blog
           </Link>
         </div>
       </section>
 
       {/* Article */}
-      <article className="py-16 md:py-24">
+      <article className="py-20 md:py-28">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             {/* Meta */}
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-8">
               <span className="px-3 py-1 text-xs font-body font-medium bg-secondary text-secondary-foreground rounded-full">
                 {post.category}
               </span>
@@ -62,20 +62,32 @@ const BlogPost = () => {
             </div>
 
             {/* Title */}
-            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground leading-tight mb-8">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-12 pb-8 border-b border-border">
               {post.title}
             </h1>
+
+            {/* Hero Image */}
+            <div className="mb-12">
+              <img 
+                src="/portfolio/pm-strategy-illustration.png" 
+                alt="Strategic product management illustration showing multiple paths and course corrections"
+                className="w-full rounded-lg shadow-sm"
+              />
+            </div>
 
             {/* Content */}
             <div
               className="prose prose-lg max-w-none
                 prose-headings:font-display prose-headings:font-semibold prose-headings:text-foreground
-                prose-p:font-body prose-p:text-muted-foreground prose-p:leading-relaxed
+                prose-h1:text-4xl prose-h1:mb-8 prose-h1:mt-12
+                prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-12 prose-h2:leading-tight
+                prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-8
+                prose-p:font-body prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg
                 prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                prose-strong:text-foreground prose-strong:font-semibold
-                prose-ul:font-body prose-ul:text-muted-foreground
-                prose-li:text-muted-foreground
-                prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground"
+                prose-strong:text-foreground prose-strong:font-bold
+                prose-ul:font-body prose-ul:text-muted-foreground prose-ul:my-6
+                prose-li:text-muted-foreground prose-li:my-2 prose-li:text-lg
+                prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground prose-blockquote:my-8"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </div>
