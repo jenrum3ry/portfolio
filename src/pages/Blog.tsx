@@ -1,39 +1,7 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { ArrowRight, Calendar } from "lucide-react";
-
-const posts = [
-  {
-    id: 1,
-    slug: "being-wrong-faster",
-    title: "The PM's Real Job: Being Wrong Faster",
-    excerpt:
-      "The best PMs aren't the ones who are right most often. They're the ones who figure out they're wrong the fastest.",
-    date: "December 24, 2024",
-    readTime: "12 min read",
-    category: "Strategy",
-  },
-  {
-    id: 2,
-    slug: "art-of-prioritization",
-    title: "The Art of Prioritization: Beyond the RICE Framework",
-    excerpt:
-      "Why traditional prioritization frameworks often fail, and how to build a more nuanced approach that accounts for strategic context.",
-    date: "December 15, 2024",
-    readTime: "8 min read",
-    category: "Strategy",
-  },
-  {
-    id: 3,
-    slug: "user-research-at-scale",
-    title: "Running User Research at Scale Without Breaking the Bank",
-    excerpt:
-      "Practical techniques for maintaining a strong user research practice even with limited resources and tight timelines.",
-    date: "December 1, 2024",
-    readTime: "6 min read",
-    category: "Research",
-  },
-];
+import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
   return (
@@ -60,7 +28,7 @@ const Blog = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto space-y-12">
-            {posts.map((post, index) => (
+            {blogPosts.map((post, index) => (
               <article
                 key={post.id}
                 className="group opacity-0 animate-fade-in"
