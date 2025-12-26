@@ -126,3 +126,112 @@
     font-family: 'Source Sans 3', sans-serif;
   }
 }
+
+/* Custom Blog Post Styles */
+@layer components {
+  .blog-content {
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  
+  .blog-content h1 {
+    display: none;
+  }
+  
+  .blog-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    line-height: 1.2;
+    color: hsl(var(--foreground));
+    margin-top: 5rem; /* 80px */
+    margin-bottom: 2rem; /* 32px */
+    scroll-margin-top: 5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .blog-content h2 {
+      font-size: 3rem; /* 48px */
+    }
+  }
+  
+  .blog-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem; /* 28px */
+    font-weight: 700;
+    line-height: 1.3;
+    color: hsl(var(--foreground));
+    margin-top: 3rem; /* 48px */
+    margin-bottom: 1.5rem; /* 24px */
+  }
+  
+  @media (min-width: 768px) {
+    .blog-content h3 {
+      font-size: 2rem; /* 32px */
+    }
+  }
+  
+  .blog-content p {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.8;
+    color: hsl(var(--foreground) / 0.85);
+    margin-bottom: 2rem; /* 32px */
+  }
+  
+  @media (min-width: 768px) {
+    .blog-content p {
+      font-size: 1.375rem; /* 22px */
+      line-height: 1.85;
+    }
+  }
+  
+  .blog-content strong {
+    font-weight: 700;
+    color: hsl(var(--foreground));
+    font-size: 1.375rem; /* 22px */
+    display: block;
+    margin-top: 3rem; /* 48px */
+    margin-bottom: 1rem; /* 16px */
+  }
+  
+  .blog-content ul {
+    margin-top: 2.5rem; /* 40px */
+    margin-bottom: 2.5rem; /* 40px */
+    padding-left: 1.5rem;
+  }
+  
+  .blog-content li {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.8;
+    color: hsl(var(--foreground) / 0.85);
+    margin-top: 1rem; /* 16px */
+    margin-bottom: 1rem; /* 16px */
+  }
+  
+  @media (min-width: 768px) {
+    .blog-content li {
+      font-size: 1.375rem; /* 22px */
+    }
+  }
+  
+  .blog-content blockquote {
+    border-left: 4px solid hsl(var(--primary));
+    padding-left: 1.5rem;
+    font-style: italic;
+    color: hsl(var(--foreground) / 0.75);
+    margin-top: 2.5rem; /* 40px */
+    margin-bottom: 2.5rem; /* 40px */
+  }
+  
+  .blog-content a {
+    color: hsl(var(--primary));
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  
+  .blog-content a:hover {
+    text-decoration: underline;
+  }
+}
