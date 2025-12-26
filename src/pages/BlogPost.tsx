@@ -67,7 +67,7 @@ const BlogPost = () => {
             </h1>
 
             {/* Hero Image */}
-            <div className="mb-20">
+            <div className="mb-16">
               <img 
                 src="/portfolio/pm-strategy-illustration.png" 
                 alt="Strategic product management illustration showing multiple paths and course corrections"
