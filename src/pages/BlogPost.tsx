@@ -67,7 +67,7 @@ const BlogPost = () => {
             </h1>
 
             {/* Hero Image */}
-            <div className="mb-12">
+            <div className="mb-16">
               <img 
                 src="/portfolio/pm-strategy-illustration.png" 
                 alt="Strategic product management illustration showing multiple paths and course corrections"
@@ -80,14 +80,14 @@ const BlogPost = () => {
               className="prose prose-xl max-w-none
                 prose-headings:font-display prose-headings:font-bold prose-headings:text-foreground prose-headings:tracking-tight
                 prose-h1:hidden
-                prose-h2:text-4xl md:prose-h2:text-5xl prose-h2:mb-8 prose-h2:mt-20 prose-h2:leading-tight prose-h2:scroll-mt-20
-                prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-10
-                prose-p:font-body prose-p:text-foreground/80 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-[1.125rem] md:prose-p:text-[1.1875rem]
+                prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:mb-6 prose-h2:mt-16 prose-h2:leading-snug prose-h2:scroll-mt-20
+                prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:mb-6 prose-h3:mt-12
+                prose-p:font-body prose-p:text-foreground/80 prose-p:leading-loose prose-p:mb-8 prose-p:text-[1.25rem] md:prose-p:text-[1.3125rem]
                 prose-a:text-primary prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-a:transition-all
-                prose-strong:text-foreground prose-strong:font-extrabold prose-strong:block prose-strong:mt-10 prose-strong:mb-3 prose-strong:text-[1.25rem]
-                prose-ul:my-8 prose-ul:font-body
-                prose-li:text-foreground/80 prose-li:my-3 prose-li:text-[1.125rem] prose-li:leading-relaxed
-                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-foreground/70 prose-blockquote:my-8"
+                prose-strong:text-foreground prose-strong:font-extrabold prose-strong:block prose-strong:mt-12 prose-strong:mb-4 prose-strong:text-[1.375rem]
+                prose-ul:my-10 prose-ul:font-body
+                prose-li:text-foreground/80 prose-li:my-4 prose-li:text-[1.25rem] prose-li:leading-loose
+                prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-foreground/70 prose-blockquote:my-10"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </div>
