@@ -1,4 +1,5 @@
 import { Mail, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -21,28 +22,28 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="/portfolio/case-studies" 
+                <Link 
+                  to="/case-studies" 
                   className="text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Case Studies
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/portfolio/blog" 
+                <Link 
+                  to="/blog" 
                   className="text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/portfolio/contact" 
+                <Link 
+                  to="/contact" 
                   className="text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
