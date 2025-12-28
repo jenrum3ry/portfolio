@@ -161,6 +161,13 @@ This project is configured for deployment with a `/portfolio` base path (e.g., G
 
 The router has `basename="/portfolio"` configured for proper routing in deployed environments.
 
+### GitHub Pages SPA Routing
+
+For client-side routing to work on GitHub Pages:
+- The build process automatically copies `index.html` → `404.html`
+- This ensures direct navigation to routes (e.g., `/portfolio/blog`) loads the React app
+- See `.github/workflows/deploy.yml` for the automated copy step
+
 **Important**: Set the `VITE_WEB3FORMS_ACCESS_KEY` environment variable in your deployment platform for the contact form to work.
 
 ### Bundle Sizes (Production Build)
