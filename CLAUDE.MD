@@ -108,6 +108,9 @@ npm run lint         # Run ESLint
 - Router has `basename="/portfolio"` for GitHub Pages deployment
 - Use React Router `<Link>` components for navigation
 - Never use `<a>` tags for internal navigation
+- **GitHub Pages SPA Fix**: The deploy workflow copies `index.html` to `404.html` after build
+  - This enables direct navigation to client-side routes (e.g., `/portfolio/blog`)
+  - Without this, GitHub Pages returns 404 for non-root routes
 
 ### Best Practices
 - Follow existing component patterns
