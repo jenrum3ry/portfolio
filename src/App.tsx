@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "@/pages/Index";
 import CaseStudies from "@/pages/CaseStudies";
 import Blog from "@/pages/Blog";
@@ -10,6 +11,7 @@ import NotFound from "@/pages/NotFound";
 function App() {
   return (
     <Router basename="/portfolio">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/case-studies" element={<CaseStudies />} />
