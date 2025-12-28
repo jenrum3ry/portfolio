@@ -454,8 +454,8 @@ export const blogPosts: BlogPost[] = [
     date: "September 3, 2023",
     readTime: "8 min read",
     category: "Product Strategy",
-    image: "",
-    imageAlt: "",
+    image: "/portfolio/veterinarian-upgrade-service.jpg",
+    imageAlt: "Doctor in scrubs working at computer in medical facility",
     content: `<h1>The 80% Solution: Time to First Value and My First Greenfield Product</h1>
 
 <p>It's 8:32 PM on a Tuesday night at a veterinary practice.</p>
