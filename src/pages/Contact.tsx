@@ -1,6 +1,8 @@
 import { Mail, Linkedin, ExternalLink, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import Layout from '@/components/layout/Layout';
+import SEO from '@/components/SEO';
+import { ROUTES } from '@/lib/routes';
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -34,6 +36,11 @@ export default function Contact() {
 
   return (
     <Layout>
+      <SEO
+        title="Contact | Jen Rumery - AI Product Manager"
+        description="Get in touch to discuss product strategy, user research methodologies, or opportunities in AI and healthcare technology."
+        url={ROUTES.CONTACT}
+      />
       <div className="bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
@@ -129,7 +136,7 @@ export default function Contact() {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Web3Forms Access Key - Hidden Field */}
-              <input type="hidden" name="access_key" value="bb1a0df4-cf9d-431e-a291-ed3629feca14" />
+              <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY} />
               
               {/* Optional: Redirect after submission */}
               <input type="hidden" name="redirect" value="false" />
@@ -219,6 +226,7 @@ export default function Contact() {
               )}
             </form>
           </div>
+        </div>
         </div>
       </div>
     </Layout>

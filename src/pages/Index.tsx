@@ -2,10 +2,17 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Microscope, Users, Zap, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { ROUTES } from "@/lib/routes";
 
 const Index = () => {
   return (
     <Layout>
+      <SEO
+        title="Jen Rumery - AI Product Manager | Veterinary Technology"
+        description="Building AI products that give veterinarians their time back. 15+ years in vet tech • Shipped 3 AI products from 0-to-1 • Deep user research across 14+ practices"
+        url={ROUTES.HOME}
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-background" />
@@ -26,12 +33,12 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="font-body">
-                <Link to="/case-studies">
+                <Link to={ROUTES.CASE_STUDIES}>
                   See My Work <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="font-body">
-                <Link to="/contact">Let's Talk</Link>
+                <Link to={ROUTES.CONTACT}>Let's Talk</Link>
               </Button>
             </div>
           </div>
@@ -242,7 +249,7 @@ const Index = () => {
               </h2>
             </div>
             <Link
-              to="/case-studies"
+              to={ROUTES.CASE_STUDIES}
               className="font-body text-sm font-medium text-primary hover:underline mt-4 md:mt-0"
             >
               View All Projects →
@@ -282,7 +289,7 @@ const Index = () => {
             ].map((project, index) => (
               <Link
                 key={project.title}
-                to="/case-studies"
+                to={ROUTES.CASE_STUDIES}
                 className="group block p-8 bg-card border border-border rounded-lg hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -327,7 +334,7 @@ const Index = () => {
             variant="secondary"
             className="font-body"
           >
-            <Link to="/contact">
+            <Link to={ROUTES.CONTACT}>
               Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

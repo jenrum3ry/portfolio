@@ -2,10 +2,17 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { ROUTES } from "@/lib/routes";
 
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="About | Jen Rumery - Product Manager"
+        description="15+ years in healthcare technology, building 0-to-1 products through deep user research and systematic methodology."
+        url={ROUTES.ABOUT}
+      />
       {/* Hero Section */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-6">
@@ -325,7 +332,7 @@ const About = () => {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button asChild size="lg" variant="secondary" className="font-body">
-              <Link to="/contact">
+              <Link to={ROUTES.CONTACT}>
                 Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

@@ -2,12 +2,13 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ROUTES } from "@/lib/routes";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "Case Studies", path: "/case-studies" },
-  { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" },
+  { name: "Home", path: ROUTES.HOME },
+  { name: "Case Studies", path: ROUTES.CASE_STUDIES },
+  { name: "Blog", path: ROUTES.BLOG },
+  { name: "Contact", path: ROUTES.CONTACT },
 ];
 
 const Header = () => {
@@ -18,7 +19,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-display text-2xl font-semibold text-foreground">
+          <Link to={ROUTES.HOME} className="font-display text-2xl font-semibold text-foreground">
             Jennifer Rumery
           </Link>
 

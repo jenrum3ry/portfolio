@@ -2,6 +2,8 @@ import { useParams, Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
+import SEO from "@/components/SEO";
+import { ROUTES } from "@/lib/routes";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -16,7 +18,7 @@ const BlogPost = () => {
               Post Not Found
             </h1>
             <Link
-              to="/blog"
+              to={ROUTES.BLOG}
               className="inline-flex items-center font-body text-primary hover:underline"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -30,11 +32,18 @@ const BlogPost = () => {
 
   return (
     <Layout>
+      <SEO
+        title={`${post.title} | Jen Rumery`}
+        description={post.excerpt}
+        image={post.image}
+        type="article"
+        url={ROUTES.BLOG_POST(post.slug)}
+      />
       {/* Back Link */}
       <section className="bg-secondary/30 py-8 border-b border-border">
         <div className="container mx-auto px-6">
           <Link
-            to="/blog"
+            to={ROUTES.BLOG}
             className="inline-flex items-center font-body text-sm text-muted-foreground hover:text-primary transition-colors group"
           >
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
