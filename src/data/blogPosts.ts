@@ -6,7 +6,7 @@ export const blogPosts: BlogPost[] = [
     slug: "being-wrong-faster",
     title: "The PM's Real Job: Being Wrong Faster",
     excerpt: "The best PMs aren't the ones who are right most often. They're the ones who figure out they're wrong the fastest.",
-    date: "December 24, 2024",
+    date: "December 5, 2025",
     readTime: "12 min read",
     category: "Product Leadership",
     image: "/portfolio/pm-strategy-illustration.png",
