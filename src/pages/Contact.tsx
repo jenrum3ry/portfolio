@@ -1,5 +1,6 @@
 import { Mail, Linkedin, ExternalLink, MapPin } from 'lucide-react';
 import { useState } from 'react';
+import Layout from '@/components/layout/Layout';
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -32,8 +33,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <Layout>
+      <div className="bg-[#FAF8F5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-serif text-gray-900 mb-4">
@@ -219,6 +221,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
