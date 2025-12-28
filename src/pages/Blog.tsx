@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { ROUTES } from "@/lib/routes";
 import { ArrowRight, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
   return (
     <Layout>
+      <SEO
+        title="Blog | Jen Rumery - Product Leadership Insights"
+        description="Thoughts on product management, leadership, and building products that make a difference."
+        url={ROUTES.BLOG}
+      />
       {/* Hero */}
       <section className="bg-secondary/30">
         <div className="container mx-auto px-6 py-20 md:py-28">
@@ -48,7 +55,7 @@ const Blog = () => {
                 </div>
 
                 <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground group-hover:text-primary transition-colors mb-3">
-                  <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                  <Link to={ROUTES.BLOG_POST(post.slug)}>{post.title}</Link>
                 </h2>
 
                 <p className="font-body text-muted-foreground leading-relaxed mb-4">
@@ -56,7 +63,7 @@ const Blog = () => {
                 </p>
 
                 <Link
-                  to={`/blog/${post.slug}`}
+                  to={ROUTES.BLOG_POST(post.slug)}
                   className="inline-flex items-center font-body text-sm font-medium text-primary hover:underline"
                 >
                   Read More <ArrowRight className="ml-1 h-4 w-4" />
