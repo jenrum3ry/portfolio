@@ -9,7 +9,7 @@ const CaseStudies = () => {
     <Layout>
       <SEO
         title="Case Studies | Jen Rumery - Portfolio"
-        description="A selection of projects that showcase my approach to product management—from discovery to delivery and beyond."
+        description="A selection of projects that showcase my approach to product management, from discovery to delivery and beyond."
         url={ROUTES.CASE_STUDIES}
       />
       {/* Hero */}
@@ -23,8 +23,8 @@ const CaseStudies = () => {
               Case Studies
             </h1>
             <p className="font-body text-lg text-muted-foreground leading-relaxed">
-              A selection of projects that showcase my approach to product 
-              management—from discovery to delivery and beyond.
+              A selection of projects that showcase my approach to product
+              management, from discovery to delivery and beyond.
             </p>
           </div>
         </div>
