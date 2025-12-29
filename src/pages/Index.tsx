@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Microscope, Users, Zap, Award } from "lucide-react";
+import { ArrowRight, Microscope, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
@@ -10,7 +10,7 @@ const Index = () => {
     <Layout>
       <SEO
         title="Jen Rumery - AI Product Manager | Veterinary Technology"
-        description="Building AI products that give veterinarians their time back. 15+ years in vet tech • Shipped 3 AI products from 0-to-1 • Deep user research across 14+ practices"
+        description="Product manager specializing in 0-to-1 AI products through systematic user research. 15+ years in healthcare tech • 500+ user interviews • Shipped products from concept to production"
         url={ROUTES.HOME}
       />
       {/* Hero Section */}
@@ -26,9 +26,11 @@ const Index = () => {
               <span className="text-primary italic">solve real problems for real people</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-              Hi, I'm Jen Rumery. I'm a product manager who builds 0-to-1 through deep user 
-              research and systematic methodology. I ship products fast, stay close to users, 
-              and bridge technical execution with strategic vision. My background spans 15+ years 
+              Hi, I'm Jen Rumery. I'm a product manager who builds 0-to-1 through deep user
+              research and systematic methodology. I'm driven by the gap between what teams think
+              users need and what users actually struggle with—those hidden friction points that
+              block real people from getting value. I ship products fast, stay close to users,
+              and bridge technical execution with strategic vision. My background spans 15+ years
               in healthcare technology, but my approach works across industries.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -80,158 +82,77 @@ const Index = () => {
               What I Do
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-6">
-              I build products through systematic user research
+              Research-driven products that solve real problems
             </h2>
             <div className="space-y-4 font-body text-lg text-muted-foreground leading-relaxed">
               <p>
-                I've spent 15+ years building products in healthcare technology—from enterprise 
-                systems at IDEXX to 0-to-1 AI products at a high-growth startup. I intentionally 
-                moved from enterprise to startup to build faster and stay closer to the people 
-                using what I create.
+                I've developed a systematic approach to understanding users that goes beyond
+                traditional product research. By adapting ethnographic methods and visual analysis
+                frameworks, I map complete user journeys, identify friction patterns, and translate
+                insights into prioritized roadmaps. This methodology uncovered that 50% of users
+                were facing blocking technical issues—the kind of insight that fundamentally shifts
+                product strategy from feature polish to foundational reliability.
               </p>
               <p>
-                What makes me different is my systematic approach to understanding users. I 
-                adapted ethnographic research methods and visual analysis frameworks into a 
-                structured process that maps complete user journeys, identifies friction 
-                patterns, and translates insights into prioritized roadmaps. This approach 
-                uncovered that 50% of users were facing blocking technical issues—the kind of 
-                insight that fundamentally shifts product strategy.
+                I've spent 15+ years building products in healthcare technology, intentionally
+                moving from enterprise systems to high-growth startups to build faster and stay
+                closer to the people using what I create. I combine deep user research with
+                hands-on execution and strategic thinking—shipping AI products, managing complex
+                platforms, and leading cross-functional teams that deliver real impact.
               </p>
               <p>
-                I'm a builder who combines deep ethnographic research, hands-on technical 
-                execution, and strategic thinking. I've shipped AI products using OpenAI APIs, 
-                managed platforms with 20+ partner integrations, and led cross-functional teams 
-                across time zones. I don't just build features—I solve actual problems for actual 
-                people.
+                I don't just build features—I solve actual problems for actual people.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Education & Credentials Section */}
-      <section className="bg-card border-y border-border py-16 md:py-20">
+      {/* How I Work Section */}
+      <section className="bg-secondary/30 py-16 md:py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-12">
-              <Award className="h-6 w-6 text-primary" />
-              <div>
-                <p className="font-body text-sm font-medium text-primary uppercase tracking-widest">
-                  Education & Credentials
-                </p>
-                <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
-                  Professional Qualifications
-                </h2>
-              </div>
-            </div>
-
-            {/* MBA Section */}
-            <div className="mb-12">
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                MBA, University of Wisconsin-Madison
-              </h3>
-              <p className="font-body text-sm text-muted-foreground mb-6">
-                2022 - 2024
-              </p>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {[
-                  {
-                    name: "Strategic Growth",
-                    assertionId: "icHl4vFGSTO0dvBlMgOvNA",
-                  },
-                  {
-                    name: "Strategic Innovation",
-                    assertionId: "vbQmr7DaSJanmgI0ndgEqw",
-                  },
-                  {
-                    name: "Consulting",
-                    assertionId: "G99EBvJ0S0uxrWst2v7P6w",
-                  },
-                  {
-                    name: "Business Analytics",
-                    assertionId: "GI3U8UwhSY2Mn_7y7jwlCw",
-                  }
-                ].map((badge, index) => (
-                  <a
-                    key={badge.name}
-                    href={`https://api.badgr.io/public/assertions/${badge.assertionId}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex flex-col items-center text-center p-4 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <div className="w-24 h-24 mb-3 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
-                      <img
-                        src={`https://api.badgr.io/public/assertions/${badge.assertionId}/image`}
-                        alt={`${badge.name} Badge`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                        loading="lazy"
-                      />
-                    </div>
-                    <p className="font-body text-sm font-medium text-foreground">
-                      {badge.name}
-                    </p>
-                    <p className="font-body text-xs text-muted-foreground mt-1">
-                      UW-Madison Verified
-                    </p>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Professional Certification Section */}
-            <div className="pt-8 border-t border-border mb-8">
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                Professional Certification
-              </h3>
-              <p className="font-body text-sm text-muted-foreground mb-6">
-                Scrum Alliance
-              </p>
-
-              <a
-                href="https://www.scrumalliance.org/community/profile/jrumery3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex flex-col items-center text-center p-6 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
-                style={{ animationDelay: "400ms" }}
-              >
-                <div className="w-32 h-32 mb-4 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
-                  <img
-                    src="https://www.scrumalliance.org/badges/sa-adv_cspo-600.png"
-                    alt="Advanced Certified Scrum Product Owner Badge"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="font-body text-base font-medium text-foreground mb-1">
-                  Advanced Certified Scrum Product Owner®
-                </p>
-                <p className="font-body text-xs text-muted-foreground mb-1">
-                  A-CSPO | Certificate ID: 001212862
-                </p>
-                <p className="font-body text-xs text-muted-foreground">
-                  Active through July 2026
-                </p>
-              </a>
-            </div>
-
-            {/* Undergraduate Education */}
-            <div className="pt-8 border-t border-border">
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                Undergraduate Education
-              </h3>
-              <p className="font-body text-base text-foreground">
-                BS, Health/Healthcare Administration & Management
-              </p>
-              <p className="font-body text-sm text-muted-foreground">
-                California College San Diego | 2005 - 2009
-              </p>
-            </div>
-
-            <p className="font-body text-sm text-muted-foreground text-center mt-8">
-              Click badges to view verification details
+          <div className="max-w-3xl mx-auto">
+            <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-2">
+              How I Work
             </p>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-8">
+              My Process
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  step: "01",
+                  title: "Research",
+                  description: "Ethnographic studies & visual analysis to understand complete user journeys"
+                },
+                {
+                  step: "02",
+                  title: "Synthesize",
+                  description: "Journey mapping & friction identification to surface hidden patterns"
+                },
+                {
+                  step: "03",
+                  title: "Execute",
+                  description: "Rapid iteration with cross-functional teams to ship products that solve real problems"
+                }
+              ].map((item, index) => (
+                <div
+                  key={item.step}
+                  className="p-6 bg-card border border-border rounded-lg opacity-0 animate-fade-in"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <p className="font-display text-4xl font-semibold text-primary/30 mb-2">
+                    {item.step}
+                  </p>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -262,28 +183,28 @@ const Index = () => {
                 title: "UX Teardown Methodology",
                 company: "Product Research",
                 description:
-                  "Developed systematic research approach across 14+ user studies that uncovered 50% of users facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
-                tags: ["User Research", "Product Strategy", "Methodology"],
+                  "Uncovered that 50% of users faced blocking technical issues through systematic research across 14+ studies. Shifted entire product roadmap from feature polish to foundational reliability.",
+                tags: ["User Research", "Product Strategy", "Roadmap Pivot"],
               },
               {
                 title: "AI Product from Concept to Production",
                 company: "0-to-1 Product Launch",
                 description:
-                  "Built AI-powered patient summarization from concept through beta launch, coordinating cross-functional teams and establishing structured beta programs that gathered real-world feedback.",
-                tags: ["AI Product", "0-to-1", "Beta Launch"],
+                  "Shipped AI-powered patient summarization from concept to production, coordinating cross-functional teams and establishing beta programs that gathered feedback to inform rapid iteration.",
+                tags: ["AI Product", "0-to-1", "Production Launch"],
               },
               {
                 title: "OpenAPI Platform Management",
                 company: "Platform & Integrations",
                 description:
-                  "Managed 20+ partner integrations, enhanced API documentation with developer-friendly Swagger UI, and advocated for technical infrastructure improvements including ERD creation.",
-                tags: ["Platform PM", "Integrations", "Developer Experience"],
+                  "Scaled platform to 20+ partner integrations while improving developer experience and advocating for infrastructure investments that strengthened system reliability.",
+                tags: ["Platform PM", "20+ Integrations", "Developer Experience"],
               },
               {
                 title: "Cross-Functional Product Leadership",
                 company: "Product Execution",
                 description:
-                  "Led distributed teams across US and international time zones, coordinated between technical advisors and engineering, and shipped products on aggressive timelines while maintaining quality.",
+                  "Led distributed teams across time zones to ship products on aggressive timelines without compromising quality, bridging technical and business perspectives to maintain strategic alignment.",
                 tags: ["Leadership", "Execution", "Cross-Functional"],
               },
             ].map((project, index) => (
