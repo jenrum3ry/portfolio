@@ -28,7 +28,7 @@ const Index = () => {
             <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
               Hi, I'm Jen Rumery. I'm a product manager who builds 0-to-1 through deep user
               research and systematic methodology. I'm driven by the gap between what teams think
-              users need and what users actually struggle with—those hidden friction points that
+              users need and what users actually struggle with, those hidden friction points that
               block real people from getting value. I ship products fast, stay close to users,
               and bridge technical execution with strategic vision. My background spans 15+ years
               in healthcare technology, but my approach works across industries.
@@ -90,18 +90,18 @@ const Index = () => {
                 traditional product research. By adapting ethnographic methods and visual analysis
                 frameworks, I map complete user journeys, identify friction patterns, and translate
                 insights into prioritized roadmaps. This methodology uncovered that 50% of users
-                were facing blocking technical issues—the kind of insight that fundamentally shifts
+                were facing blocking technical issues, the kind of insight that fundamentally shifts
                 product strategy from feature polish to foundational reliability.
               </p>
               <p>
                 I've spent 15+ years building products in healthcare technology, intentionally
                 moving from enterprise systems to high-growth startups to build faster and stay
                 closer to the people using what I create. I combine deep user research with
-                hands-on execution and strategic thinking—shipping AI products, managing complex
+                hands-on execution and strategic thinking, shipping AI products, managing complex
                 platforms, and leading cross-functional teams that deliver real impact.
               </p>
               <p>
-                I don't just build features—I solve actual problems for actual people.
+                I don't just build features - I solve actual problems for actual people.
               </p>
             </div>
           </div>

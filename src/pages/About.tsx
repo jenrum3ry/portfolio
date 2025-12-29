@@ -145,10 +145,10 @@ const About = () => {
               </div>
 
               <p>
-                <strong className="text-foreground">The impact:</strong> Using this methodology 
-                across 14+ user studies, I discovered that 50% of users were facing blocking 
-                technical issues preventing product adoption—not a lack of features. This insight 
-                fundamentally shifted the entire product roadmap from feature enhancement to 
+                <strong className="text-foreground">The impact:</strong> Using this methodology
+                across 14+ user studies, I discovered that 50% of users were facing blocking
+                technical issues preventing product adoption, not a lack of features. This insight
+                fundamentally shifted the entire product roadmap from feature enhancement to
                 foundational reliability improvements.
               </p>
               
@@ -177,11 +177,11 @@ const About = () => {
                 },
                 {
                   title: "Systematic Methodology",
-                  description: "Proprietary UX teardown process that's repeatable, visual, collaborative, and actionable. Not just 'user interviews'—a structured framework that surfaces hidden insights."
+                  description: "Proprietary UX teardown process that's repeatable, visual, collaborative, and actionable. Not just 'user interviews' - a structured framework that surfaces hidden insights."
                 },
                 {
                   title: "Hands-On Builder",
-                  description: "From debugging in release candidate environments to prototyping with AI APIs to negotiating partner agreements—I'm in the details while maintaining strategic perspective."
+                  description: "From debugging in release candidate environments to prototyping with AI APIs to negotiating partner agreements - I'm in the details while maintaining strategic perspective."
                 },
                 {
                   title: "Domain Depth",
@@ -193,7 +193,7 @@ const About = () => {
                 },
                 {
                   title: "Systems Thinker",
-                  description: "Don't just ship features—design how information flows, how teams coordinate, how processes scale. Build infrastructure that enables others to work better."
+                  description: "Don't just ship features, design how information flows, how teams coordinate, how processes scale. Build infrastructure that enables others to work better."
                 }
               ].map((item, index) => (
                 <div
@@ -269,7 +269,7 @@ const About = () => {
                   Technical PMs need access to technical infrastructure.
                 </p>
                 <p>
-                  Code repositories, database schemas, API documentation—these aren't nice-to-haves. 
+                  Code repositories, database schemas, API documentation - these aren't nice-to-haves. 
                   They're essential for managing technical products effectively.
                 </p>
               </div>
