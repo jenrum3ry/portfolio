@@ -450,8 +450,8 @@ export const blogPosts: BlogPost[] = [
     id: 4,
     slug: "80-solution-time-to-first-value",
     title: "The 80% Solution: Time to First Value and My First Greenfield Product",
-    excerpt: "How I learned that shipping an 80% solution to the majority beats waiting indefinitely for 100% perfection—and gave veterinarians their nights back.",
-    date: "September 3, 2023",
+    excerpt: "How I learned that shipping an 80% solution to the majority beats waiting indefinitely for 100% perfection - and gave veterinarians their nights back.",
+    date: "December 5, 2025",
     readTime: "8 min read",
     category: "Product Strategy",
     image: "/portfolio/veterinarian-upgrade-service.jpg",
@@ -500,7 +500,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>I didn't have an answer.</p>
 
-<p>So I did something I should have done much earlier—I went to the data.</p>
+<p>So I did something I should have done much earlier, I went to the data.</p>
 
 <p>I queried our install base to understand what we were actually dealing with. Which practices could upgrade cleanly? Which couldn't? How many machines did they really have?</p>
 
@@ -529,7 +529,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Once I framed the problem that way, the answer became obvious.</p>
 
-<p>Shipping something that delivered immediate value to 80% of practices was far more impactful than delaying value indefinitely while chasing edge cases that either didn't need us—or couldn't use the service at all.</p>
+<p>Shipping something that delivered immediate value to 80% of practices was far more impactful than delaying value indefinitely while chasing edge cases that either didn't need us - or couldn't use the service at all.</p>
 
 <h2>Reframing the Real Problem</h2>
 
@@ -565,7 +565,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>We automated what we could control and gave users control where it mattered most.</p>
 
-<p>Now, that exhausted veterinarian at 8:32 PM could schedule an upgrade for the next night and go home—confident the system would handle the tedious work while they slept.</p>
+<p>Now, that exhausted veterinarian at 8:32 PM could schedule an upgrade for the next night and go home, confident the system would handle the tedious work while they slept.</p>
 
 <h2>The Silent Success</h2>
 
@@ -593,7 +593,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Looking back, my perfectionism wasn't really about protecting users. It was about protecting myself from being wrong.</p>
 
-<p>But by holding the product back, I wasn't avoiding failure—I was prolonging user pain.</p>
+<p>But by holding the product back, I wasn't avoiding failure, I was prolonging user pain.</p>
 
 <p>The MyCornerstone Upgrade Service ultimately helped thousands of veterinary practices stay current, reduced support burden, and gave doctors their nights back.</p>
 
