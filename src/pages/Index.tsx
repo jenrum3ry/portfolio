@@ -51,7 +51,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
               { number: "15+", label: "Years Experience", icon: Microscope },
-              { number: "14+", label: "User Studies", icon: Users },
+              { number: "500+", label: "User Interviews Conducted", icon: Users },
               { number: "0-to-1", label: "Builder", icon: Zap },
             ].map((stat, index) => (
               <div
