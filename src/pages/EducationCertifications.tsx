@@ -282,24 +282,14 @@ const EducationCertifications = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-3 mt-2">
-                  <a
-                    href="https://www.scrumalliance.org/community/profile/jrumery3"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-body text-xs text-primary hover:underline"
-                  >
-                    View Profile →
-                  </a>
-                  <a
-                    href="/portfolio/Jennifer%20Rumery-ScrumAlliance_CSPO_Certificate.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-body text-xs text-primary hover:underline"
-                  >
-                    Download Certificate →
-                  </a>
-                </div>
+                <a
+                  href="https://www.scrumalliance.org/community/profile/jrumery3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-xs text-primary hover:underline mt-2"
+                >
+                  View Profile →
+                </a>
               </div>
 
               {/* A-CSPO Certification */}
@@ -325,24 +315,14 @@ const EducationCertifications = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-3 mt-2">
-                  <a
-                    href="https://www.scrumalliance.org/community/profile/jrumery3"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-body text-xs text-primary hover:underline"
-                  >
-                    View Profile →
-                  </a>
-                  <a
-                    href="/portfolio/Jennifer%20Rumery-ScrumAlliance_A-CSPO_Certificate.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-body text-xs text-primary hover:underline"
-                  >
-                    Download Certificate →
-                  </a>
-                </div>
+                <a
+                  href="https://www.scrumalliance.org/community/profile/jrumery3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-xs text-primary hover:underline mt-2"
+                >
+                  View Profile →
+                </a>
               </div>
             </div>
 
