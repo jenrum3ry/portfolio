@@ -25,13 +25,16 @@ const Index = () => {
               I bridge research insights to{" "}
               <span className="text-primary italic">technical execution in complex domains</span>
             </h1>
-            <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-10 max-w-3xl">
+            <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-6 max-w-3xl">
               I'm a product manager obsessed with uncovering the hidden friction that blocks real users.
               My 15+ years in healthcare taught me how to translate complex domain knowledge into intuitive
               products - and I bring that same methodology to whatever I build. I combine ethnographic research,
               AI/ML product experience, and systematic execution to ship products that solve problems others
-              don't even see yet. I'm looking for Series B-D companies where I can lead end-to-end product
-              strategy from user research to shipped products.
+              don't even see yet.
+            </p>
+            <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-10 max-w-3xl">
+              I'm interested in joining Series B-D companies where I can lead end-to-end product
+              strategy - from user research through shipped products that scale.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="font-body">
@@ -79,10 +82,10 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
-              What I Do
+              How I Work
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
-              Research-driven products that solve real problems
+              I find the problems hiding beneath feature requests
             </h2>
             <div className="space-y-6 font-body text-lg text-foreground/80 leading-[1.75]">
               <p>
@@ -206,8 +209,8 @@ const Index = () => {
                 title: "Cross-Functional Product Leadership",
                 company: "Product Execution",
                 description:
-                  "Led 3 distributed teams across 5 time zones. Shipped quarterly roadmap 10% under budget while maintaining 95% team satisfaction scores and 98% on-time delivery rate with zero critical production incidents.",
-                tags: ["3 Teams", "5 Time Zones", "95% Satisfaction"],
+                  "Led 3 distributed teams across 5 time zones to ship quarterly roadmap with 95% team satisfaction and zero critical production incidents. Secured stakeholder confidence through transparent communication and consistent delivery.",
+                tags: ["3 Teams, 5 Timezones", "95% Team Satisfaction", "Zero Incidents"],
               },
             ].map((project, index) => (
               <Link
