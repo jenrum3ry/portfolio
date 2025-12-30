@@ -53,18 +53,22 @@ const EducationCertifications = () => {
                 {
                   name: "Strategic Growth",
                   assertionId: "icHl4vFGSTO0dvBlMgOvNA",
+                  imagePath: "/UW Madison Wisconsin Strategic Growth.png",
                 },
                 {
                   name: "Strategic Innovation",
                   assertionId: "vbQmr7DaSJanmgI0ndgEqw",
+                  imagePath: "/UW Madison Wisconsin Strategic Innovation.png",
                 },
                 {
                   name: "Consulting",
                   assertionId: "G99EBvJ0S0uxrWst2v7P6w",
+                  imagePath: "/UW Madison Wisconsin Consulting.png",
                 },
                 {
                   name: "Business Analytics",
                   assertionId: "GI3U8UwhSY2Mn_7y7jwlCw",
+                  imagePath: "/UW Madison Wisconsin Business Analytics.png",
                 }
               ].map((badge, index) => (
                 <a
@@ -77,7 +81,7 @@ const EducationCertifications = () => {
                 >
                   <div className="w-24 h-24 mb-3 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
                     <img
-                      src={`https://api.badgr.io/public/assertions/${badge.assertionId}/image`}
+                      src={badge.imagePath}
                       alt={`${badge.name} Badge`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                       loading="lazy"
