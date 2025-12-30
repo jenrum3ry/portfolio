@@ -131,6 +131,8 @@ export const blogPosts: BlogPost[] = [
 
 <p>The problem wasn't the framework. The problem was that I'd confused scoring with strategy.</p>
 
+<p>Credit where it's due: when Intercom's Sean McBride <a href="https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/" target="_blank" rel="noopener noreferrer">created RICE</a>, he was solving a genuine problem. Teams needed a way to compare wildly different initiatives without letting personal bias dominate. RICE gave them that. But here's what I discovered: having an objective method for scoring doesn't mean you're solving the right problem. You can be rigorously quantifying the wrong question.</p>
+
 <p>Traditional prioritization frameworks like RICE, WSJF, or ICE promise to make hard decisions easy. Just plug in the numbers, sort by score, and your roadmap writes itself. But real prioritization isn't a math problem. It's a judgment problem that requires understanding context that no formula can capture.</p>
 
 <h2>Why Scoring Frameworks Fail</h2>
@@ -139,55 +141,43 @@ export const blogPosts: BlogPost[] = [
 
 <p>But here's what those frameworks can't tell you:</p>
 
-<p><strong>They can't see strategic momentum.</strong> Sometimes the "right" next move isn't the highest-scoring item. It's the one that unlocks three other things you want to build. A low-scoring API endpoint might be worth building now because it enables the integration strategy you're betting on for next year.</p>
+<p><strong>They can't see strategic momentum.</strong><br>Sometimes the "right" next move isn't the highest-scoring item. It's the one that unlocks three other things you want to build. A low-scoring API endpoint might be worth building now because it enables the integration strategy you're betting on for next year.</p>
 
-<p><strong>They can't account for team capacity reality.</strong> Your scoring might say Feature A (867) beats Feature B (654), but if Feature A requires three months of dedicated backend work and you have exactly one backend engineer who's already committed to a critical migration, the score is meaningless. Real teams have constraints that spreadsheets don't see.</p>
+<p><strong>They can't account for team capacity reality.</strong><br>Your scoring might say Feature A (867) beats Feature B (654), but if Feature A requires three months of dedicated backend work and you have exactly one backend engineer who's already committed to a critical migration, the score is meaningless. Real teams have constraints that spreadsheets don't see.</p>
 
-<p><strong>They can't capture learning value.</strong> Building something to validate an assumption is fundamentally different from building something to ship at scale. A lightweight prototype that scores low on "reach" might teach you whether your entire product direction makes sense. That learning is worth more than any individual feature.</p>
+<p><strong>They can't capture learning value.</strong><br>Building something to validate an assumption is fundamentally different from building something to ship at scale. A lightweight prototype that scores low on "reach" might teach you whether your entire product direction makes sense. That learning is worth more than any individual feature.</p>
 
-<p><strong>They create false precision.</strong> When you assign "Confidence: 70%" vs "Confidence: 65%", what does that actually mean? You're quantifying intuition, then treating those numbers as if they're measurements. The difference between a RICE score of 758 and 742 is noise, not signal. But once it's in the spreadsheet, we treat 758 as objectively better.</p>
+<p><strong>They create false precision.</strong><br>When you assign "Confidence: 70%" vs "Confidence: 65%", what does that actually mean? You're quantifying intuition, then treating those numbers as if they're measurements. The difference between a RICE score of 758 and 742 is noise, not signal. But once it's in the spreadsheet, we treat 758 as objectively better.</p>
 
-<p><strong>They optimize for features, not outcomes.</strong> Frameworks ask "how valuable is this feature?" But the real question is "what outcome are we trying to move, and what's the fastest path to move it?" Sometimes the answer isn't building anything new. It's fixing something that's broken, improving something that exists, or removing something that's confusing.</p>
+<p><strong>They optimize for features, not outcomes.</strong><br>Frameworks ask "how valuable is this feature?" But the real question is "what outcome are we trying to move, and what's the fastest path to move it?" Sometimes the answer isn't building anything new. It's fixing something that's broken, improving something that exists, or removing something that's confusing.</p>
 
 <p>The moment you realize your highest-scoring items aren't moving your most important metric is the moment you understand that scoring isn't strategy.</p>
 
-<div class="section-callout">
 <h2>What Actually Drives Prioritization</h2>
-</div>
 
 <p>So if frameworks don't work, what does? In my experience, good prioritization comes from asking better questions:</p>
 
-<h3>1. What's blocking our most important outcome?</h3>
-
-<p>Start with the metric or outcome that matters most right now. Not the comprehensive list of things that would be nice to improve. The one thing that, if you moved it significantly, would change how the business performs.</p>
+<p><strong>1. What's blocking our most important outcome?</strong><br>Start with the metric or outcome that matters most right now. Not the comprehensive list of things that would be nice to improve. The one thing that, if you moved it significantly, would change how the business performs.</p>
 
 <p>Then ask: what's preventing us from moving that number?</p>
 
 <p>Sometimes it's a missing feature. But often it's a broken experience, a confusing flow, a reliability issue, or a gap in the customer's workflow that your product doesn't address. The highest-leverage work is often invisible to feature-based frameworks because it's about fixing or improving, not adding.</p>
 
-<h3>2. What can only we do right now?</h3>
-
-<p>Teams have unique contexts that change what's possible. Your competitor might be able to build Feature X faster, but only you have the infrastructure to build Feature Y. Your backend team might be deep in a migration that makes certain work nearly free but other work impossibly expensive.</p>
+<p><strong>2. What can only we do right now?</strong><br>Teams have unique contexts that change what's possible. Your competitor might be able to build Feature X faster, but only you have the infrastructure to build Feature Y. Your backend team might be deep in a migration that makes certain work nearly free but other work impossibly expensive.</p>
 
 <p>Good prioritization accounts for what your specific team, in this specific moment, is uniquely positioned to do well.</p>
 
-<h3>3. What do we need to learn?</h3>
-
-<p>Not every item on your roadmap needs to ship to customers at scale. Some things exist purely to validate assumptions. When you're making a big bet, the highest-leverage work might be a two-week prototype that proves (or disproves) that the bet is worth making.</p>
+<p><strong>3. What do we need to learn?</strong><br>Not every item on your roadmap needs to ship to customers at scale. Some things exist purely to validate assumptions. When you're making a big bet, the highest-leverage work might be a two-week prototype that proves (or disproves) that the bet is worth making.</p>
 
 <p>Frameworks struggle with this because learning doesn't score well on "reach" or "impact." But learning compounds. The information you gain from a small experiment can save months of building the wrong thing.</p>
 
-<h3>4. What builds vs. what unlocks?</h3>
-
-<p>Some features are endpoints. They deliver value, but they're standalone. Other features are foundations. They unlock entire categories of future work.</p>
+<p><strong>4. What builds vs. what unlocks?</strong><br>Some features are endpoints. They deliver value, but they're standalone. Other features are foundations. They unlock entire categories of future work.</p>
 
 <p>A platform API might score low because it has no direct user-facing impact. But if it enables ten high-value integrations you want to build over the next year, it's not competing with those integrations. It's enabling them.</p>
 
 <p>This is where strategic sequencing matters more than scoring. Sometimes you build the lower-scoring thing first because it makes everything else possible.</p>
 
-<h3>5. What's the cost of waiting?</h3>
-
-<p>Not all delayed work costs the same. Delaying a nice-to-have feature by two quarters barely matters. Delaying the fix for an issue that's causing 20% of your customers to churn is catastrophically expensive.</p>
+<p><strong>5. What's the cost of waiting?</strong><br>Not all delayed work costs the same. Delaying a nice-to-have feature by two quarters barely matters. Delaying the fix for an issue that's causing 20% of your customers to churn is catastrophically expensive.</p>
 
 <p>Frameworks treat all delayed work equally. Reality doesn't.</p>
 
@@ -195,13 +185,13 @@ export const blogPosts: BlogPost[] = [
 
 <p>Here's what I've found actually works:</p>
 
-<p><strong>Start with clarity on your current goal.</strong> Not your goals (plural). Your goal (singular). What's the one outcome you're trying to move right now? Get specific. "Improve adoption" is too vague. "Get 40% of trial users to complete their first project within 7 days" is clear.</p>
+<p><strong>Start with clarity on your current goal.</strong><br>Not your goals (plural). Your goal (singular). What's the one outcome you're trying to move right now? Get specific. "Improve adoption" is too vague. "Get 40% of trial users to complete their first project within 7 days" is clear.</p>
 
-<p><strong>Map everything to that goal.</strong> For each potential item, don't score it. Just ask: if we did this, would it meaningfully move our goal? If yes, by how much? If no, why are we considering it?</p>
+<p><strong>Map everything to that goal.</strong><br>For each potential item, don't score it. Just ask: if we did this, would it meaningfully move our goal? If yes, by how much? If no, why are we considering it?</p>
 
 <p>This forces you to articulate your assumptions. "Feature X will improve conversion because users are confused by the current onboarding flow" is a hypothesis you can discuss and validate. "Feature X scores 847" shuts down that conversation.</p>
 
-<p><strong>Separate bets into categories.</strong> Not everything competes. You're not choosing between fixing a critical bug and building a new feature. Those are different budgets. I typically think in three buckets:</p>
+<p><strong>Separate bets into categories.</strong><br>Not everything competes. You're not choosing between fixing a critical bug and building a new feature. Those are different budgets. I typically think in three buckets:</p>
 
 <ul>
 <li><strong>Reliability & Performance</strong> - Things that need to work correctly before you build new things</li>
@@ -211,15 +201,16 @@ export const blogPosts: BlogPost[] = [
 
 <p>Each bucket gets capacity. Within each bucket, you prioritize. But you don't pit a platform API against a critical bug fix. They're playing different games.</p>
 
-<p><strong>Include "fast follower" capacity.</strong> This is the most important thing most teams miss. If you plan your roadmap to 100% capacity, you have no space to respond when you learn something important or when an unexpected opportunity appears.</p>
+<p><strong>Include "fast follower" capacity.</strong><br>This is the most important thing most teams miss. If you plan your roadmap to 100% capacity, you have no space to respond when you learn something important or when an unexpected opportunity appears.</p>
 
 <p>I typically allocate 15-20% of capacity to "fast follow work" - things we'll decide on mid-quarter based on what we learn. This isn't slack time. It's strategic flexibility.</p>
 
-<p><strong>Make your assumptions explicit.</strong> For anything significant, write down: "We're betting that X will drive outcome Y because we believe Z." This does two things. First, it surfaces when you're actually just guessing. Second, it makes it obvious when you've learned something that invalidates the bet.</p>
+<p><strong>Make your assumptions explicit.</strong><br>For anything significant, write down: "We're betting that X will drive outcome Y because we believe Z." This does two things. First, it surfaces when you're actually just guessing. Second, it makes it obvious when you've learned something that invalidates the bet.</p>
 
 <p>When you write "We're building Feature X to improve adoption because users are confused by the current flow," you can check: are users actually confused by the current flow? How do we know? What would prove us wrong? If you can't answer those questions, you're not ready to build.</p>
 
-<p><strong>Review with skepticism, not scoring.</strong> When reviewing prioritization, don't ask "what are the scores?" Ask:</p>
+<p><strong>Review with skepticism, not scoring.</strong><br>When reviewing prioritization, don't ask "what are the scores?" Ask:</p>
+
 <ul>
 <li>If we only shipped one thing this quarter, which would it be?</li>
 <li>What are we assuming needs to be true for this priority to be right?</li>
@@ -234,6 +225,7 @@ export const blogPosts: BlogPost[] = [
 <p>I'm not anti-framework. I'm anti-framework-worship.</p>
 
 <p>Scoring systems are useful when:</p>
+
 <ul>
 <li>You're comparing similar types of work (multiple feature requests, multiple bug fixes)</li>
 <li>You need a quick filter to eliminate obvious low-value items</li>
@@ -248,18 +240,20 @@ export const blogPosts: BlogPost[] = [
 
 <p>So what does prioritization look like when you're not just sorting by RICE score?</p>
 
-<p><strong>You start with your goal.</strong> For us, it was: reduce time-to-first-value for new customers. Specifically, get 50% of trials to successfully complete their first project setup within 3 days.</p>
+<p><strong>You start with your goal.</strong><br>For us, it was: reduce time-to-first-value for new customers. Specifically, get 50% of trials to successfully complete their first project setup within 3 days.</p>
 
-<p><strong>You map the blockers.</strong> Through user research (mostly our lightweight UX teardowns), we found three main issues:</p>
-<ol>
+<p><strong>You map the blockers.</strong><br>Through user research (mostly our lightweight UX teardowns), we found three main issues:</p>
+
+<ul>
 <li>API credentials were confusing to generate</li>
 <li>The test data flow wasn't obvious</li>
 <li>Error messages didn't help users recover</li>
-</ol>
+</ul>
 
-<p><strong>You ask: what moves the needle most?</strong> All three mattered. But fixing error messages was fast (2 weeks) and would help even after we fixed the other issues. API credentials was the biggest blocker but required backend changes (6 weeks). Test data flow was medium complexity (4 weeks).</p>
+<p><strong>You ask: what moves the needle most?</strong><br>All three mattered. But fixing error messages was fast (2 weeks) and would help even after we fixed the other issues. API credentials was the biggest blocker but required backend changes (6 weeks). Test data flow was medium complexity (4 weeks).</p>
 
-<p><strong>You sequence strategically.</strong> We did:</p>
+<p><strong>You sequence strategically.</strong><br>We did:</p>
+
 <ol>
 <li>Error messages first (fast win, helped immediately)</li>
 <li>Test data flow second (meaningful improvement, unlocked better onboarding)</li>
@@ -275,6 +269,7 @@ export const blogPosts: BlogPost[] = [
 <p>Prioritization frameworks promise to make hard decisions easy. But hard decisions are hard because they require judgment about context, timing, constraints, and strategic fit that no formula can capture.</p>
 
 <p>The best prioritization I've seen doesn't come from better scoring. It comes from:</p>
+
 <ul>
 <li>Clearer goals</li>
 <li>Better understanding of what's actually blocking those goals</li>
