@@ -306,7 +306,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>So I picked up the phone and called five customers.</p>
 
-<p>Those five conversations changed our entire roadmap. We discovered that 60% of our planned features were solving problems our users didn't have, while the real issue—the one causing them to abandon our product—wasn't on our roadmap at all.</p>
+<p>Those five conversations changed our entire roadmap. We discovered that 60% of our planned features were solving problems our users didn't have, while the real issue - the one causing them to abandon our product - wasn't on our roadmap at all.</p>
 
 <p>That's when I learned: user research isn't about expensive methodology. It's about systematically learning from the people who use your product before you invest months building the wrong thing.</p>
 
@@ -334,7 +334,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>"At scale" doesn't mean "constantly" or "with huge sample sizes." It means building user research into your regular operating rhythm so that learning from users isn't a special event. It's just how you work.</p>
 
-<p>Over fifteen months, I conducted 14+ user studies—some formal, most informal. But the real impact wasn't from any single study. It was from building a system where talking to users was as normal as looking at analytics.</p>
+<p>Over fifteen months, I conducted 14+ user studies - some formal, most informal. But the real impact wasn't from any single study. It was from building a system where talking to users was as normal as looking at analytics.</p>
 
 <p>Here's what that looked like:</p>
 
@@ -342,7 +342,7 @@ export const blogPosts: BlogPost[] = [
 
 <p><strong>Lightweight observation sessions.</strong> Instead of formal usability testing, I'd ask users to share their screen and walk me through their actual workflow. Not a task I assigned them. The real thing they're trying to do. This is where you learn what's actually hard, not what's hard in your test scenario.</p>
 
-<p><strong>Structured but simple methodology.</strong> I developed what I call "UX Teardowns"—a repeatable approach that takes 45 minutes per session, requires no special tools, and generates insights you can act on immediately. The goal isn't comprehensive research. It's systematic learning.</p>
+<p><strong>Structured but simple methodology.</strong> I developed what I call "UX Teardowns" - a repeatable approach that takes 45 minutes per session, requires no special tools, and generates insights you can act on immediately. The goal isn't comprehensive research. It's systematic learning.</p>
 
 <p>The key is consistency over intensity. Five conversations every month for a year teaches you more than 60 conversations crammed into one month, because you're learning over time how things change, what patterns persist, and what your changes actually impact.</p>
 
@@ -366,7 +366,7 @@ export const blogPosts: BlogPost[] = [
 <li>Stay quiet and watch</li>
 <li>Note moments of hesitation, confusion, or workarounds</li>
 <li>Don't help them or explain how things "should" work</li>
-<li>Let awkward silences happen—that's when they verbalize their thinking</li>
+<li>Let awkward silences happen - that's when they verbalize their thinking</li>
 </ul>
 
 <p><strong>Key questions (10 minutes):</strong></p>
@@ -396,11 +396,11 @@ export const blogPosts: BlogPost[] = [
 
 <p><strong>The problem behind the feature request.</strong> A customer asked for "better filtering options." Watching her screen, I realized the issue wasn't the filters. It was that our search returned 300 results and she had to manually check each one because the preview didn't show the information she needed. We didn't need better filters. We needed better result previews.</p>
 
-<p><strong>The workaround that revealed broken assumptions.</strong> We saw multiple users keeping a separate spreadsheet to track something our product should have tracked. We thought they just didn't know about our tracking feature. Turned out they knew about it—they just couldn't trust it because it randomly dropped entries. We had a data integrity bug that analytics would never have shown us.</p>
+<p><strong>The workaround that revealed broken assumptions.</strong> We saw multiple users keeping a separate spreadsheet to track something our product should have tracked. We thought they just didn't know about our tracking feature. Turned out they knew about it - they just couldn't trust it because it randomly dropped entries. We had a data integrity bug that analytics would never have shown us.</p>
 
 <p><strong>The thing that almost made them churn.</strong> Our retention metrics looked fine. But asking "what almost made you stop using this?" revealed that 50% of new users hit a blocking technical issue in their first week. They only stayed because they'd already bought an annual subscription. We'd optimized onboarding conversion while completely missing the onboarding failure rate.</p>
 
-<p><strong>The surprisingly critical feature we'd ignored.</strong> We'd ranked our help documentation as low priority—users "rarely" clicked on it. Turns out they rarely clicked on it because they couldn't find it. When we improved discoverability, usage jumped 300%. Users had needed help all along. We just made it impossible to access.</p>
+<p><strong>The surprisingly critical feature we'd ignored.</strong> We'd ranked our help documentation as low priority - users "rarely" clicked on it. Turns out they rarely clicked on it because they couldn't find it. When we improved discoverability, usage jumped 300%. Users had needed help all along. We just made it impossible to access.</p>
 
 <p>This kind of insight doesn't come from surveys or analytics. It comes from watching real people try to do real things.</p>
 
