@@ -9,11 +9,11 @@ export const caseStudies: CaseStudy[] = [
     description:
       "Developed systematic research approach across 14+ user studies that uncovered 50% of users facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
     problem:
-      "AI-powered clinical documentation tools were launching across 1,300+ veterinary practices with unknown adoption patterns. Traditional user surveys and product analytics weren't revealing why adoption varied so dramatically between practices—some thrived while others abandoned the tools entirely within weeks.",
+      "AI-powered clinical documentation tools were launching across 1,300+ veterinary practices with unknown adoption patterns. Traditional user surveys and product analytics weren't revealing why adoption varied so dramatically between practices - some thrived while others abandoned the tools entirely within weeks.",
     myRole:
       "Led user research strategy and execution. Designed and conducted 14+ ethnographic studies, developed the UX Teardown methodology, synthesized insights into actionable roadmap changes, and presented findings to executive leadership that shifted product strategy.",
     approach:
-      "I developed a systematic, ethnographic research approach that combined journey mapping, visual annotation, and pattern analysis. Rather than asking users what they wanted, I watched them work—mapping complete workflows across 60+ screens and 7 workflow stages, identifying friction points in real time, and using color-coded tagging to surface patterns across multiple practices. This translated directly into prioritized product roadmaps.",
+      "I developed a systematic, ethnographic research approach that combined journey mapping, visual annotation, and pattern analysis. Rather than asking users what they wanted, I watched them work - mapping complete workflows across 60+ screens and 7 workflow stages, identifying friction points in real time, and using color-coded tagging to surface patterns across multiple practices. This translated directly into prioritized product roadmaps.",
     challenge:
       "AI-powered clinical documentation tools were launching across 1,300+ veterinary practices with unknown adoption patterns. The product team needed to understand why some practices thrived while others struggled, but traditional user surveys weren't revealing the root causes.",
     solution:
@@ -50,7 +50,7 @@ export const caseStudies: CaseStudy[] = [
     approach:
       "Rather than building in isolation, I established a tight feedback loop with real veterinarians from day one. Launched with a minimal viable product focused on patient summarization (the highest-value use case), recruited 200+ beta users, analyzed every session for accuracy and usability issues, and iterated weekly based on actual usage patterns rather than assumptions.",
     challenge:
-      "Veterinarians needed AI-powered documentation tools to reclaim clinical time, but adoption would only succeed if the AI was accurate, trustworthy, and integrated seamlessly into existing workflows. Traditional waterfall development would have taken 6+ months—too slow for a competitive market.",
+      "Veterinarians needed AI-powered documentation tools to reclaim clinical time, but adoption would only succeed if the AI was accurate, trustworthy, and integrated seamlessly into existing workflows. Traditional waterfall development would have taken 6+ months - too slow for a competitive market.",
     solution:
       "Led rapid product development using a beta-first approach. Defined MVP scope (patient summarization only), coordinated cross-functional teams across product, engineering, ML, and design, launched beta program within 6 weeks, and established continuous feedback loops that informed daily iteration. Prioritized accuracy over features, ensuring 95% accuracy threshold before expanding use cases.",
     results: [
@@ -68,7 +68,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "User Retention", value: "85%" }
     ],
     learnings:
-      "The biggest learning was that shipping fast doesn't mean shipping recklessly. By focusing relentlessly on one high-value use case (patient summarization) and setting a clear accuracy threshold (95%), we maintained quality while moving at startup speed. The beta program was essential—real veterinarians surfaced edge cases and workflow issues that we would never have anticipated internally.",
+      "The biggest learning was that shipping fast doesn't mean shipping recklessly. By focusing relentlessly on one high-value use case (patient summarization) and setting a clear accuracy threshold (95%), we maintained quality while moving at startup speed. The beta program was essential - real veterinarians surfaced edge cases and workflow issues that we would never have anticipated internally.",
     tags: ["AI Product", "0-to-1", "Production Launch"],
     image: "",
     imageAlt: ""
@@ -105,7 +105,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Support Ticket Reduction", value: "40%" }
     ],
     learnings:
-      "Platform products require the same user research rigor as customer-facing products. Treating developers as users—interviewing them, mapping their workflows, prioritizing their friction points—was just as valuable as traditional user research. The other key learning was that advocating for infrastructure isn't about technology for its own sake; it's about quantifying business risk and showing leadership why reliability matters to revenue.",
+      "Platform products require the same user research rigor as customer-facing products. Treating developers as users - interviewing them, mapping their workflows, prioritizing their friction points - was just as valuable as traditional user research. The other key learning was that advocating for infrastructure isn't about technology for its own sake; it's about quantifying business risk and showing leadership why reliability matters to revenue.",
     tags: ["Platform PM", "20+ Integrations", "Developer Experience"],
     image: "",
     imageAlt: ""
@@ -142,7 +142,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "On-Time Delivery", value: "98%" }
     ],
     learnings:
-      "The biggest lesson was that distributed teams require intentional design. You can't replicate in-person rituals and expect them to work across time zones. Async-first with intentional sync points worked far better than trying to schedule everything synchronously. The other key insight was that PM's role as a bridge between technical and business perspectives becomes even more critical when teams are distributed—clarity and over-communication are not optional.",
+      "The biggest lesson was that distributed teams require intentional design. You can't replicate in-person rituals and expect them to work across time zones. Async-first with intentional sync points worked far better than trying to schedule everything synchronously. The other key insight was that PM's role as a bridge between technical and business perspectives becomes even more critical when teams are distributed - clarity and over-communication are not optional.",
     tags: ["Leadership", "Execution", "Cross-Functional"],
     image: "",
     imageAlt: ""
@@ -179,7 +179,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Content Update Time", value: "Hours vs Months" }
     ],
     learnings:
-      "The most valuable insight was that phased migration based on actual usage data dramatically reduced risk compared to a big-bang approach. By analyzing a full year of support interactions, we identified the 20% of help content that addressed 80% of user needs. This allowed us to validate the platform with real users before committing to full-scale migration. The other key learning was that cross-functional coordination at this scale requires explicit process design—we couldn't rely on ad-hoc communication across 7 different teams.",
+      "The most valuable insight was that phased migration based on actual usage data dramatically reduced risk compared to a big-bang approach. By analyzing a full year of support interactions, we identified the 20% of help content that addressed 80% of user needs. This allowed us to validate the platform with real users before committing to full-scale migration. The other key learning was that cross-functional coordination at this scale requires explicit process design - we couldn't rely on ad-hoc communication across 7 different teams.",
     tags: ["Product Strategy", "Platform Development", "Cross-Functional Leadership"],
     image: "Cornerstone_Help_Hub.png",
     imageAlt: "Cornerstone Help Hub modern interface showing searchable help center with category navigation and virtual assistant",

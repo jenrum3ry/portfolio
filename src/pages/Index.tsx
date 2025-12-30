@@ -28,7 +28,7 @@ const Index = () => {
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-10 max-w-3xl">
               I'm a product manager obsessed with uncovering the hidden friction that blocks real users.
               My 15+ years in healthcare taught me how to translate complex domain knowledge into intuitive
-              products—and I bring that same methodology to whatever I build. I combine ethnographic research,
+              products - and I bring that same methodology to whatever I build. I combine ethnographic research,
               AI/ML product experience, and systematic execution to ship products that solve problems others
               don't even see yet. I'm looking for Series B-D companies where I can lead end-to-end product
               strategy from user research to shipped products.
@@ -87,15 +87,15 @@ const Index = () => {
             <div className="space-y-6 font-body text-lg text-foreground/80 leading-[1.75]">
               <p>
                 My approach to product development is built on a foundation of deep user understanding.
-                I've spent 15+ years in healthcare technology—from enterprise practice management systems
-                to AI-powered clinical tools—learning how to translate complex domain knowledge into
+                I've spent 15+ years in healthcare technology - from enterprise practice management systems
+                to AI-powered clinical tools - learning how to translate complex domain knowledge into
                 products that clinicians actually want to use. This expertise transfers to any complex
                 domain where systematic research reveals insights that transform product strategy.
               </p>
               <p>
                 I've developed a proprietary methodology that combines ethnographic research with systematic
                 execution. Through 500+ user interviews across healthcare, fintech, and consumer applications,
-                I've refined an approach that uncovers the friction points generic surveys miss—like discovering
+                I've refined an approach that uncovers the friction points generic surveys miss - like discovering
                 that 50% of users faced blocking technical issues, shifting entire product roadmaps from
                 feature polish to foundational reliability.
               </p>
@@ -125,17 +125,17 @@ const Index = () => {
                 {
                   step: "01",
                   title: "Research",
-                  description: "I conduct ethnographic studies and user interviews to uncover the hidden friction points that generic surveys miss—watching real workflows, identifying workarounds, and understanding constraints."
+                  description: "I conduct ethnographic studies and user interviews to uncover the hidden friction points that generic surveys miss - watching real workflows, identifying workarounds, and understanding constraints."
                 },
                 {
                   step: "02",
                   title: "Synthesize",
-                  description: "I translate insights into prioritized roadmaps using frameworks like Jobs to Be Done and value stream mapping—turning patterns into actionable product strategy."
+                  description: "I translate insights into prioritized roadmaps using frameworks like Jobs to Be Done and value stream mapping - turning patterns into actionable product strategy."
                 },
                 {
                   step: "03",
                   title: "Execute",
-                  description: "I ship fast and stay close to users, iterating based on real usage data rather than internal opinions—building products that solve validated problems, not imagined ones."
+                  description: "I ship fast and stay close to users, iterating based on real usage data rather than internal opinions - building products that solve validated problems, not imagined ones."
                 }
               ].map((item, index) => (
                 <div
