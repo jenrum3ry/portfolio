@@ -23,8 +23,6 @@ export const blogPosts: BlogPost[] = [
 
 <p>I learned that being technically right doesn't matter if you're solving the wrong part of the problem.</p>
 
-<img src="/portfolio/being-wrong-faster-infographic.png" alt="Being Wrong Faster Framework - comparing elaborate planning vs quick learning cycles" />
-
 <p>The best PMs I know aren't the ones who are right most often. They're the ones who figure out they're wrong the fastest.</p>
 
 <p>You'll hear this called "failing fast" in startup circles, a principle from <a href="https://theleanstartup.com/" target="_blank" rel="noopener noreferrer">Eric Ries' Lean Startup methodology</a>, but that framing has always bothered me. Failure implies recklessness. What we're actually doing is building systems to surface bad assumptions before they become expensive mistakes. It's not about failing - it's about being wrong faster.</p>
@@ -140,6 +138,8 @@ export const blogPosts: BlogPost[] = [
 <p>If I can't answer these in under 5 minutes, I'm not ready to build.</p>
 
 <h2>The Takeaway</h2>
+
+<img src="/portfolio/being-wrong-faster-infographic.png" alt="Being Wrong Faster Framework - comparing elaborate planning vs quick learning cycles" />
 
 <p>The myth of product management is that great PMs have great instincts. They just know what to build.</p>
 
