@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>I learned that being technically right doesn't matter if you're solving the wrong part of the problem.</p>
 
-<img src="/being-wrong-faster-infographic.png" alt="Being Wrong Faster Framework - comparing elaborate planning vs quick learning cycles" />
+<img src="/portfolio/being-wrong-faster-infographic.png" alt="Being Wrong Faster Framework - comparing elaborate planning vs quick learning cycles" />
 
 <p>The best PMs I know aren't the ones who are right most often. They're the ones who figure out they're wrong the fastest.</p>
 
