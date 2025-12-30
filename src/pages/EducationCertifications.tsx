@@ -52,25 +52,25 @@ const EducationCertifications = () => {
               {[
                 {
                   name: "Strategic Growth",
-                  imagePath: "/UW%20Madison%20Wisconsin%20Strategic%20Growth.png",
+                  imagePath: "/portfolio/UW%20Madison%20Wisconsin%20Strategic%20Growth.png",
                   issuedDate: "04/09/2024",
                   description: "Those who have earned the Strategic Growth badge have developed skills related to growth strategies, growth marketing strategies, and digital strategies used by managers and directors of successful organizations."
                 },
                 {
                   name: "Strategic Innovation",
-                  imagePath: "/UW%20Madison%20Wisconsin%20Strategic%20Innovation.png",
+                  imagePath: "/portfolio/UW%20Madison%20Wisconsin%20Strategic%20Innovation.png",
                   issuedDate: "07/10/2024",
                   description: "Those who have earned the Strategic Innovation badge have developed skills related to Strategic Management of Innovation, Product Management, and Data Technology for Business Analytics."
                 },
                 {
                   name: "Consulting",
-                  imagePath: "/UW%20Madison%20Wisconsin%20Consulting.png",
+                  imagePath: "/portfolio/UW%20Madison%20Wisconsin%20Consulting.png",
                   issuedDate: "10/02/2024",
                   description: "Those who have earned the Wisconsin School of Business Consulting badge have developed problem-solving, strategy implementation, and change management skills used by professional consultants, managers, and directors of successful organizations."
                 },
                 {
                   name: "Business Analytics",
-                  imagePath: "/UW%20Madison%20Wisconsin%20Business%20Analytics.png",
+                  imagePath: "/portfolio/UW%20Madison%20Wisconsin%20Business%20Analytics.png",
                   issuedDate: "12/25/2024",
                   description: "Those who have earned the Business Analytics badge have developed skills and demonstrated competency through rigorous assessment for making data-driven decisions, including database management, data visualization and communication."
                 }
