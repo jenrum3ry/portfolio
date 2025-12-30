@@ -11,4 +11,12 @@ export interface CaseStudy {
   image: string;
   imageAlt: string;
   liveUrl?: string;
+  problem?: string;
+  myRole?: string;
+  approach?: string;
+  learnings?: string;
+  metrics?: {
+    label: string;
+    value: string;
+  }[];
 }

@@ -83,27 +83,57 @@ const CaseStudies = () => {
                   )}
 
                   <div className="space-y-4 mb-6">
-                    <div>
-                      <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
-                        THE CHALLENGE
-                      </h3>
-                      <p className="font-body text-sm text-muted-foreground">
-                        {study.challenge}
-                      </p>
-                    </div>
-                    <div>
-                      <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
-                        THE SOLUTION
-                      </h3>
-                      <p className="font-body text-sm text-muted-foreground">
-                        {study.solution}
-                      </p>
-                    </div>
+                    {study.problem && (
+                      <div>
+                        <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
+                          PROBLEM
+                        </h3>
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                          {study.problem}
+                        </p>
+                      </div>
+                    )}
+                    {study.myRole && (
+                      <div>
+                        <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
+                          MY ROLE
+                        </h3>
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                          {study.myRole}
+                        </p>
+                      </div>
+                    )}
+                    {study.approach && (
+                      <div>
+                        <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
+                          APPROACH
+                        </h3>
+                        <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                          {study.approach}
+                        </p>
+                      </div>
+                    )}
                   </div>
 
-                  <div className="bg-card border border-border rounded-lg p-4">
+                  {/* Metrics */}
+                  {study.metrics && study.metrics.length > 0 && (
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      {study.metrics.map((metric) => (
+                        <div key={metric.label} className="bg-secondary/50 border border-border rounded-lg p-4 text-center">
+                          <p className="font-display text-3xl md:text-4xl font-bold text-primary mb-1">
+                            {metric.value}
+                          </p>
+                          <p className="font-body text-xs text-muted-foreground uppercase tracking-wider">
+                            {metric.label}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="bg-card border border-border rounded-lg p-4 mb-6">
                     <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-3">
-                      KEY RESULTS
+                      RESULTS
                     </h3>
                     <ul className="space-y-2">
                       {study.results.map((result) => (
@@ -117,6 +147,17 @@ const CaseStudies = () => {
                       ))}
                     </ul>
                   </div>
+
+                  {study.learnings && (
+                    <div className="bg-primary/5 border-l-4 border-primary rounded-r-lg p-4">
+                      <h3 className="font-body text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
+                        LEARNINGS
+                      </h3>
+                      <p className="font-body text-sm text-muted-foreground leading-relaxed italic">
+                        {study.learnings}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </article>
             ))}
