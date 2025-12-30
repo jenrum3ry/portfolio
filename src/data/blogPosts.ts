@@ -6,22 +6,26 @@ export const blogPosts: BlogPost[] = [
     slug: "being-wrong-faster",
     title: "The PM's Real Job: Being Wrong Faster",
     excerpt: "Beyond 'fail fast': Why the best product managers focus on being wrong faster, and how to build systems that expose bad assumptions before they become expensive mistakes.",
-    date: "December 5, 2025",
+    date: "December 30, 2025",
     readTime: "12 min read",
     category: "Product Leadership",
     image: "/portfolio/pm-strategy-illustration.png",
     imageAlt: "Abstract illustration representing product strategy and iteration",
     content: `<h1>The PM's Real Job: Being Wrong Faster</h1>
 
-<p>In my first PM role, I spent three months building a feature I was absolutely certain would transform how our customers worked. I'd surveyed users, analyzed competitors, and created detailed specs. Leadership loved the vision. Engineering was excited about the technical challenge. We shipped on schedule.</p>
+<p>In a previous PM role, I inherited an AI feature that had been live for several months with disappointing adoption numbers. The AI itself was solid - it provided clinically sound recommendations. But we'd made a critical workflow mistake.</p>
 
-<p>Adoption was 12%. We'd spent three months and $180K in engineering time building something almost no one used.</p>
+<p>Users would generate AI recommendations, review them, and then manually re-enter everything into their system of record. We'd built something technically impressive that failed the "so what?" test.</p>
 
-<p>I'd been so focused on being right - on having the answers, demonstrating conviction, showing leadership I knew what to build - that I'd optimized for confidence instead of truth. I learned the hard way that the PM's real job isn't knowing what to build. It's discovering what's worth building before you waste months building the wrong thing.</p>
+<p>"I'm not going to use something that doubles my documentation time," one user told us bluntly.</p>
+
+<p>After we integrated the AI outputs directly into the workflow - auto-populating fields so users could review and approve rather than retype from scratch - adoption more than tripled. The AI hadn't changed. The integration had.</p>
+
+<p>I learned that being technically right doesn't matter if you're solving the wrong part of the problem.</p>
 
 <p>The best PMs I know aren't the ones who are right most often. They're the ones who figure out they're wrong the fastest.</p>
 
-<p>You'll hear this called "failing fast" in startup circles, but that framing has always bothered me. Failure implies recklessness. What we're actually doing is building systems to surface bad assumptions before they become expensive mistakes. It's not about failing - it's about being wrong faster.</p>
+<p>You'll hear this called "failing fast" in startup circles, a principle from <a href="https://theleanstartup.com/" target="_blank" rel="noopener noreferrer">Eric Ries' Lean Startup methodology</a>, but that framing has always bothered me. Failure implies recklessness. What we're actually doing is building systems to surface bad assumptions before they become expensive mistakes. It's not about failing - it's about being wrong faster.</p>
 
 <h2>The Confidence Trap</h2>
 
@@ -81,9 +85,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Certainty is seductive because it simplifies decision-making. When you're certain, you don't need to maintain multiple hypotheses. You don't need to build in flexibility. You don't need to keep listening for signals that you might be wrong. You just execute.</p>
 
-<p>I once saw a PM so certain about a dashboard redesign that they ignored user testing showing people couldn't find basic functions. "They'll learn the new interface," the PM insisted. Three months post-launch, support tickets were up 40%. Certainty made them blind to evidence.</p>
-
-<p>But certainty also makes you blind. When you're convinced you're right, you stop looking for evidence that you're not. You interpret ambiguous signals in ways that confirm your existing beliefs. You dismiss contradictory feedback as outliers or misunderstandings.</p>
+<p>I once saw a PM so certain about a dashboard redesign that they ignored user testing showing people couldn't find basic functions. "They'll learn the new interface," the PM insisted. Three months post-launch, support tickets were up 40%. Certainty made them blind to evidence. When you're convinced you're right, you stop looking for evidence that you're not. You interpret ambiguous signals in ways that confirm your existing beliefs. You dismiss contradictory feedback as outliers or misunderstandings.</p>
 
 <p>This is why the best PMs I know maintain a healthy skepticism of their own ideas. Not because they lack conviction, but because they know that conviction without continuous validation is just a comfortable way to build the wrong thing.</p>
 
@@ -95,7 +97,13 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Start with explicit assumptions</h3>
 
-<p>For any major initiative, write down what needs to be true for this to succeed. Not just high-level hopes like "customers will want this," but specific, testable assumptions like "practice managers will schedule upgrades themselves if they have a 24-hour window to choose from."</p>
+<p>For any major initiative, write down what needs to be true for this to succeed. Not just high-level hopes like "customers will want this," but specific, testable assumptions.</p>
+
+<p>For that AI feature I mentioned earlier, our implicit assumption was: "Vets will adopt AI diagnostic recommendations if they're clinically accurate." That sounds reasonable. But when forced to make it explicit and specific, the real assumption became: "Vets will tolerate manual re-entry of AI recommendations if those recommendations save them clinical reasoning time."</p>
+
+<p>That's a very different bet. And when you write it down that starkly, you immediately see the problem: we were asking vets to trade five minutes of clinical thinking for five minutes of typing. The time savings were zero.</p>
+
+<p>If we'd started with that explicit assumption, we could have tested it with a simple prototype: show vets AI recommendations on a printout and ask them to transcribe it into their medical record. We would have learned in a 30-minute user session what took us three months to discover in production.</p>
 
 <h3>Define "what would prove me wrong"</h3>
 
