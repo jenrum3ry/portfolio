@@ -35,7 +35,9 @@ export const blogPosts: BlogPost[] = [
 
 <p>But only one of them is actually strategic.</p>
 
+<div class="section-callout">
 <h2>What "Being Wrong Faster" Actually Means</h2>
+</div>
 
 <p>Being wrong faster isn't about being reckless or making poor decisions. It's about building systems that expose bad assumptions before they become expensive mistakes.</p>
 
@@ -149,7 +151,9 @@ export const blogPosts: BlogPost[] = [
 
 <p>The moment you realize your highest-scoring items aren't moving your most important metric is the moment you understand that scoring isn't strategy.</p>
 
+<div class="section-callout">
 <h2>What Actually Drives Prioritization</h2>
+</div>
 
 <p>So if frameworks don't work, what does? In my experience, good prioritization comes from asking better questions:</p>
 
@@ -342,7 +346,9 @@ export const blogPosts: BlogPost[] = [
 
 <p>The key is consistency over intensity. Five conversations every month for a year teaches you more than 60 conversations crammed into one month, because you're learning over time how things change, what patterns persist, and what your changes actually impact.</p>
 
+<div class="section-callout">
 <h2>The UX Teardown Methodology</h2>
+</div>
 
 <p>Here's the approach I've refined through 14+ studies. It's lightweight, repeatable, and doesn't require a research background:</p>
 
@@ -512,7 +518,9 @@ export const blogPosts: BlogPost[] = [
 
 <p>And that's when I realized I'd been asking the wrong question the entire time.</p>
 
+<div class="section-callout">
 <h2>Defining Time to First Value</h2>
+</div>
 
 <p>The real question wasn't: <em>Can we upgrade every computer?</em></p>
 
