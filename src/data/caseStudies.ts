@@ -147,4 +147,42 @@ export const caseStudies: CaseStudy[] = [
     image: "",
     imageAlt: ""
   },
+  {
+    id: 5,
+    title: "Cornerstone Help Hub - Cloud Migration & Virtual Assistant",
+    platform: "Enterprise Veterinary Practice Management Software",
+    year: "2022-2023",
+    description:
+      "Led greenfield development of cloud-based help platform from concept through production deployment, serving 1,300+ veterinary practices. Achieved 90% virtual assistant adoption and migrated 1,000+ legacy help paths in 12 months.",
+    problem:
+      "Cornerstone's server-based architecture locked help documentation inside the software's F1 system. Every content update required a full software release cycle, creating months-long lag between identifying user confusion and publishing updated help. With over 1,000 F1 help paths requiring migration and no cloud infrastructure in place, the team needed a strategic approach that balanced velocity, quality, and user impact without overwhelming the organization.",
+    myRole:
+      "Owned end-to-end platform development from concept to production integration. Defined product vision and strategy, coordinated cross-functional teams (customer support, education, development, training, customer success, content), established data-driven prioritization framework, managed early adopter beta program, and executed 12-month strategic migration across 1,000+ help paths.",
+    approach:
+      "Rather than attempting a big-bang migration, I applied an 80/20 framework based on a full year of support data (call volume, chat transcripts, user feedback). First wave addressed 80% of support volume with highest-impact help content. Second wave completed comprehensive migration. This phased approach validated the platform with real users before committing to full-scale migration, reducing risk while maintaining velocity.",
+    challenge:
+      "Cornerstone's server-based architecture locked help documentation inside the software's F1 system. Every content update required a full software release cycle, creating months-long lag between identifying user confusion and publishing updated help. With over 1,000 F1 help paths requiring migration, the team needed a strategic approach that balanced velocity, quality, and user impact.",
+    solution:
+      "Led end-to-end platform development from concept to production integration. Built modern cloud-based help hub (cornerstonehelphub.com) with integrated virtual assistant using data-driven prioritization. Analyzed full year of support data (call volume, chat transcripts, user feedback) and applied 80/20 framework: first wave addressed 80% of support volume, second wave completed comprehensive migration. Validated approach with early adopter beta program before coordinating cross-functional rollout across customer support, education, development, training, customer success, and content teams to execute 12-month strategic migration.",
+    results: [
+      "90% virtual assistant adoption as first support touchpoint",
+      "Migrated 1,000+ help paths from server-based system in 12 months",
+      "Decoupled content updates from software release cycle (hours vs. months)",
+      "Built multi-channel support flow: virtual assistant → chat → phone",
+      "Reduced routine support call volume through self-service deflection",
+      "Established 80/20 prioritization framework adopted organization-wide",
+    ],
+    metrics: [
+      { label: "Virtual Assistant Adoption", value: "90%" },
+      { label: "Help Paths Migrated", value: "1,000+" },
+      { label: "Practices Served", value: "1,300+" },
+      { label: "Content Update Time", value: "Hours vs Months" }
+    ],
+    learnings:
+      "The most valuable insight was that phased migration based on actual usage data dramatically reduced risk compared to a big-bang approach. By analyzing a full year of support interactions, we identified the 20% of help content that addressed 80% of user needs. This allowed us to validate the platform with real users before committing to full-scale migration. The other key learning was that cross-functional coordination at this scale requires explicit process design—we couldn't rely on ad-hoc communication across 7 different teams.",
+    tags: ["Product Strategy", "Platform Development", "Cross-Functional Leadership"],
+    image: "Cornerstone_Help_Hub.png",
+    imageAlt: "Cornerstone Help Hub modern interface showing searchable help center with category navigation and virtual assistant",
+    liveUrl: "https://cornerstonehelphub.com"
+  },
 ];
