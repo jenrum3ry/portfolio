@@ -352,6 +352,24 @@
     padding: 0;
   }
 
+  /* Drop cap - first paragraph after content starts */
+  .blog-content > p:first-of-type::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    float: left;
+    font-size: 4.5rem;
+    line-height: 0.85;
+    font-weight: 700;
+    color: hsl(var(--primary));
+    margin-right: 0.15em;
+    margin-top: 0.1em;
+  }
+
+  @media (min-width: 768px) {
+    .blog-content > p:first-of-type::first-letter {
+      font-size: 5.5rem;
+    }
+  }
+
   /* Centered section callout - for emphasized headings/sections */
   .blog-content .section-callout {
     text-align: center;
