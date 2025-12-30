@@ -455,14 +455,14 @@ export const blogPosts: BlogPost[] = [
   {
     id: 4,
     slug: "80-solution-time-to-first-value",
-    title: "The 80% Solution: Time to First Value and My First Greenfield Product",
+    title: "The 80% Solution: Time to First Value",
     excerpt: "How I learned that shipping an 80% solution to the majority beats waiting indefinitely for 100% perfection - and gave veterinarians their nights back.",
     date: "December 5, 2025",
     readTime: "8 min read",
     category: "Product Strategy",
     image: "/portfolio/veterinarian-upgrade-service.jpg",
     imageAlt: "Doctor in scrubs working at computer in medical facility",
-    content: `<h1>The 80% Solution: Time to First Value and My First Greenfield Product</h1>
+    content: `<h1>The 80% Solution: Time to First Value</h1>
 
 <p>It's 8:32 PM on a Tuesday night at a veterinary practice.</p>
 
