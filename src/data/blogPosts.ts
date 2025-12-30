@@ -464,7 +464,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Three hours later, you're still there.</p>
 
-<p>You walk the same path again and again—exam rooms, surgery suites, front desk—clicking "Next" on one of eleven computers. Then waiting. Then walking the loop again. Clicking "Next." Waiting. Over and over.</p>
+<p>You walk the same path again and again - exam rooms, surgery suites, front desk - clicking "Next" on one of eleven computers. Then waiting. Then walking the loop again. Clicking "Next." Waiting. Over and over.</p>
 
 <p>You're a doctor. A highly trained medical professional. And tonight, your job is human automation.</p>
 
@@ -476,7 +476,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>When I first learned about how painful upgrades were, my reaction was immediate: <em>we need to do everything for them.</em></p>
 
-<p>Veterinary practices don't have IT teams. They're small businesses focused on patient care. Obviously, the right answer was total automation—a system that upgraded every computer in every practice with zero involvement required.</p>
+<p>Veterinary practices don't have IT teams. They're small businesses focused on patient care. Obviously, the right answer was total automation - a system that upgraded every computer in every practice with zero involvement required.</p>
 
 <p>Complete control. Perfect execution.</p>
 
@@ -506,7 +506,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The results were eye-opening.</p>
 
-<p>Roughly 80% of practices were on versions we could already support with our new upgrade service. Most of them weren't massive hospitals with complex setups—they had nine to eleven computers, not the twenty-plus I had been designing for.</p>
+<p>Roughly 80% of practices were on versions we could already support with our new upgrade service. Most of them weren't massive hospitals with complex setups - they had nine to eleven computers, not the twenty-plus I had been designing for.</p>
 
 <p>The remaining 20% were on much older or heavily customized configurations. Many had their own IT support or environments that were never going to be compatible with full automation anyway.</p>
 
@@ -577,7 +577,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The practice scheduled the upgrade. The system qualified their computers. The upgrade ran overnight. And the next morning, they were on the latest version.</p>
 
-<p>That silent success—the thing I thought required perfection—only happened once we shipped something "good enough" and let real users validate it.</p>
+<p>That silent success - the thing I thought required perfection - only happened once we shipped something "good enough" and let real users validate it.</p>
 
 <h2>What I Learned</h2>
 
@@ -586,7 +586,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Solving for edge cases can block the majority.</strong> Data helps separate real user needs from imagined ones.</li>
 <li><strong>Automation without trust isn't helpful.</strong> Transparency and control build confidence.</li>
 <li><strong>Perfectionism often disguises fear.</strong> Shipping is how you learn.</li>
-<li><strong>Your job isn't to be right—it's to learn fast.</strong></li>
+<li><strong>Your job isn't to be right - it's to learn fast.</strong></li>
 </ol>
 
 <h2>The Broader Lesson</h2>
@@ -599,6 +599,6 @@ export const blogPosts: BlogPost[] = [
 
 <p>None of that would have happened if I'd kept chasing the 100% solution.</p>
 
-<p>Sometimes, 80% shipped—delivered quickly and intentionally—is infinitely more valuable than 100% stuck in your head.</p>`
+<p>Sometimes, 80% shipped - delivered quickly and intentionally - is infinitely more valuable than 100% stuck in your head.</p>`
   }
 ];
