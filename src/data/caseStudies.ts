@@ -153,7 +153,7 @@ export const caseStudies: CaseStudy[] = [
     platform: "Enterprise Veterinary Practice Management Software",
     year: "2022-2023",
     description:
-      "Led greenfield development of cloud-based help platform from concept through production deployment, serving 1,300+ veterinary practices. Achieved 90% virtual assistant adoption and migrated 1,000+ legacy help paths in 12 months.",
+      "Led greenfield development of cloud-based help platform from concept through production deployment, serving 6,500+ veterinary practices. Achieved 90% virtual assistant adoption and migrated 1,000+ legacy help paths in 12 months.",
     problem:
       "Cornerstone's server-based architecture locked help documentation inside the software's F1 system. Every content update required a full software release cycle, creating months-long lag between identifying user confusion and publishing updated help. With over 1,000 F1 help paths requiring migration and no cloud infrastructure in place, the team needed a strategic approach that balanced velocity, quality, and user impact without overwhelming the organization.",
     myRole:
@@ -175,7 +175,7 @@ export const caseStudies: CaseStudy[] = [
     metrics: [
       { label: "Virtual Assistant Adoption", value: "90%" },
       { label: "Help Paths Migrated", value: "1,000+" },
-      { label: "Practices Served", value: "1,300+" },
+      { label: "Practices Served", value: "6,500+" },
       { label: "Content Update Time", value: "Hours vs Months" }
     ],
     learnings:
