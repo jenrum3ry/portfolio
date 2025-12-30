@@ -48,58 +48,62 @@ const EducationCertifications = () => {
               business domains.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
                   name: "Strategic Growth",
-                  assertionId: "icHl4vFGSTO0dvBlMgOvNA",
-                  imagePath: "/UW Madison Wisconsin Strategic Growth.png",
+                  imagePath: "/UW%20Madison%20Wisconsin%20Strategic%20Growth.png",
+                  issuedDate: "04/09/2024",
+                  description: "Those who have earned the Strategic Growth badge have developed skills related to growth strategies, growth marketing strategies, and digital strategies used by managers and directors of successful organizations."
                 },
                 {
                   name: "Strategic Innovation",
-                  assertionId: "vbQmr7DaSJanmgI0ndgEqw",
-                  imagePath: "/UW Madison Wisconsin Strategic Innovation.png",
+                  imagePath: "/UW%20Madison%20Wisconsin%20Strategic%20Innovation.png",
+                  issuedDate: "07/10/2024",
+                  description: "Those who have earned the Strategic Innovation badge have developed skills related to Strategic Management of Innovation, Product Management, and Data Technology for Business Analytics."
                 },
                 {
                   name: "Consulting",
-                  assertionId: "G99EBvJ0S0uxrWst2v7P6w",
-                  imagePath: "/UW Madison Wisconsin Consulting.png",
+                  imagePath: "/UW%20Madison%20Wisconsin%20Consulting.png",
+                  issuedDate: "10/02/2024",
+                  description: "Those who have earned the Wisconsin School of Business Consulting badge have developed problem-solving, strategy implementation, and change management skills used by professional consultants, managers, and directors of successful organizations."
                 },
                 {
                   name: "Business Analytics",
-                  assertionId: "GI3U8UwhSY2Mn_7y7jwlCw",
-                  imagePath: "/UW Madison Wisconsin Business Analytics.png",
+                  imagePath: "/UW%20Madison%20Wisconsin%20Business%20Analytics.png",
+                  issuedDate: "12/25/2024",
+                  description: "Those who have earned the Business Analytics badge have developed skills and demonstrated competency through rigorous assessment for making data-driven decisions, including database management, data visualization and communication."
                 }
               ].map((badge, index) => (
-                <a
+                <div
                   key={badge.name}
-                  href={`https://api.badgr.io/public/assertions/${badge.assertionId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex flex-col items-center text-center p-4 rounded-lg border border-border bg-background hover:shadow-warm hover:scale-105 transition-all duration-300 opacity-0 animate-fade-in"
+                  className="flex flex-col items-start p-6 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="w-24 h-24 mb-3 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
-                    <img
-                      src={badge.imagePath}
-                      alt={`${badge.name} Badge`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                      loading="lazy"
-                    />
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
+                      <img
+                        src={badge.imagePath}
+                        alt={`${badge.name} Badge`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-body text-base font-semibold text-foreground mb-1">
+                        Wisconsin School of Business: {badge.name}
+                      </h3>
+                      <p className="font-body text-sm text-muted-foreground">
+                        Issued on {badge.issuedDate}
+                      </p>
+                    </div>
                   </div>
-                  <p className="font-body text-sm font-medium text-foreground">
-                    {badge.name}
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                    {badge.description}
                   </p>
-                  <p className="font-body text-xs text-muted-foreground mt-1">
-                    UW-Madison Verified
-                  </p>
-                </a>
+                </div>
               ))}
             </div>
-
-            <p className="font-body text-sm text-muted-foreground text-center mt-8">
-              Click badges to view verification details
-            </p>
           </div>
         </div>
       </section>
