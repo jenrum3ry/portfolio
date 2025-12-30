@@ -53,25 +53,25 @@ const BlogPost = () => {
       </section>
 
       {/* Article */}
-      <article className="py-20 md:py-28">
+      <article className="py-16 md:py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             {/* Meta */}
-            <div className="flex items-center gap-4 mb-8">
-              <span className="px-3 py-1 text-xs font-body font-medium bg-secondary text-secondary-foreground rounded-full">
+            <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-10">
+              <span className="px-4 py-1.5 text-xs font-body font-semibold bg-primary/10 text-primary rounded-full uppercase tracking-wider">
                 {post.category}
               </span>
-              <span className="flex items-center gap-1 text-xs font-body text-muted-foreground">
-                <Calendar className="h-3 w-3" />
+              <span className="flex items-center gap-1.5 text-sm font-body text-muted-foreground">
+                <Calendar className="h-3.5 w-3.5" />
                 {post.date}
               </span>
-              <span className="text-xs font-body text-muted-foreground">
+              <span className="text-sm font-body text-muted-foreground">
                 {post.readTime}
               </span>
             </div>
 
             {/* Title */}
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-12 pb-8 border-b border-border">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.15] mb-16 pb-10 border-b-2 border-border">
               {post.title}
             </h1>
 

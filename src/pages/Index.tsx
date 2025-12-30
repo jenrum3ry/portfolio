@@ -16,16 +16,16 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-background" />
-        <div className="container mx-auto px-6 py-24 md:py-32 relative">
-          <div className="max-w-3xl animate-fade-in">
-            <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-4">
+        <div className="container mx-auto px-6 py-28 md:py-40 relative">
+          <div className="max-w-4xl animate-fade-in">
+            <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-6">
               Product Manager
             </p>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-foreground leading-tight mb-6">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
               Building products that{" "}
               <span className="text-primary italic">solve real problems for real people</span>
             </h1>
-            <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+            <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-10 max-w-3xl">
               Hi, I'm Jen Rumery. I'm a product manager who builds 0-to-1 through deep user
               research and systematic methodology. I'm driven by the gap between what teams think
               users need and what users actually struggle with, those hidden friction points that
@@ -75,16 +75,16 @@ const Index = () => {
       </section>
 
       {/* What I Do Section */}
-      <section className="py-20 md:py-28">
+      <section className="py-24 md:py-32">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl">
-            <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-2">
+          <div className="max-w-3xl mx-auto">
+            <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
               What I Do
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-6">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
               Research-driven products that solve real problems
             </h2>
-            <div className="space-y-4 font-body text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-6 font-body text-lg text-foreground/80 leading-[1.75]">
               <p>
                 I've developed a systematic approach to understanding users that goes beyond
                 traditional product research. By adapting ethnographic methods and visual analysis
@@ -100,7 +100,7 @@ const Index = () => {
                 hands-on execution and strategic thinking, shipping AI products, managing complex
                 platforms, and leading cross-functional teams that deliver real impact.
               </p>
-              <p>
+              <p className="font-semibold text-foreground text-xl">
                 I don't just build features - I solve actual problems for actual people.
               </p>
             </div>
@@ -109,16 +109,18 @@ const Index = () => {
       </section>
 
       {/* How I Work Section */}
-      <section className="bg-secondary/30 py-16 md:py-20">
+      <section className="bg-secondary/30 py-20 md:py-28">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-2">
-              How I Work
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-8">
-              My Process
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
+                How I Work
+              </p>
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
+                My Process
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
                   step: "01",
@@ -138,16 +140,16 @@ const Index = () => {
               ].map((item, index) => (
                 <div
                   key={item.step}
-                  className="p-6 bg-card border border-border rounded-lg opacity-0 animate-fade-in"
+                  className="group p-8 bg-card border-2 border-border rounded-xl hover:border-primary/50 hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <p className="font-display text-4xl font-semibold text-primary/30 mb-2">
+                  <p className="font-display text-5xl font-bold text-primary/20 group-hover:text-primary/30 transition-colors mb-4">
                     {item.step}
                   </p>
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                  <h3 className="font-display text-2xl font-bold text-foreground mb-3">
                     {item.title}
                   </h3>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  <p className="font-body text-base text-foreground/70 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -158,14 +160,14 @@ const Index = () => {
       </section>
 
       {/* Featured Work Preview */}
-      <section className="bg-secondary/30 py-20 md:py-28">
+      <section className="py-20 md:py-28">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14">
             <div>
-              <p className="font-body text-sm font-medium text-primary uppercase tracking-widest mb-2">
+              <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
                 Featured Work
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground">
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
                 Recent Projects
               </h2>
             </div>
@@ -211,16 +213,16 @@ const Index = () => {
               <Link
                 key={project.title}
                 to={ROUTES.CASE_STUDIES}
-                className="group block p-8 bg-card border border-border rounded-lg hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
+                className="group block p-8 bg-card border-2 border-border rounded-xl hover:border-primary/50 hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <p className="font-body text-xs font-medium text-primary uppercase tracking-widest mb-2">
+                <p className="font-body text-xs font-bold text-primary uppercase tracking-[0.15em] mb-3">
                   {project.company}
                 </p>
-                <h3 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="font-body text-muted-foreground mb-4 leading-relaxed">
+                <p className="font-body text-foreground/70 mb-5 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -241,12 +243,12 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6 py-20 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+        <div className="container mx-auto px-6 py-24 md:py-32 text-center">
+          <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 leading-tight max-w-3xl mx-auto">
             Looking for a builder who combines research with execution?
           </h2>
-          <p className="font-body text-lg opacity-90 mb-8 max-w-xl mx-auto">
-            I'm currently exploring opportunities where I can leverage my unique combination 
+          <p className="font-body text-lg md:text-xl opacity-95 mb-10 max-w-2xl mx-auto leading-relaxed">
+            I'm currently exploring opportunities where I can leverage my unique combination
             of systematic user research, 0-to-1 product building, and hands-on technical execution.
           </p>
           <Button
