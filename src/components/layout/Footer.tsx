@@ -1,5 +1,6 @@
 import { Mail, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ROUTES } from '@/lib/routes';
 
 export default function Footer() {
   return (
@@ -22,24 +23,32 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  to="/case-studies" 
+                <Link
+                  to={ROUTES.CASE_STUDIES}
                   className="text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/blog" 
+                <Link
+                  to={ROUTES.BLOG}
                   className="text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Blog
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/contact" 
+                <Link
+                  to={ROUTES.EDUCATION_CERTIFICATIONS}
+                  className="text-gray-300 hover:text-[#B8733E] transition-colors"
+                >
+                  Education
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={ROUTES.CONTACT}
                   className="text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Contact

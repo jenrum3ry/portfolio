@@ -12,6 +12,7 @@ const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const About = lazy(() => import("@/pages/About"));
+const EducationCertifications = lazy(() => import("@/pages/EducationCertifications"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path={ROUTES.CONTACT} element={<Contact />} />
             <Route path={ROUTES.ABOUT} element={<About />} />
+            <Route path={ROUTES.EDUCATION_CERTIFICATIONS} element={<EducationCertifications />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
