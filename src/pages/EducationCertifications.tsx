@@ -252,42 +252,102 @@ const EducationCertifications = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
-              Professional Certification
+              Professional Certifications
             </h2>
             <p className="font-body text-base text-muted-foreground mb-8">
               Scrum Alliance
             </p>
 
-            <div className="max-w-md mx-auto">
-              <a
-                href="https://www.scrumalliance.org/community/profile/jrumery3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col items-center text-center p-6 rounded-lg border border-border bg-card hover:shadow-warm hover:scale-105 transition-all duration-300 opacity-0 animate-fade-in"
-                style={{ animationDelay: "100ms" }}
-              >
-                <div className="w-32 h-32 mb-4 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
-                  <img
-                    src="https://www.scrumalliance.org/badges/sa-adv_cspo-600.png"
-                    alt="Advanced Certified Scrum Product Owner Badge"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    loading="lazy"
-                  />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* CSPO Certification */}
+              <div className="flex flex-col items-start p-6 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300">
+                <div className="flex items-start gap-4 mb-4 w-full">
+                  <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
+                    <img
+                      src="/portfolio/sa-cspo-600.png"
+                      alt="Certified Scrum Product Owner Badge"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-body text-base font-semibold text-foreground mb-1">
+                      Certified Scrum Product Owner®
+                    </h3>
+                    <p className="font-body text-sm text-muted-foreground mb-1">
+                      CSPO | Certificate ID: 001212862
+                    </p>
+                    <p className="font-body text-sm text-muted-foreground">
+                      Awarded: June 16, 2021
+                    </p>
+                  </div>
                 </div>
-                <p className="font-body text-lg font-medium text-foreground mb-2">
-                  Advanced Certified Scrum Product Owner®
-                </p>
-                <p className="font-body text-sm text-muted-foreground mb-1">
-                  A-CSPO | Certificate ID: 001212862
-                </p>
-                <p className="font-body text-sm text-muted-foreground">
-                  Active through July 2026
-                </p>
-              </a>
+                <div className="flex gap-3 mt-2">
+                  <a
+                    href="https://www.scrumalliance.org/community/profile/jrumery3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-xs text-primary hover:underline"
+                  >
+                    View Profile →
+                  </a>
+                  <a
+                    href="/portfolio/Jennifer%20Rumery-ScrumAlliance_CSPO_Certificate.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-xs text-primary hover:underline"
+                  >
+                    Download Certificate →
+                  </a>
+                </div>
+              </div>
+
+              {/* A-CSPO Certification */}
+              <div className="flex flex-col items-start p-6 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300">
+                <div className="flex items-start gap-4 mb-4 w-full">
+                  <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
+                    <img
+                      src="/portfolio/sa-adv_cspo-600.png"
+                      alt="Advanced Certified Scrum Product Owner Badge"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-body text-base font-semibold text-foreground mb-1">
+                      Advanced Certified Scrum Product Owner®
+                    </h3>
+                    <p className="font-body text-sm text-muted-foreground mb-1">
+                      A-CSPO | Certificate ID: 001212862
+                    </p>
+                    <p className="font-body text-sm text-muted-foreground">
+                      Awarded: July 12, 2022
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-3 mt-2">
+                  <a
+                    href="https://www.scrumalliance.org/community/profile/jrumery3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-xs text-primary hover:underline"
+                  >
+                    View Profile →
+                  </a>
+                  <a
+                    href="/portfolio/Jennifer%20Rumery-ScrumAlliance_A-CSPO_Certificate.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-xs text-primary hover:underline"
+                  >
+                    Download Certificate →
+                  </a>
+                </div>
+              </div>
             </div>
 
             <p className="font-body text-sm text-muted-foreground text-center mt-8">
-              Click badge to view verification details
+              Active through July 12, 2026
             </p>
           </div>
         </div>
