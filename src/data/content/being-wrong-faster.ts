@@ -6,6 +6,8 @@ export const beingWrongFasterContent = `<h1>The PM's Real Job: Being Wrong Faste
 
 <p>I'd been so focused on being right (on having the answers, demonstrating conviction, showing leadership I knew what to build) that I'd optimized for confidence instead of truth. I learned the hard way that the PM's real job isn't knowing what to build. It's discovering what's worth building before you waste months building the wrong thing.</p>
 
+<img src="/being-wrong-faster-infographic.png" alt="Being Wrong Faster Framework - comparing elaborate planning vs quick learning cycles" />
+
 <p>The best PMs I know aren't the ones who are right most often. They're the ones who figure out they're wrong the fastest.</p>
 
 <h2>The Confidence Trap</h2>
