@@ -516,9 +516,11 @@ export const blogPosts: BlogPost[] = [
 
 <p>The real question wasn't: <em>Can we upgrade every computer?</em></p>
 
-<p>It was: <strong>What is the time to first value for this product?</strong></p>
+<p>It was:</p>
 
-<p>For this service, time to first value wasn't perfection. It wasn't 100% coverage. It was the moment a veterinary practice could get onto the latest version of the software <strong>without staying late in the hospital</strong>.</p>
+<p><strong>What is the time to first value for this product?</strong></p>
+
+<p>For this service, time to first value wasn't perfection. It wasn't 100% coverage. It was the moment a veterinary practice could get onto the latest version of the software without staying late in the hospital.</p>
 
 <p>It was when they could:</p>
 <ul>
