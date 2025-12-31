@@ -28,7 +28,7 @@ const Index = () => {
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-6 max-w-3xl">
               I'm a product manager obsessed with uncovering the hidden friction that blocks real users.
               My 15+ years in healthcare taught me how to translate complex domain knowledge into intuitive
-              products—that same methodology works anywhere. I ship products that solve problems others
+              products. That same methodology works anywhere. I ship products that solve problems others
               don't even see yet.
             </p>
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-10 max-w-3xl">
@@ -51,23 +51,44 @@ const Index = () => {
       {/* Stats Section */}
       <section className="bg-card border-y border-border">
         <div className="container mx-auto px-6 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { number: "15+", label: "Years in Healthcare Tech (3 Startups, 1 Enterprise)", icon: Microscope },
-              { number: "500+", label: "User Interviews Across Healthcare, Fintech & Consumer Apps", icon: Users },
-              { number: "8", label: "Products Shipped from Concept to Market", icon: Zap },
+              {
+                label: "Healthcare Product Leader",
+                number: "15+",
+                description: "years across startups and enterprise scale"
+              },
+              {
+                label: "Research-Driven",
+                number: "500+",
+                description: "user interviews across healthcare, fintech, and consumer apps"
+              },
+              {
+                label: "Built for Users and Operations",
+                number: null,
+                description: "internal platforms for efficiency, external solutions for impact"
+              },
+              {
+                label: "Shipping Track Record",
+                number: "8",
+                description: "products shipped from concept to market"
+              }
             ].map((stat, index) => (
               <div
                 key={stat.label}
                 className="opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <stat.icon className="h-8 w-8 text-primary mx-auto mb-4" />
-                <p className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-2">
-                  {stat.number}
-                </p>
-                <p className="font-body text-sm text-muted-foreground uppercase tracking-wider">
+                <p className="font-body text-sm font-bold text-primary uppercase tracking-wider mb-3">
                   {stat.label}
+                </p>
+                {stat.number && (
+                  <p className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-2">
+                    {stat.number}
+                  </p>
+                )}
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {stat.description}
                 </p>
               </div>
             ))}
