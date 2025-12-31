@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { ArrowRight, X } from "lucide-react";
 import { caseStudies } from "@/data/caseStudies";
@@ -9,9 +9,32 @@ import {
 } from "@/components/ui/dialog";
 import SEO from "@/components/SEO";
 import { ROUTES } from "@/lib/routes";
+import { trackProjectView, trackProjectClick, trackExternalLink } from "@/lib/analytics";
+import { useScrollTracking } from "@/hooks/use-analytics";
 
 const CaseStudies = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
+  // Track scroll depth for engagement metrics
+  useScrollTracking();
+
+  // Track project views on mount
+  useEffect(() => {
+    caseStudies.forEach((study) => {
+      trackProjectView(study.title, study.id);
+    });
+  }, []);
+
+  const handleImageClick = (study: typeof caseStudies[0]) => {
+    trackProjectClick(study.title, study.id);
+    setSelectedImage({ src: study.image, alt: study.imageAlt });
+  };
+
+  const handleExternalLinkClick = (study: typeof caseStudies[0]) => {
+    if (study.liveUrl) {
+      trackExternalLink(study.liveUrl, study.title);
+    }
+  };
 
   return (
     <Layout>
@@ -52,7 +75,7 @@ const CaseStudies = () => {
                 <div className="lg:col-span-2">
                   <div
                     className="bg-card border border-border rounded-lg overflow-hidden flex items-center justify-center p-2 cursor-pointer hover:border-primary/50 transition-colors group"
-                    onClick={() => setSelectedImage({ src: study.image, alt: study.imageAlt })}
+                    onClick={() => handleImageClick(study)}
                   >
                     <img
                       src={study.image}
@@ -88,6 +111,7 @@ const CaseStudies = () => {
                       href={study.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => handleExternalLinkClick(study)}
                       className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-body font-medium text-primary border border-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
                     >
                       View Live Site

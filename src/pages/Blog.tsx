@@ -4,8 +4,17 @@ import SEO from "@/components/SEO";
 import { ROUTES } from "@/lib/routes";
 import { ArrowRight, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
+import { trackBlogPostClick } from "@/lib/analytics";
+import { useScrollTracking } from "@/hooks/use-analytics";
 
 const Blog = () => {
+  // Track scroll depth for engagement metrics
+  useScrollTracking();
+
+  const handleBlogClick = (postTitle: string, postSlug: string) => {
+    trackBlogPostClick(postTitle, postSlug);
+  };
+
   return (
     <Layout>
       <SEO
@@ -55,7 +64,12 @@ const Blog = () => {
                 </div>
 
                 <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground group-hover:text-primary transition-colors mb-3">
-                  <Link to={ROUTES.BLOG_POST(post.slug)}>{post.title}</Link>
+                  <Link
+                    to={ROUTES.BLOG_POST(post.slug)}
+                    onClick={() => handleBlogClick(post.title, post.slug)}
+                  >
+                    {post.title}
+                  </Link>
                 </h2>
 
                 <p className="font-body text-muted-foreground leading-relaxed mb-4">
@@ -64,6 +78,7 @@ const Blog = () => {
 
                 <Link
                   to={ROUTES.BLOG_POST(post.slug)}
+                  onClick={() => handleBlogClick(post.title, post.slug)}
                   className="inline-flex items-center font-body text-sm font-medium text-primary hover:underline"
                 >
                   Read More <ArrowRight className="ml-1 h-4 w-4" />
