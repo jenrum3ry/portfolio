@@ -10,7 +10,7 @@ const EducationCertifications = () => {
     <Layout>
       <SEO
         title="Education & Certifications | Jen Rumery - Product Manager"
-        description="MBA from University of Wisconsin-Madison, Advanced Certified Scrum Product Owner (A-CSPO), and verified digital credentials."
+        description="MBA from University of Wisconsin-Madison, Advanced Certified Scrum Product Owner (A-CSPO), US Air Force veteran, and verified digital credentials."
         url={ROUTES.EDUCATION_CERTIFICATIONS}
       />
       {/* Hero Section */}
@@ -146,8 +146,33 @@ const EducationCertifications = () => {
         </div>
       </section>
 
-      {/* Undergraduate Education */}
+      {/* Military Service */}
       <section className="bg-secondary/30 py-20 md:py-28">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
+              Military Service
+            </h2>
+            <p className="font-body text-lg text-foreground mb-2">
+              United States Air Force
+            </p>
+            <p className="font-body text-base text-muted-foreground mb-2">
+              Aerospace Ground Equipment Mechanic | 2003 - 2011
+            </p>
+            <p className="font-body text-base text-muted-foreground mb-4">
+              Honorable Discharge
+            </p>
+            <p className="font-body text-base text-muted-foreground leading-relaxed">
+              Served 8 years on active duty, including one reenlistment, maintaining critical
+              ground support equipment for aerospace operations. Transitioned to healthcare
+              administration after completing undergraduate degree while serving.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Undergraduate Education */}
+      <section className="py-20 md:py-28">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
