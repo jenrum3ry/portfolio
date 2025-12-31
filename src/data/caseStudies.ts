@@ -46,29 +46,29 @@ export const caseStudies: CaseStudy[] = [
     problem:
       "Veterinarians were spending 30-40% of their day on clinical documentation, taking time away from patient care. Manual SOAP note creation was tedious, repetitive, and prone to errors. The market opportunity was clear, but building an AI product that clinicians would trust required balancing speed with accuracy.",
     myRole:
-      "Owned end-to-end product development from concept validation through production launch. Defined product requirements, coordinated engineering/ML/design teams, established beta program with 200+ users, analyzed usage patterns, and drove rapid iteration based on real-world feedback.",
+      "Owned end-to-end product development from concept validation through beta launch. Defined product requirements, coordinated engineering/ML/design teams, established clinical advisor partnerships, analyzed usage patterns, and drove rapid iteration based on real-world feedback.",
     approach:
-      "Rather than building in isolation, I established a tight feedback loop with real veterinarians from day one. Launched with a minimal viable product focused on patient summarization (the highest-value use case), recruited 200+ beta users, analyzed every session for accuracy and usability issues, and iterated weekly based on actual usage patterns rather than assumptions.",
+      "Rather than building in isolation, I established a tight feedback loop with real veterinarians from day one. Launched with a minimal viable product focused on patient summarization (the highest-value use case), partnered directly with Director of Veterinary Medicine for clinical validation, conducted 4 intensive stakeholder reviews in 2 weeks, and iterated based on actual usage patterns rather than assumptions.",
     challenge:
       "Veterinarians needed AI-powered documentation tools to reclaim clinical time, but adoption would only succeed if the AI was accurate, trustworthy, and integrated seamlessly into existing workflows. Traditional waterfall development would have taken 6+ months - too slow for a competitive market.",
     solution:
       "Led rapid product development using a beta-first approach. Defined MVP scope (patient summarization only), coordinated cross-functional teams across product, engineering, ML, and design, launched beta program within 6 weeks, and established continuous feedback loops that informed daily iteration. Prioritized accuracy over features, ensuring 95% accuracy threshold before expanding use cases.",
     results: [
-      "Shipped MVP in 8 weeks (2 weeks ahead of schedule)",
-      "Achieved 95% accuracy on patient summaries",
-      "Recruited 200+ beta users in first month",
-      "Maintained 85% retention rate throughout beta",
-      "Identified 3 critical workflow integrations through user feedback",
-      "Reduced veterinarian documentation time by average of 25%"
+      "→ Shipped beta 2 weeks ahead of original timeline while maintaining quality standards",
+      "→ Discovered and resolved critical workflow blocker before launch: 2-minute generation time would break clinical workflows, redesigned to auto-generate during patient check-in",
+      "→ Established reusable clinical validation framework that became template for future AI features",
+      "→ Designed phased rollout (5-7 practices, gradual expansion) preventing infrastructure overload with 1,300-practice customer base",
+      "→ Translated 4 hours of complex clinical feedback into 15 discrete engineering tickets with clear acceptance criteria and owners",
+      "→ Identified 3 critical data categorization issues through real patient record testing that would have tanked adoption post-launch"
     ],
     metrics: [
-      { label: "Time to Production", value: "8 weeks" },
-      { label: "AI Accuracy Rate", value: "95%" },
-      { label: "Beta Users", value: "200+" },
-      { label: "User Retention", value: "85%" }
+      { label: "TIME TO BETA LAUNCH", value: "10 weeks" },
+      { label: "STAKEHOLDER REVIEWS IN 2 WEEKS", value: "4 sessions" },
+      { label: "TRANSLATED FROM CLINICAL FEEDBACK", value: "15+ tickets" },
+      { label: "WAVE 1 BETA COHORT", value: "5-7 practices" }
     ],
     learnings:
-      "The biggest learning was that shipping fast doesn't mean shipping recklessly. By focusing relentlessly on one high-value use case (patient summarization) and setting a clear accuracy threshold (95%), we maintained quality while moving at startup speed. The beta program was essential - real veterinarians surfaced edge cases and workflow issues that we would never have anticipated internally.",
+      "The biggest learning was that deep clinical partnership beats speed. Working directly with a practicing veterinarian surfaced edge cases and workflow issues we would never have anticipated internally. For example, she immediately identified that the AI-generated summary structure didn't match how vets actually present cases to colleagues. This would have killed adoption if we'd discovered it after launch.\n\nThe beta program design was critical. By structuring a phased rollout (5-7 practices initially, then gradual expansion), we protected against both technical overload (preventing 1,300 clinics from generating summaries simultaneously) and gave ourselves a controlled environment for fast iteration without enterprise-wide impact.",
     tags: ["AI Product", "0-to-1", "Production Launch"],
     image: "",
     imageAlt: ""
