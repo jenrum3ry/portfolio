@@ -283,7 +283,7 @@ const EducationCertifications = () => {
                   </div>
                 </div>
                 <a
-                  href="https://www.scrumalliance.org/community/profile/jrumery3"
+                  href="https://www.scrumalliance.org/members/1212862"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-xs text-primary hover:underline mt-2"
@@ -316,7 +316,7 @@ const EducationCertifications = () => {
                   </div>
                 </div>
                 <a
-                  href="https://www.scrumalliance.org/community/profile/jrumery3"
+                  href="https://www.scrumalliance.org/members/1212862"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-xs text-primary hover:underline mt-2"
