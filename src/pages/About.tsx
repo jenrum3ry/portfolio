@@ -81,8 +81,8 @@ const About = () => {
             </h2>
             <div className="space-y-6 font-body text-lg text-muted-foreground leading-relaxed">
               <p>
-                I developed a proprietary approach to evaluating end-to-end user journeys by 
-                systematically mapping workflows, visually annotating screens, and tagging 
+                I developed an approach to evaluating end-to-end user journeys by
+                systematically mapping workflows, visually annotating screens, and tagging
                 friction points in a way that translates directly into actionable product roadmaps.
               </p>
               
@@ -177,7 +177,7 @@ const About = () => {
                 },
                 {
                   title: "Systematic Methodology",
-                  description: "Proprietary UX teardown process that's repeatable, visual, collaborative, and actionable. Not just 'user interviews' - a structured framework that surfaces hidden insights."
+                  description: "UX teardown process that's repeatable, visual, collaborative, and actionable. Not just 'user interviews' - a structured framework that surfaces hidden insights."
                 },
                 {
                   title: "Hands-On Builder",
