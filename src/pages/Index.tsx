@@ -28,8 +28,7 @@ const Index = () => {
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-6 max-w-3xl">
               I'm a product manager obsessed with uncovering the hidden friction that blocks real users.
               My 15+ years in healthcare taught me how to translate complex domain knowledge into intuitive
-              products - and I bring that same methodology to whatever I build. I combine ethnographic research,
-              AI/ML product experience, and systematic execution to ship products that solve problems others
+              products—that same methodology works anywhere. I ship products that solve problems others
               don't even see yet.
             </p>
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-10 max-w-3xl">
@@ -76,39 +75,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What I Do Section */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
-              How I Work
-            </p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
-              I find the problems hiding beneath feature requests
-            </h2>
-            <div className="space-y-6 font-body text-lg text-foreground/80 leading-[1.75]">
-              <p>
-                My approach to product development is built on a foundation of deep user understanding.
-                I've spent 15+ years in healthcare technology - from enterprise practice management systems
-                to AI-powered clinical tools - learning how to translate complex domain knowledge into
-                products that clinicians actually want to use. This expertise transfers to any complex
-                domain where systematic research reveals insights that transform product strategy.
-              </p>
-              <p>
-                I've developed a methodology that combines ethnographic research with systematic
-                execution. Through 500+ user interviews across healthcare, fintech, and consumer applications,
-                I've refined an approach that uncovers the friction points generic surveys miss - like discovering
-                that 50% of users faced blocking technical issues, shifting entire product roadmaps from
-                feature polish to foundational reliability.
-              </p>
-              <p className="font-semibold text-foreground text-xl">
-                I shipped 8 products from concept to market by staying obsessively close to users and iterating based on real usage data rather than internal assumptions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* How I Work Section */}
       <section className="bg-secondary/30 py-20 md:py-28">
         <div className="container mx-auto px-6">
@@ -117,9 +83,12 @@ const Index = () => {
               <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
                 How I Work
               </p>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
-                My Process
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-3">
+                I find the problems hiding beneath feature requests
               </h2>
+              <p className="font-display text-xl md:text-2xl font-semibold text-foreground/60">
+                My Process
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -165,9 +134,6 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14">
             <div>
-              <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
-                Featured Work
-              </p>
               <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">
                 Recent Projects
               </h2>
