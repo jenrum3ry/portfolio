@@ -24,10 +24,10 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to={ROUTES.CASE_STUDIES}
+                  to={ROUTES.PROJECTS}
                   className="text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
-                  Case Studies
+                  Projects
                 </Link>
               </li>
               <li>

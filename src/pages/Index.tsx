@@ -36,7 +36,7 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="font-body">
-                <Link to={ROUTES.CASE_STUDIES}>
+                <Link to={ROUTES.PROJECTS}>
                   See My Work <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -157,7 +157,7 @@ const Index = () => {
               </h2>
             </div>
             <Link
-              to={ROUTES.CASE_STUDIES}
+              to={ROUTES.PROJECTS}
               className="font-body text-sm font-medium text-primary hover:underline mt-4 md:mt-0"
             >
               View All Projects →
@@ -197,7 +197,7 @@ const Index = () => {
             ].map((project, index) => (
               <Link
                 key={project.title}
-                to={ROUTES.CASE_STUDIES}
+                to={ROUTES.PROJECTS}
                 className="group block p-8 bg-card border-2 border-border rounded-xl hover:border-primary/50 hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >

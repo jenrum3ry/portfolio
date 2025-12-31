@@ -1,7 +1,7 @@
 # Portfolio Project - Jen Rumery
 
 ## Project Overview
-This is a personal portfolio website for Jen Rumery, a Product Manager with 15+ years of experience in healthcare technology. The portfolio showcases work experience, case studies, blog posts, and professional credentials.
+This is a personal portfolio website for Jen Rumery, a Product Manager with 15+ years of experience in healthcare technology. The portfolio showcases work experience, projects, blog posts, and professional credentials.
 
 ## Tech Stack
 - **Build Tool**: Vite (v5.4.19)
@@ -33,7 +33,7 @@ portfolio/
 │   │   ├── About.tsx        # About page
 │   │   ├── Blog.tsx         # Blog listing
 │   │   ├── BlogPost.tsx     # Individual blog post
-│   │   ├── CaseStudies.tsx  # Case studies showcase
+│   │   ├── CaseStudies.tsx  # Projects showcase
 │   │   ├── Contact.tsx      # Contact page
 │   │   └── NotFound.tsx     # 404 page
 │   ├── App.tsx              # Main app with routing
@@ -46,7 +46,7 @@ portfolio/
 ## Routes
 The application uses React Router with a `/portfolio` base path:
 - `/` - Home page (Index.tsx)
-- `/case-studies` - Case studies showcase
+- `/projects` - Projects showcase
 - `/blog` - Blog listing
 - `/blog/:slug` - Individual blog post
 - `/contact` - Contact page
@@ -102,7 +102,7 @@ npm run lint         # Run ESLint
 ### Data Management
 - Blog posts are stored in `src/data/blogPosts.ts`
 - No backend/API - static data only
-- Case studies and credentials are embedded in page components
+- Projects and credentials are embedded in page components
 
 ### Routing
 - Router has `basename="/portfolio"` for GitHub Pages deployment
@@ -137,6 +137,6 @@ The contact page provides ways to reach Jen Rumery for professional opportunitie
 
 ## Future Enhancement Considerations
 - Blog content is currently stored in TypeScript files - consider CMS integration
-- Case studies could be expanded with dedicated detail pages
+- Projects could be expanded with dedicated detail pages
 - Contact form could be integrated with a backend service
 - Analytics integration for tracking visitor engagement

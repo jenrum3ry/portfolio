@@ -23,7 +23,7 @@ function App() {
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path={ROUTES.HOME} element={<Index />} />
-            <Route path={ROUTES.CASE_STUDIES} element={<CaseStudies />} />
+            <Route path={ROUTES.PROJECTS} element={<CaseStudies />} />
             <Route path={ROUTES.BLOG} element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path={ROUTES.CONTACT} element={<Contact />} />

@@ -8,9 +8,9 @@ const CaseStudies = () => {
   return (
     <Layout>
       <SEO
-        title="Case Studies | Jen Rumery - Portfolio"
+        title="Projects | Jen Rumery - Portfolio"
         description="A selection of projects that showcase my approach to product management, from discovery to delivery and beyond."
-        url={ROUTES.CASE_STUDIES}
+        url={ROUTES.PROJECTS}
       />
       {/* Hero */}
       <section className="bg-secondary/30">
@@ -20,7 +20,7 @@ const CaseStudies = () => {
               PORTFOLIO
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
-              Case Studies
+              Projects
             </h1>
             <p className="font-body text-lg text-muted-foreground leading-relaxed">
               A selection of projects that showcase my approach to product
@@ -30,7 +30,7 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* Case Studies List */}
+      {/* Projects List */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6">
           <div className="space-y-16">

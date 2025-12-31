@@ -1,6 +1,6 @@
 # Portfolio Website - Jen Rumery
 
-A modern, responsive portfolio website showcasing professional experience, case studies, and blog content for Jen Rumery, a Product Manager with 15+ years of experience in healthcare technology.
+A modern, responsive portfolio website showcasing professional experience, projects, and blog content for Jen Rumery, a Product Manager with 15+ years of experience in healthcare technology.
 
 ## 🚀 Quick Start
 
@@ -46,7 +46,7 @@ portfolio/
 │   │   └── ScrollToTop.tsx  # Route change scroll handler
 │   ├── data/
 │   │   ├── blogPosts.ts     # Blog post data
-│   │   └── caseStudies.ts   # Case study data
+│   │   └── caseStudies.ts   # Project data
 │   ├── types/               # TypeScript type definitions
 │   │   ├── blog.ts          # BlogPost interface
 │   │   ├── caseStudy.ts     # CaseStudy interface
@@ -62,7 +62,7 @@ portfolio/
 │   │   ├── About.tsx        # About page
 │   │   ├── Blog.tsx         # Blog listing
 │   │   ├── BlogPost.tsx     # Individual blog post
-│   │   ├── CaseStudies.tsx  # Case studies showcase
+│   │   ├── CaseStudies.tsx  # Projects showcase
 │   │   ├── Contact.tsx      # Contact form
 │   │   └── NotFound.tsx     # 404 page
 │   ├── App.tsx              # Main app with routing & error boundary
@@ -81,7 +81,7 @@ portfolio/
 - **Error Handling** - Error boundaries for graceful error recovery
 - **Routing** - React Router with `/portfolio` base path
 - **Dark Mode Support** - Theme switching with next-themes
-- **Professional Portfolio** - Showcases work experience, case studies, and blog posts
+- **Professional Portfolio** - Showcases work experience, projects, and blog posts
 - **Performance** - Optimized bundle sizes (main: 182KB, pages: 2-15KB each)
 
 ## 🛠️ Available Scripts
@@ -107,7 +107,7 @@ portfolio/
 The application uses React Router with these routes (defined in `src/lib/routes.ts`):
 
 - `/` - Home page (ROUTES.HOME)
-- `/case-studies` - Case studies showcase (ROUTES.CASE_STUDIES)
+- `/projects` - Projects showcase (ROUTES.PROJECTS)
 - `/blog` - Blog listing (ROUTES.BLOG)
 - `/blog/:slug` - Individual blog post (ROUTES.BLOG_POST)
 - `/contact` - Contact form (ROUTES.CONTACT)
@@ -151,7 +151,7 @@ VITE_WEB3FORMS_ACCESS_KEY=your-api-key-here
 ## 📝 Data Management
 
 - **Blog posts**: `src/data/blogPosts.ts` (BlogPost type from `src/types/blog.ts`)
-- **Case studies**: `src/data/caseStudies.ts` (CaseStudy type from `src/types/caseStudy.ts`)
+- **Projects**: `src/data/caseStudies.ts` (CaseStudy type from `src/types/caseStudy.ts`)
 - **Static data only**: No backend/API (except Web3Forms for contact form)
 - **Type safety**: All data uses centralized TypeScript interfaces
 
