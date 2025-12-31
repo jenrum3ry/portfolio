@@ -33,8 +33,7 @@ const Index = () => {
               don't even see yet.
             </p>
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-10 max-w-3xl">
-              I'm interested in joining Series B-D companies where I can lead end-to-end product
-              strategy - from user research through shipped products that scale.
+              I want to work somewhere I can partner with teams to turn messy user problems into elegant product solutions.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="font-body">
@@ -57,7 +56,7 @@ const Index = () => {
             {[
               { number: "15+", label: "Years in Healthcare Tech (3 Startups, 1 Enterprise)", icon: Microscope },
               { number: "500+", label: "User Interviews Across Healthcare, Fintech & Consumer Apps", icon: Users },
-              { number: "8", label: "Products Shipped from 0-to-1, 3 with $1M+ ARR", icon: Zap },
+              { number: "8", label: "Products Shipped from Concept to Market", icon: Zap },
             ].map((stat, index) => (
               <div
                 key={stat.label}
@@ -96,15 +95,14 @@ const Index = () => {
                 domain where systematic research reveals insights that transform product strategy.
               </p>
               <p>
-                I've developed a proprietary methodology that combines ethnographic research with systematic
+                I've developed a methodology that combines ethnographic research with systematic
                 execution. Through 500+ user interviews across healthcare, fintech, and consumer applications,
                 I've refined an approach that uncovers the friction points generic surveys miss - like discovering
                 that 50% of users faced blocking technical issues, shifting entire product roadmaps from
                 feature polish to foundational reliability.
               </p>
               <p className="font-semibold text-foreground text-xl">
-                I shipped 8 products from concept to market, with 3 achieving $1M+ ARR, by staying obsessively
-                close to users and iterating based on real usage data rather than internal assumptions.
+                I shipped 8 products from concept to market by staying obsessively close to users and iterating based on real usage data rather than internal assumptions.
               </p>
             </div>
           </div>
@@ -127,18 +125,18 @@ const Index = () => {
               {[
                 {
                   step: "01",
-                  title: "Research",
-                  description: "I conduct ethnographic studies and user interviews to uncover the hidden friction points that generic surveys miss - watching real workflows, identifying workarounds, and understanding constraints."
+                  title: "Discovery",
+                  description: "I watch users work. Real workflows beat surveys every time."
                 },
                 {
                   step: "02",
-                  title: "Synthesize",
-                  description: "I translate insights into prioritized roadmaps using frameworks like Jobs to Be Done and value stream mapping - turning patterns into actionable product strategy."
+                  title: "Pattern-Finding",
+                  description: "I map what I hear to strategic frameworks that actually predict outcomes."
                 },
                 {
                   step: "03",
-                  title: "Execute",
-                  description: "I ship fast and stay close to users, iterating based on real usage data rather than internal opinions - building products that solve validated problems, not imagined ones."
+                  title: "Building",
+                  description: "Fast iteration, close to users, shipping based on signals not guesses."
                 }
               ].map((item, index) => (
                 <div
@@ -251,9 +249,7 @@ const Index = () => {
             Looking for your next product leader?
           </h2>
           <p className="font-body text-lg md:text-xl opacity-95 mb-10 max-w-3xl mx-auto leading-relaxed">
-            I'm looking for my next opportunity where I can lead product strategy from user discovery
-            through execution. Ideal fit: Series B-D companies in healthcare, AI infrastructure, or
-            developer tools where research-driven product thinking can directly impact adoption and retention.
+            I want to work somewhere I can partner with teams to turn messy user problems into elegant product solutions.
             If you're building something that solves a real problem for real users, let's talk.
           </p>
           <Button
