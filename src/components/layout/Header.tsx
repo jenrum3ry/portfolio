@@ -32,7 +32,7 @@ const Header = () => {
                 to={link.path}
                 className={`font-body text-sm font-medium transition-colors hover:text-primary ${
                   location.pathname === link.path
-                    ? "text-primary"
+                    ? "text-primary underline decoration-2 underline-offset-4"
                     : "text-muted-foreground"
                 }`}
               >
@@ -62,7 +62,7 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block py-2 font-body text-sm font-medium transition-colors hover:text-primary ${
                   location.pathname === link.path
-                    ? "text-primary"
+                    ? "text-primary underline decoration-2 underline-offset-4"
                     : "text-muted-foreground"
                 }`}
               >
