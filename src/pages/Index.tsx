@@ -164,11 +164,11 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "UX Teardown Methodology",
-                company: "Product Research",
+                title: "Cornerstone Help Hub - Cloud Migration & Virtual Assistant",
+                company: "Platform Development",
                 description:
-                  "Uncovered that 50% of users faced blocking technical issues through systematic research across 14+ studies. This insight shifted the entire product roadmap, resulting in a 40% increase in feature adoption and 30% reduction in support tickets.",
-                tags: ["User Research", "Product Strategy", "+40% Adoption"],
+                  "Led greenfield development serving 6,500+ practices. Achieved 90% virtual assistant adoption and migrated 1,000+ legacy help paths in 12 months. Decoupled content updates from software releases (hours vs. months).",
+                tags: ["90% Adoption", "1,000+ Paths Migrated", "Cloud Migration"],
               },
               {
                 title: "AI Product from Concept to Production",
