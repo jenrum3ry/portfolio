@@ -1,10 +1,18 @@
+import { useState } from "react";
 import Layout from "@/components/layout/Layout";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 import { caseStudies } from "@/data/caseStudies";
-
+import {
+  Dialog,
+  DialogContent,
+  DialogClose,
+} from "@/components/ui/dialog";
 import SEO from "@/components/SEO";
 import { ROUTES } from "@/lib/routes";
+
 const CaseStudies = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
   return (
     <Layout>
       <SEO
@@ -42,11 +50,14 @@ const CaseStudies = () => {
               >
                 {/* Image - FIXED: No cropping, full image visible */}
                 <div className="lg:col-span-2">
-                  <div className="bg-card border border-border rounded-lg overflow-hidden flex items-center justify-center p-2">
+                  <div
+                    className="bg-card border border-border rounded-lg overflow-hidden flex items-center justify-center p-2 cursor-pointer hover:border-primary/50 transition-colors group"
+                    onClick={() => setSelectedImage({ src: study.image, alt: study.imageAlt })}
+                  >
                     <img
                       src={study.image}
                       alt={study.imageAlt}
-                      className="w-full h-auto object-contain"
+                      className="w-full h-auto object-contain group-hover:opacity-90 transition-opacity"
                     />
                   </div>
                 </div>
@@ -166,6 +177,25 @@ const CaseStudies = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Lightbox Dialog */}
+      <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
+        <DialogContent className="max-w-7xl w-full p-0 bg-black/95 border-none">
+          <DialogClose className="absolute right-4 top-4 z-50 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+            <X className="h-6 w-6 text-white" />
+            <span className="sr-only">Close</span>
+          </DialogClose>
+          {selectedImage && (
+            <div className="flex items-center justify-center p-8">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="max-h-[90vh] w-auto object-contain"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </Layout>
   );
 };
