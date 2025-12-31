@@ -54,12 +54,12 @@ export const caseStudies: CaseStudy[] = [
     solution:
       "Led rapid product development using a beta-first approach. Defined MVP scope (patient summarization only), coordinated cross-functional teams across product, engineering, ML, and design, launched beta program within 6 weeks, and established continuous feedback loops that informed daily iteration. Prioritized accuracy over features, ensuring 95% accuracy threshold before expanding use cases.",
     results: [
-      "→ Shipped beta 2 weeks ahead of original timeline while maintaining quality standards",
-      "→ Discovered and resolved critical workflow blocker before launch: 2-minute generation time would break clinical workflows, redesigned to auto-generate during patient check-in",
-      "→ Established reusable clinical validation framework that became template for future AI features",
-      "→ Designed phased rollout (5-7 practices, gradual expansion) preventing infrastructure overload with 1,300-practice customer base",
-      "→ Translated 4 hours of complex clinical feedback into 15 discrete engineering tickets with clear acceptance criteria and owners",
-      "→ Identified 3 critical data categorization issues through real patient record testing that would have tanked adoption post-launch"
+      "Shipped beta 2 weeks ahead of original timeline while maintaining quality standards",
+      "Discovered and resolved critical workflow blocker before launch: 2-minute generation time would break clinical workflows, redesigned to auto-generate during patient check-in",
+      "Established reusable clinical validation framework that became template for future AI features",
+      "Designed phased rollout (5-7 practices, gradual expansion) preventing infrastructure overload with 1,300-practice customer base",
+      "Translated 4 hours of complex clinical feedback into 15 discrete engineering tickets with clear acceptance criteria and owners",
+      "Identified 3 critical data categorization issues through real patient record testing that would have tanked adoption post-launch"
     ],
     metrics: [
       { label: "TIME TO BETA LAUNCH", value: "10 weeks" },
