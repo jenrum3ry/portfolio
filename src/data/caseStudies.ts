@@ -70,8 +70,8 @@ export const caseStudies: CaseStudy[] = [
     learnings:
       "The biggest learning was that shipping fast doesn't mean shipping recklessly. By focusing relentlessly on one high-value use case (patient summarization) and setting a clear accuracy threshold (95%), we maintained quality while moving at startup speed. The beta program was essential - real veterinarians surfaced edge cases and workflow issues that we would never have anticipated internally.",
     tags: ["AI Product", "0-to-1", "Production Launch"],
-    image: "",
-    imageAlt: ""
+    image: "SAI mockup example.png",
+    imageAlt: "AI-powered patient summarization interface mockup showing clinical documentation workflow"
   },
   {
     id: 3,
