@@ -111,43 +111,6 @@ export const caseStudies: CaseStudy[] = [
     imageAlt: ""
   },
   {
-    id: 4,
-    title: "Cross-Functional Product Leadership",
-    platform: "Distributed Team Coordination",
-    year: "2023-2024",
-    description:
-      "Led distributed teams across time zones to ship products on aggressive timelines without compromising quality, bridging technical and business perspectives to maintain strategic alignment.",
-    problem:
-      "The organization was scaling rapidly with distributed teams across 5 time zones (US East Coast, US West Coast, Central Europe, India, and remote US). Communication gaps were causing delays, misalignment between technical and business stakeholders was leading to rework, and aggressive timelines were putting pressure on quality.",
-    myRole:
-      "Led 3 cross-functional product teams (engineering, design, QA, customer success) across multiple time zones. Owned product roadmap prioritization, facilitated communication between technical and business stakeholders, coordinated release planning, and maintained team morale while shipping on aggressive schedules.",
-    approach:
-      "I established clear communication rituals (daily async standups, weekly sync across time zones, documented decision-making), created shared visibility into priorities and blockers, and acted as a bridge between technical teams and business stakeholders. Rather than forcing synchronous work, I optimized for async-first collaboration with intentional sync points for critical decisions.",
-    challenge:
-      "Distributed teams across 5 time zones made synchronous collaboration nearly impossible. Business stakeholders wanted aggressive timelines, engineering teams needed realistic scope, and without careful coordination, quality would suffer. Traditional PM approaches (daily standups, sprint planning in person) didn't work at this scale.",
-    solution:
-      "Redesigned team rituals for async-first collaboration. Established daily async standups (written updates in Slack), weekly all-hands syncs scheduled to accommodate all time zones, documented all decisions in shared spaces, and created visibility dashboards that gave everyone real-time access to priorities, blockers, and progress. Bridged technical/business perspectives by translating engineering constraints into business impact and business goals into technical requirements.",
-    results: [
-      "Shipped quarterly roadmap 10% under budget",
-      "Maintained 95% team satisfaction scores despite aggressive timelines",
-      "Reduced cross-team blockers by 35% through better coordination",
-      "Achieved 98% on-time delivery rate across 3 product teams",
-      "Established async-first rituals adopted by 5 other product teams",
-      "Zero critical production incidents during major releases"
-    ],
-    metrics: [
-      { label: "Teams Led", value: "3" },
-      { label: "Time Zones", value: "5" },
-      { label: "Team Satisfaction", value: "95%" },
-      { label: "On-Time Delivery", value: "98%" }
-    ],
-    learnings:
-      "The biggest lesson was that distributed teams require intentional design. You can't replicate in-person rituals and expect them to work across time zones. Async-first with intentional sync points worked far better than trying to schedule everything synchronously. The other key insight was that PM's role as a bridge between technical and business perspectives becomes even more critical when teams are distributed - clarity and over-communication are not optional.",
-    tags: ["Leadership", "Execution", "Cross-Functional"],
-    image: "",
-    imageAlt: ""
-  },
-  {
     id: 5,
     title: "Cornerstone Help Hub - Cloud Migration & Virtual Assistant",
     platform: "Enterprise Veterinary Practice Management Software",
