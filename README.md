@@ -191,7 +191,7 @@ This portfolio showcases the work of Jen Rumery, highlighting expertise in:
 - UX Research & Teardown Methodology
 - AI Product Development (0-to-1 building)
 - OpenAPI Platform Management
-- Cross-Functional Product Leadership
+- Cloud Migration & Platform Development
 
 ---
 

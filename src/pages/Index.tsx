@@ -164,11 +164,11 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "UX Teardown Methodology",
-                company: "Product Research",
+                title: "Cornerstone Help Hub - Cloud Migration & Virtual Assistant",
+                company: "Platform Development",
                 description:
-                  "Uncovered that 50% of users faced blocking technical issues through systematic research across 14+ studies. This insight shifted the entire product roadmap, resulting in a 40% increase in feature adoption and 30% reduction in support tickets.",
-                tags: ["User Research", "Product Strategy", "+40% Adoption"],
+                  "Led greenfield development serving 6,500+ practices. Achieved 90% virtual assistant adoption and migrated 1,000+ legacy help paths in 12 months. Decoupled content updates from software releases (hours vs. months).",
+                tags: ["90% Adoption", "1,000+ Paths Migrated", "Cloud Migration"],
               },
               {
                 title: "AI Product from Concept to Production",
@@ -183,13 +183,6 @@ const Index = () => {
                 description:
                   "Scaled to 20+ integrations, improved developer onboarding time by 50%, resulting in 2x increase in third-party app adoption. Secured $500K+ infrastructure investment through data-driven advocacy.",
                 tags: ["20+ Integrations", "50% Faster Onboarding", "2x Adoption"],
-              },
-              {
-                title: "Cross-Functional Product Leadership",
-                company: "Product Execution",
-                description:
-                  "Led 3 distributed teams across 5 time zones to ship quarterly roadmap with 95% team satisfaction and zero critical production incidents. Secured stakeholder confidence through transparent communication and consistent delivery.",
-                tags: ["3 Teams, 5 Timezones", "95% Team Satisfaction", "Zero Incidents"],
               },
             ].map((project, index) => (
               <Link
