@@ -351,7 +351,7 @@ const About = () => {
               </p>
 
               <a
-                href="https://www.scrumalliance.org/community/profile/jrumery3"
+                href="https://www.scrumalliance.org/members/1212862"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex flex-col items-center text-center p-6 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
