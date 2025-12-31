@@ -17,10 +17,10 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <header className="sticky top-0 z-50 bg-[#3a3a3a] backdrop-blur-md border-b border-gray-600">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to={ROUTES.HOME} className="font-display text-2xl font-semibold text-foreground">
+          <Link to={ROUTES.HOME} className="font-display text-2xl font-semibold text-white">
             Jennifer Rumery
           </Link>
 
@@ -30,10 +30,10 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-body text-sm font-medium transition-colors hover:text-primary ${
+                className={`font-body text-sm font-medium transition-colors hover:text-[#B8733E] ${
                   location.pathname === link.path
-                    ? "text-primary underline decoration-2 underline-offset-4"
-                    : "text-muted-foreground"
+                    ? "text-[#B8733E] underline decoration-2 underline-offset-4"
+                    : "text-gray-300"
                 }`}
               >
                 {link.name}
@@ -60,10 +60,10 @@ const Header = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block py-2 font-body text-sm font-medium transition-colors hover:text-primary ${
+                className={`block py-2 font-body text-sm font-medium transition-colors hover:text-[#B8733E] ${
                   location.pathname === link.path
-                    ? "text-primary underline decoration-2 underline-offset-4"
-                    : "text-muted-foreground"
+                    ? "text-[#B8733E] underline decoration-2 underline-offset-4"
+                    : "text-gray-300"
                 }`}
               >
                 {link.name}

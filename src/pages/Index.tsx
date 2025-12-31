@@ -18,7 +18,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-background" />
         <div className="container mx-auto px-6 py-28 md:py-40 relative">
           <div className="max-w-4xl animate-fade-in">
-            <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-6">
+            <p className="font-body text-sm md:text-base font-bold text-primary uppercase tracking-[0.2em] mb-6">
               Product Manager
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
