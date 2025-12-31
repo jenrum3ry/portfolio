@@ -37,20 +37,22 @@ const CaseStudies = () => {
             {caseStudies.map((study, index) => (
               <article
                 key={study.id}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 pb-16 border-b border-border last:border-b-0 last:pb-0 opacity-0 animate-fade-in"
+                className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 pb-16 border-b border-border last:border-b-0 last:pb-0 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Image - FIXED: No cropping, full image visible */}
-                <div className="bg-card border border-border rounded-lg overflow-hidden flex items-center justify-center p-4">
-                  <img 
-                    src={study.image}
-                    alt={study.imageAlt}
-                    className="w-full h-auto object-contain"
-                  />
+                <div className="lg:col-span-2">
+                  <div className="bg-card border border-border rounded-lg overflow-hidden flex items-center justify-center p-2">
+                    <img
+                      src={study.image}
+                      alt={study.imageAlt}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
                 </div>
 
                 {/* Content */}
-                <div>
+                <div className="lg:col-span-3">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {study.tags.map((tag) => (
                       <span
