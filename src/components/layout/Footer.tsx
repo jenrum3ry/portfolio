@@ -83,9 +83,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
+        {/* Copyright & Privacy */}
         <div className="mt-8 pt-8 border-t border-gray-600 text-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Jennifer Rumery. All rights reserved.</p>
+          <p className="mb-2">&copy; {new Date().getFullYear()} Jennifer Rumery. All rights reserved.</p>
+          <p className="text-xs">
+            This site uses{' '}
+            <a
+              href="https://clarity.microsoft.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[#B8733E] transition-colors"
+            >
+              Microsoft Clarity
+            </a>
+            {' '}to understand visitor interactions. No cookies are used.
+          </p>
         </div>
       </div>
     </footer>
