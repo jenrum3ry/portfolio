@@ -70,8 +70,8 @@ export const caseStudies: CaseStudy[] = [
     learnings:
       "The biggest learning was that deep clinical partnership beats speed. Working directly with a practicing veterinarian surfaced edge cases and workflow issues we would never have anticipated internally. For example, she immediately identified that the AI-generated summary structure didn't match how vets actually present cases to colleagues. This would have killed adoption if we'd discovered it after launch.\n\nThe beta program design was critical. By structuring a phased rollout (5-7 practices initially, then gradual expansion), we protected against both technical overload (preventing 1,300 clinics from generating summaries simultaneously) and gave ourselves a controlled environment for fast iteration without enterprise-wide impact.",
     tags: ["AI Product", "0-to-1", "Production Launch"],
-    image: "",
-    imageAlt: ""
+    image: "SAI mockup example.png",
+    imageAlt: "AI-powered patient summarization interface mockup showing clinical documentation workflow"
   },
   {
     id: 3,
