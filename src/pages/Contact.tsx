@@ -1,11 +1,21 @@
 import { Mail, Linkedin, ExternalLink, MapPin } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import SEO from '@/components/SEO';
 import { ROUTES } from '@/lib/routes';
+import { trackContactForm, trackExternalLink } from '@/lib/analytics';
+import { useScrollTracking } from '@/hooks/use-analytics';
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  // Track scroll depth for engagement metrics
+  useScrollTracking();
+
+  // Track contact form view on mount
+  useEffect(() => {
+    trackContactForm('view');
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,6 +33,7 @@ export default function Contact() {
       const data = await response.json();
 
       if (data.success) {
+        trackContactForm('submit');
         setFormStatus('success');
         form.reset();
         setTimeout(() => setFormStatus('idle'), 5000);
@@ -63,6 +74,7 @@ export default function Contact() {
             {/* Email Card */}
             <a
               href="mailto:jennifer-rumery@outlook.com"
+              onClick={() => trackExternalLink('mailto:jennifer-rumery@outlook.com', 'Email')}
               className="group bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border border-gray-200 hover:border-[#B8733E] block"
             >
               <div className="flex items-start gap-4">
@@ -88,6 +100,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/jennifer-rumery/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackExternalLink('https://www.linkedin.com/in/jennifer-rumery/', 'LinkedIn')}
               className="group bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border border-gray-200 hover:border-[#B8733E] block"
             >
               <div className="flex items-start gap-4">

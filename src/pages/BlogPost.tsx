@@ -1,13 +1,26 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import SEO from "@/components/SEO";
 import { ROUTES } from "@/lib/routes";
+import { trackBlogPostView } from "@/lib/analytics";
+import { useScrollTracking } from "@/hooks/use-analytics";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find((p) => p.slug === slug);
+
+  // Track scroll depth for engagement metrics
+  useScrollTracking();
+
+  // Track blog post view
+  useEffect(() => {
+    if (post) {
+      trackBlogPostView(post.title, post.slug);
+    }
+  }, [post]);
 
   if (!post) {
     return (
