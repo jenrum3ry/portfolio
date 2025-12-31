@@ -51,27 +51,25 @@ const Index = () => {
       {/* Stats Section */}
       <section className="bg-card border-y border-border">
         <div className="container mx-auto px-6 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
               {
                 label: "Healthcare Product Leader",
                 number: "15+",
-                description: "years across startups and enterprise scale"
+                description: "years across startups and enterprise scale",
+                icon: Microscope
               },
               {
                 label: "Research-Driven",
                 number: "500+",
-                description: "user interviews across healthcare, fintech, and consumer apps"
-              },
-              {
-                label: "Built for Users and Operations",
-                number: null,
-                description: "internal platforms for efficiency, external solutions for impact"
+                description: "user interviews across healthcare, fintech, and consumer apps",
+                icon: Users
               },
               {
                 label: "Shipping Track Record",
-                number: "8",
-                description: "products shipped from concept to market"
+                number: "20+",
+                description: "products shipped: from user-facing solutions to operational platforms",
+                icon: Zap
               }
             ].map((stat, index) => (
               <div
@@ -79,14 +77,13 @@ const Index = () => {
                 className="opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
+                <stat.icon className="h-8 w-8 text-primary mx-auto mb-4" />
                 <p className="font-body text-sm font-bold text-primary uppercase tracking-wider mb-3">
                   {stat.label}
                 </p>
-                {stat.number && (
-                  <p className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-2">
-                    {stat.number}
-                  </p>
-                )}
+                <p className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-2">
+                  {stat.number}
+                </p>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
                   {stat.description}
                 </p>
