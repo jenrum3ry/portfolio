@@ -337,23 +337,36 @@ const EducationCertifications = () => {
       <section className="bg-secondary/30 py-20 md:py-28">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-8">
               Military Service
             </h2>
-            <p className="font-body text-lg text-foreground mb-2">
-              United States Air Force
-            </p>
-            <p className="font-body text-base text-muted-foreground mb-2">
-              Aerospace Ground Equipment Mechanic | 2003 - 2011
-            </p>
-            <p className="font-body text-base text-muted-foreground mb-4">
-              Honorable Discharge
-            </p>
-            <p className="font-body text-base text-muted-foreground leading-relaxed">
-              Served 8 years on active duty, including one reenlistment, maintaining critical
-              ground support equipment for aerospace operations. Transitioned to healthcare
-              administration after completing undergraduate degree while serving.
-            </p>
+
+            <div className="flex items-start gap-6 p-6 rounded-lg border border-border bg-background">
+              <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20 bg-white flex items-center justify-center">
+                <img
+                  src="/portfolio/USAF.png"
+                  alt="United States Air Force Logo"
+                  className="w-full h-full object-contain p-2"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-body text-lg font-semibold text-foreground mb-2">
+                  United States Air Force
+                </h3>
+                <p className="font-body text-base text-muted-foreground mb-1">
+                  Aerospace Ground Equipment Mechanic
+                </p>
+                <p className="font-body text-sm text-muted-foreground mb-2">
+                  2003 - 2011 | Honorable Discharge
+                </p>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  Served 8 years on active duty, including one reenlistment, maintaining critical
+                  ground support equipment for aerospace operations. Transitioned to healthcare
+                  administration after completing undergraduate degree while serving.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
