@@ -22,17 +22,14 @@ const Index = () => {
               Product Manager
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
-              I bridge research insights to{" "}
-              <span className="text-primary italic">technical execution in complex domains</span>
+              I turn research insights into{" "}
+              <span className="text-primary italic">shipping products in complex domains</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-6 max-w-3xl">
               I'm a product manager obsessed with uncovering the hidden friction that blocks real users.
-              My 15+ years in healthcare taught me how to translate complex domain knowledge into intuitive
-              products. That same methodology works anywhere. I ship products that solve problems others
+              My 15+ years in healthcare taught me to uncover hidden friction and translate it into intuitive
+              products. That same methodology works in any complex domain. I ship products that solve problems others
               don't even see yet.
-            </p>
-            <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-10 max-w-3xl">
-              I want to work somewhere I can partner with teams to turn messy user problems into elegant product solutions.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="font-body">
