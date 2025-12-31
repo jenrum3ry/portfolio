@@ -62,7 +62,7 @@ portfolio/
 │   │   ├── About.tsx        # About page
 │   │   ├── Blog.tsx         # Blog listing
 │   │   ├── BlogPost.tsx     # Individual blog post
-│   │   ├── CaseStudies.tsx  # Projects showcase
+│   │   ├── CaseStudies.tsx  # Projects showcase with image lightbox
 │   │   ├── Contact.tsx      # Contact form
 │   │   └── NotFound.tsx     # 404 page
 │   ├── App.tsx              # Main app with routing & error boundary
@@ -82,6 +82,8 @@ portfolio/
 - **Routing** - React Router with `/portfolio` base path
 - **Dark Mode Support** - Theme switching with next-themes
 - **Professional Portfolio** - Showcases work experience, projects, and blog posts
+- **Image Lightbox** - Click project images to view enlarged in modal dialog
+- **Cohesive Design** - Dark header/footer bookend design with bronze accent colors
 - **Performance** - Optimized bundle sizes (main: 182KB, pages: 2-15KB each)
 
 ## 🛠️ Available Scripts
@@ -99,8 +101,11 @@ portfolio/
 - **UI Components**: shadcn-ui (Radix UI primitives)
 - **Styling**: Tailwind CSS with custom theme
 - **Animations**: Custom fade-in animations with staggered delays
-- **Typography**: Custom display and body fonts
+- **Typography**: Custom display and body fonts with responsive sizing
 - **Color Scheme**: Professional color palette with warm shadows
+- **Layout**: Dark header (#3a3a3a) and footer bookend design
+- **Accent Colors**: Bronze (#B8733E) for hover states and highlights
+- **Responsive Typography**: Mobile-first with breakpoint-specific sizing
 
 ## 🧭 Routes
 
