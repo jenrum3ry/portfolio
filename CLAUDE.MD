@@ -153,7 +153,7 @@ The contact page provides ways to reach Jen Rumery for professional opportunitie
 - UX Teardown Methodology (systematic user research)
 - AI Product Development (0-to-1 building)
 - OpenAPI Platform Management (integrations, developer experience)
-- Cross-Functional Product Leadership (distributed teams, execution)
+- Cloud Migration & Platform Development (enterprise help systems)
 
 ## Recent UI Enhancements
 

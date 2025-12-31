@@ -184,13 +184,6 @@ const Index = () => {
                   "Scaled to 20+ integrations, improved developer onboarding time by 50%, resulting in 2x increase in third-party app adoption. Secured $500K+ infrastructure investment through data-driven advocacy.",
                 tags: ["20+ Integrations", "50% Faster Onboarding", "2x Adoption"],
               },
-              {
-                title: "Cross-Functional Product Leadership",
-                company: "Product Execution",
-                description:
-                  "Led 3 distributed teams across 5 time zones to ship quarterly roadmap with 95% team satisfaction and zero critical production incidents. Secured stakeholder confidence through transparent communication and consistent delivery.",
-                tags: ["3 Teams, 5 Timezones", "95% Team Satisfaction", "Zero Incidents"],
-              },
             ].map((project, index) => (
               <Link
                 key={project.title}
