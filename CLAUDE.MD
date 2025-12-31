@@ -61,10 +61,18 @@ The application uses React Router with a `/portfolio` base path:
 - Stats section (experience, user studies, 0-to-1 builder)
 - "What I Do" section highlighting systematic user research approach
 - Education & Credentials section with MBA badges and certifications
-- Featured work preview with 4 key projects
+- Featured work preview with 3 key projects:
+  1. Cornerstone Help Hub - Cloud Migration & Virtual Assistant
+  2. AI Product from Concept to Production
+  3. OpenAPI Platform Management
 - CTA section
 
 ### Projects Page (CaseStudies.tsx)
+- **4 Portfolio Projects** (in priority order):
+  1. Cornerstone Help Hub - Cloud Migration & Virtual Assistant
+  2. AI Product from Concept to Production
+  3. OpenAPI Platform Management
+  4. UX Teardown Methodology
 - Asymmetric grid layout: 5-column grid with 2:3 ratio (image:content)
   - Image column: `lg:col-span-2` (40% width)
   - Content column: `lg:col-span-3` (60% width)
@@ -150,10 +158,10 @@ The portfolio displays verified credentials:
 The contact page provides ways to reach Jen Rumery for professional opportunities.
 
 ## Key Areas of Work Featured
-- UX Teardown Methodology (systematic user research)
-- AI Product Development (0-to-1 building)
-- OpenAPI Platform Management (integrations, developer experience)
-- Cloud Migration & Platform Development (enterprise help systems)
+1. Cloud Migration & Platform Development (enterprise help systems, 6,500+ practices)
+2. AI Product Development (0-to-1 building, 8 weeks to production)
+3. OpenAPI Platform Management (integrations, developer experience, 20+ partners)
+4. UX Teardown Methodology (systematic user research, 14+ studies)
 
 ## Recent UI Enhancements
 

@@ -160,6 +160,17 @@ VITE_WEB3FORMS_ACCESS_KEY=your-api-key-here
 - **Static data only**: No backend/API (except Web3Forms for contact form)
 - **Type safety**: All data uses centralized TypeScript interfaces
 
+## 📁 Portfolio Projects
+
+The portfolio showcases 4 case studies in priority order:
+
+1. **Cornerstone Help Hub** - Cloud migration & virtual assistant (90% adoption, 1,000+ paths)
+2. **AI Product from Concept to Production** - 8 weeks to launch (95% accuracy, 200+ beta users)
+3. **OpenAPI Platform Management** - 20+ integrations (50% faster onboarding, 2x adoption)
+4. **UX Teardown Methodology** - Systematic research (14+ studies, 1,300+ practices)
+
+Homepage features the top 3 projects. All projects include clickable image lightbox for detailed viewing.
+
 ## 🌐 Deployment
 
 This project is configured for deployment with a `/portfolio` base path (e.g., GitHub Pages).
@@ -188,10 +199,10 @@ Private project - all rights reserved.
 ## 👤 About
 
 This portfolio showcases the work of Jen Rumery, highlighting expertise in:
-- UX Research & Teardown Methodology
-- AI Product Development (0-to-1 building)
-- OpenAPI Platform Management
-- Cloud Migration & Platform Development
+1. Cloud Migration & Platform Development (6,500+ practices served)
+2. AI Product Development (0-to-1 building, 8 weeks to production)
+3. OpenAPI Platform Management (20+ integrations)
+4. UX Research & Teardown Methodology (14+ studies conducted)
 
 ---
 
