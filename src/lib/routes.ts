@@ -1,6 +1,6 @@
 export const ROUTES = {
   HOME: '/',
-  CASE_STUDIES: '/case-studies',
+  PROJECTS: '/projects',
   BLOG: '/blog',
   BLOG_POST: (slug: string) => `/blog/${slug}`,
   CONTACT: '/contact',
