@@ -624,7 +624,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What I Learned</h2>
 
-<img src="/portfolio/80 percent info graphic.png" alt="Five key learnings: Time to first value matters more than theoretical completeness, Solving for edge cases can block the majority, Automation without trust isn't helpful, Perfectionism often disguises fear, Your job isn't to be right - it's to learn fast" />
+<img src="/portfolio/80 percent info graphic.png" alt="Five key learnings: Time to first value matters more than theoretical completeness, Solving for edge cases can block the majority, Automation without trust isn't helpful, Perfectionism often disguises fear, Your job isn't to be right - it's to learn fast" style="max-width: 600px; margin: 2rem auto; display: block;" />
 
 <h2>The Broader Lesson</h2>
 
