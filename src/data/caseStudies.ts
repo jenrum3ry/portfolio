@@ -82,34 +82,35 @@ export const caseStudies: CaseStudy[] = [
     platform: "Integration Platform & Partner Ecosystem",
     year: "2023-2024",
     description:
-      "Scaled platform to 20+ partner integrations while improving developer experience and advocating for infrastructure investments that strengthened system reliability.",
+      "Scaled platform to 40+ partner integrations while establishing partnership lifecycle process and improving developer experience.",
     problem:
-      "The platform was built to support a handful of integrations but needed to scale to 20+ partners without becoming a maintenance nightmare. Developer experience was poor (complex documentation, unclear error messages, inconsistent API patterns), and infrastructure limitations were causing reliability issues that threatened partner trust.",
+      "The platform was built to support a handful of integrations but needed to scale to 40+ third-party partners plus individual veterinary practices with their own API keys. Developer experience was inconsistent (unclear documentation, inconsistent API patterns), infrastructure limitations were causing reliability issues, and there was no formal process for managing new partnership requests from initial inquiry through production launch.",
     myRole:
-      "Owned platform strategy and partner integrations roadmap. Managed relationships with 20+ integration partners, prioritized developer experience improvements, advocated for infrastructure investments with executive leadership, and coordinated cross-functional teams to execute platform improvements.",
+      "Owned platform strategy and partner integrations roadmap. Managed relationships with 40+ integration partners, established intake and evaluation process for new partnerships, prioritized developer experience improvements, advocated for infrastructure investments with executive leadership, and managed partnerships from discovery through beta to production release.",
     approach:
-      "I treated platform management as a product in itself, with developers as my primary users. Conducted interviews with integration partners to understand friction points, mapped their complete integration journey, identified the 80/20 of improvements (better docs, clearer error messages, consistent API patterns), and built a prioritized roadmap that balanced partner needs with infrastructure sustainability.",
+      "I established a partnership lifecycle process to evaluate and onboard new integrations systematically. Conducted interviews with integration partners to understand how they actually used the API, identified common friction points in the developer experience, and used production incidents to inform API design decisions rather than just applying quick fixes.",
     challenge:
-      "The platform needed to scale from a few integrations to 20+ without degrading performance or overwhelming the engineering team. Poor developer documentation was causing integration delays, and infrastructure limitations were creating reliability concerns that could damage partner relationships.",
+      "The platform needed to scale from a few integrations to 40+ without degrading performance or overwhelming the engineering team. Poor developer documentation was causing integration delays, and infrastructure limitations were creating reliability concerns that could damage partner relationships.",
     solution:
       "Led platform improvements using systematic developer research. Interviewed integration partners, mapped their workflows, identified top friction points (documentation gaps, unclear errors, inconsistent patterns), and prioritized improvements based on impact. Advocated for infrastructure investments by quantifying the business risk of unreliable integrations, securing executive buy-in for foundational improvements.",
     results: [
-      "Scaled to 20+ integrations without reliability degradation",
-      "Improved developer onboarding time by 50% through better documentation",
+      "Scaled to 40+ integrations without reliability degradation",
+      "Established partnership lifecycle: discovery, agreement, development, beta, production",
+      "Improved developer onboarding time by 50% through clearer documentation",
       "Achieved 2x increase in third-party app adoption",
       "Reduced integration support tickets by 40%",
-      "Established developer feedback loop adopted across engineering org",
-      "Secured $500K+ infrastructure investment through data-driven advocacy"
+      "Secured $500K+ infrastructure investment through data-driven advocacy",
+      "Redesigned high-volume endpoint pattern after production incident"
     ],
     metrics: [
-      { label: "Partner Integrations", value: "20+" },
+      { label: "Partner Integrations", value: "40+" },
       { label: "Onboarding Time Reduction", value: "50%" },
       { label: "App Adoption Increase", value: "2x" },
       { label: "Support Ticket Reduction", value: "40%" }
     ],
     learnings:
-      "Platform products require the same user research rigor as customer-facing products. Treating developers as users - interviewing them, mapping their workflows, prioritizing their friction points - was just as valuable as traditional user research. The other key learning was that advocating for infrastructure isn't about technology for its own sake; it's about quantifying business risk and showing leadership why reliability matters to revenue.",
-    tags: ["Platform PM", "20+ Integrations", "Developer Experience"],
+      "A production incident taught me that API design requires different research than feature development. One partner's polling pattern consumed 78% of API capacity because our endpoint design forced frequent polling to sync data. Interviews with 5 partners revealed they were all building workarounds for the same problem. We built an async bulk export endpoint (POST to start job, GET to retrieve results), which reduced that partner's load by 85%. The key insight: platform products need heavier upfront research because a bad endpoint design affects every partner using it, not just one user. The partnership lifecycle process was equally important. Establishing clear stages from discovery through production meant we could scale partnerships without ad-hoc processes overwhelming the team.",
+    tags: ["Platform PM", "40+ Integrations", "Developer Experience"],
     image: "",
     imageAlt: ""
   },
