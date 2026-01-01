@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { ROUTES } from "@/lib/routes";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { caseStudies } from "@/data/caseStudies";
 
 const Index = () => {
   return (
@@ -161,57 +163,47 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Cornerstone Help Hub - Cloud Migration & Virtual Assistant",
-                company: "Platform Development",
-                description:
-                  "Led greenfield development serving 6,500+ practices. Achieved 90% virtual assistant adoption and migrated 1,000+ legacy help paths in 12 months. Decoupled content updates from software releases (hours vs. months).",
-                tags: ["90% Adoption", "1,000+ Paths Migrated", "Cloud Migration"],
-              },
-              {
-                title: "AI Product from Concept to Production",
-                company: "0-to-1 Product Launch",
-                description:
-                  "Shipped AI-powered patient summarization in 8 weeks (2 weeks ahead of schedule) with 95% accuracy. Achieved 200+ beta users in first month with 85% retention rate, reducing veterinarian documentation time by 25%.",
-                tags: ["AI Product", "8 Weeks to Launch", "95% Accuracy"],
-              },
-              {
-                title: "OpenAPI Platform Management",
-                company: "Platform & Integrations",
-                description:
-                  "Scaled to 20+ integrations, improved developer onboarding time by 50%, resulting in 2x increase in third-party app adoption. Secured $500K+ infrastructure investment through data-driven advocacy.",
-                tags: ["20+ Integrations", "50% Faster Onboarding", "2x Adoption"],
-              },
-            ].map((project, index) => (
-              <Link
-                key={project.title}
-                to={ROUTES.PROJECTS}
-                className="group block p-8 bg-card border-2 border-border rounded-xl hover:border-primary/50 hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <p className="font-body text-xs font-bold text-primary uppercase tracking-[0.15em] mb-3">
-                  {project.company}
-                </p>
-                <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="font-body text-foreground/70 mb-5 leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 text-xs font-body font-medium bg-secondary text-secondary-foreground rounded-full"
+          <div className="relative px-12">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {caseStudies.map((project) => (
+                  <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/2">
+                    <Link
+                      to={ROUTES.PROJECTS}
+                      className="group block p-8 bg-card border-2 border-border rounded-xl hover:border-primary/50 hover:shadow-warm transition-all duration-300 h-full"
                     >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </Link>
-            ))}
+                      <p className="font-body text-xs font-bold text-primary uppercase tracking-[0.15em] mb-3">
+                        {project.platform}
+                      </p>
+                      <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="font-body text-foreground/70 mb-5 leading-relaxed">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-3 py-1 text-xs font-body font-medium bg-secondary text-secondary-foreground rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </Link>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>
