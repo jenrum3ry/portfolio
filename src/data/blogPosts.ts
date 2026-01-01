@@ -624,13 +624,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What I Learned</h2>
 
-<ol>
-<li><strong>Time to first value matters more than theoretical completeness.</strong> Value delayed is value denied.</li>
-<li><strong>Solving for edge cases can block the majority.</strong> Data helps separate real user needs from imagined ones.</li>
-<li><strong>Automation without trust isn't helpful.</strong> Transparency and control build confidence.</li>
-<li><strong>Perfectionism often disguises fear.</strong> Shipping is how you learn.</li>
-<li><strong>Your job isn't to be right - it's to learn fast.</strong></li>
-</ol>
+<img src="/portfolio/80 percent info graphic.png" alt="Five key learnings: Time to first value matters more than theoretical completeness, Solving for edge cases can block the majority, Automation without trust isn't helpful, Perfectionism often disguises fear, Your job isn't to be right - it's to learn fast" />
 
 <h2>The Broader Lesson</h2>
 
