@@ -175,7 +175,7 @@ const Index = () => {
                 {caseStudies.map((project) => (
                   <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/2">
                     <Link
-                      to={ROUTES.PROJECTS}
+                      to={`${ROUTES.PROJECTS}#project-${project.id}`}
                       className="group block p-8 bg-card border-2 border-border rounded-xl hover:border-primary/50 hover:shadow-warm transition-all duration-300 h-full"
                     >
                       <p className="font-body text-xs font-bold text-primary uppercase tracking-[0.15em] mb-3">

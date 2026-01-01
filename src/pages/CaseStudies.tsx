@@ -25,6 +25,19 @@ const CaseStudies = () => {
     });
   }, []);
 
+  // Scroll to project section if hash is present in URL
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, []);
+
   const handleImageClick = (study: typeof caseStudies[0]) => {
     trackProjectClick(study.title, study.id);
     setSelectedImage({ src: study.image, alt: study.imageAlt });
@@ -68,6 +81,7 @@ const CaseStudies = () => {
             {caseStudies.map((study, index) => (
               <article
                 key={study.id}
+                id={`project-${study.id}`}
                 className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 pb-16 border-b border-border last:border-b-0 last:pb-0 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
