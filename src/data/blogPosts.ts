@@ -624,18 +624,17 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What I Learned</h2>
 
-<img src="/portfolio/80 percent info graphic.png" alt="Five key learnings: Time to first value matters more than theoretical completeness, Solving for edge cases can block the majority, Automation without trust isn't helpful, Perfectionism often disguises fear, Your job isn't to be right - it's to learn fast" style="max-width: 600px; margin: 2rem auto; display: block;" />
-
-<h2>The Broader Lesson</h2>
-
-<p>Looking back, my perfectionism wasn't really about protecting users. It was about protecting myself from being wrong.</p>
-
-<p>But by holding the product back, I wasn't avoiding failure, I was prolonging user pain.</p>
-
-<p>The MyCornerstone Upgrade Service ultimately helped thousands of veterinary practices stay current, reduced support burden, and gave doctors their nights back.</p>
-
-<p>None of that would have happened if I'd kept chasing the 100% solution.</p>
-
-<p>Sometimes, 80% shipped - delivered quickly and intentionally - is infinitely more valuable than 100% stuck in your head.</p>`
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; margin: 2rem 0;">
+  <div>
+    <img src="/portfolio/80 percent info graphic.png" alt="Five key learnings: Time to first value matters more than theoretical completeness, Solving for edge cases can block the majority, Automation without trust isn't helpful, Perfectionism often disguises fear, Your job isn't to be right - it's to learn fast" style="width: 100%; height: auto;" />
+  </div>
+  <div>
+    <p>Looking back, my perfectionism wasn't really about protecting users. It was about protecting myself from being wrong.</p>
+    <p>But by holding the product back, I wasn't avoiding failure, I was prolonging user pain.</p>
+    <p>The MyCornerstone Upgrade Service ultimately helped thousands of veterinary practices stay current, reduced support burden, and gave doctors their nights back.</p>
+    <p>None of that would have happened if I'd kept chasing the 100% solution.</p>
+    <p>Sometimes, 80% shipped - delivered quickly and intentionally - is infinitely more valuable than 100% stuck in your head.</p>
+  </div>
+</div>`
   }
 ];
