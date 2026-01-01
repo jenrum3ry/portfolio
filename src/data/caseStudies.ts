@@ -111,8 +111,8 @@ export const caseStudies: CaseStudy[] = [
     learnings:
       "A production incident taught me that API design requires different research than feature development. One partner's polling pattern consumed 78% of API capacity because our endpoint design forced frequent polling to sync data. Interviews with 5 partners revealed they were all building workarounds for the same problem. We built an async bulk export endpoint (POST to start job, GET to retrieve results), which reduced that partner's load by 85%. The key insight: platform products need heavier upfront research because a bad endpoint design affects every partner using it, not just one user. The partnership lifecycle process was equally important. Establishing clear stages from discovery through production meant we could scale partnerships without ad-hoc processes overwhelming the team.",
     tags: ["Platform PM", "40+ Integrations", "Developer Experience"],
-    image: "",
-    imageAlt: ""
+    image: "OpenAPI.png",
+    imageAlt: "OpenAPI Platform Management showing integration architecture and partner ecosystem"
   },
   {
     id: 4,
