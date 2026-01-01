@@ -83,7 +83,7 @@ const CaseStudies = () => {
                 key={study.id}
                 id={`project-${study.id}`}
                 className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 pb-16 border-b border-border last:border-b-0 last:pb-0 opacity-0 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                style={{ animationDelay: `${index * 100}ms`, scrollMarginTop: '120px' }}
               >
                 {/* Image - FIXED: No cropping, full image visible */}
                 <div className="lg:col-span-2">
