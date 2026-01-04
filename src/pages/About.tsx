@@ -414,7 +414,7 @@ const About = () => {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-body border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <a href="/resume.pdf" download>
+              <a href="/Jennifer%20Rumery%20SrPM%20Resume.pdf" download>
                 <Download className="mr-2 h-4 w-4" /> Download Resume
               </a>
             </Button>
