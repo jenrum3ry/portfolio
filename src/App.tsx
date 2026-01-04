@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import PageLoader from "@/components/PageLoader";
@@ -35,7 +35,7 @@ function App() {
               <Route path={ROUTES.BLOG} element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path={ROUTES.CONTACT} element={<Contact />} />
-              <Route path={ROUTES.ABOUT} element={<About />} />
+              <Route path={ROUTES.ABOUT} element={<Navigate to={ROUTES.HOME} replace />} />
               <Route path={ROUTES.EDUCATION_CERTIFICATIONS} element={<EducationCertifications />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

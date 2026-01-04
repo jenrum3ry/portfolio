@@ -92,6 +92,40 @@ const Index = () => {
         </div>
       </section>
 
+      {/* My Story Section */}
+      <section className="py-20 md:py-28">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
+              My Story
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8">
+              From the field to the product room
+            </h2>
+            <div className="space-y-6 font-body text-lg text-muted-foreground leading-relaxed">
+              <p>
+                I started as an implementation specialist at IDEXX, working directly with
+                customers to deploy practice management software. I spent years in the field,
+                training users, troubleshooting workflows, and learning what actually matters
+                when people are trying to get work done.
+              </p>
+              <p>
+                Over 14 years at IDEXX, I progressed from implementation specialist to business
+                analyst to product owner, eventually leading digital product strategy for an
+                enterprise platform serving thousands of locations globally.
+              </p>
+              <p>
+                But I wanted to build faster. I wanted to stay closer to users. So I
+                moved to a high-growth startup where I could ship products in
+                weeks instead of quarters. At Shepherd, I built three AI products from concept to production,
+                managed a platform with 20+ partner integrations, and developed a systematic
+                methodology for understanding users that became my signature approach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How I Work Section */}
       <section className="bg-secondary/30 py-20 md:py-28">
         <div className="container mx-auto px-6">
@@ -137,6 +171,145 @@ const Index = () => {
                     {item.title}
                   </h3>
                   <p className="font-body text-base text-foreground/70 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* UX Teardown Methodology */}
+      <section className="py-20 md:py-28">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
+              My Methodology
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8">
+              UX Teardown: My Signature Approach
+            </h2>
+            <div className="space-y-6 font-body text-lg text-muted-foreground leading-relaxed">
+              <p>
+                I developed an approach to evaluating end-to-end user journeys by
+                systematically mapping workflows, visually annotating screens, and tagging
+                friction points in a way that translates directly into actionable product roadmaps.
+              </p>
+
+              <div className="bg-card border border-border rounded-lg p-8 my-8">
+                <h3 className="font-display text-xl font-semibold text-foreground mb-6">
+                  The 7-Step Process:
+                </h3>
+                <ol className="space-y-4 font-body text-base text-muted-foreground">
+                  <li className="flex gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">1</span>
+                    <div>
+                      <strong className="text-foreground">Journey Mapping</strong> - Break complete
+                      workflows into distinct phases, focusing on the 80/80 rule (80% most common
+                      workflows, 80% most common screens)
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">2</span>
+                    <div>
+                      <strong className="text-foreground">Screen-by-Screen Walkthrough</strong> - Navigate
+                      through every screen, every interaction, documenting the complete user experience
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">3</span>
+                    <div>
+                      <strong className="text-foreground">Visual Annotation</strong> - Use collaborative
+                      tools like FigJam to add comments, drawings, and observations directly on screen images
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">4</span>
+                    <div>
+                      <strong className="text-foreground">Systematic Tagging</strong> - Color-coded
+                      categories (UX friction, AI opportunities, feature areas, duplicate entry, etc.)
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">5</span>
+                    <div>
+                      <strong className="text-foreground">Structured Data Capture</strong> - Transfer
+                      tagged observations into spreadsheets for sorting, filtering, and analysis
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">6</span>
+                    <div>
+                      <strong className="text-foreground">Heat Mapping</strong> - Zoom out to see where
+                      friction clusters, identify patterns across screens, prioritize based on density
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">7</span>
+                    <div>
+                      <strong className="text-foreground">Translation to Action</strong> - Convert
+                      insights into Jira tickets, ProductBoard features, and prioritized roadmaps within 24 hours
+                    </div>
+                  </li>
+                </ol>
+              </div>
+
+              <p>
+                <strong className="text-foreground">The impact:</strong> Using this methodology
+                across 14+ user studies, I discovered that 50% of users were facing blocking
+                technical issues preventing product adoption, not a lack of features. This insight
+                fundamentally shifted the entire product roadmap from feature enhancement to
+                foundational reliability improvements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Makes Me Different */}
+      <section className="bg-secondary/30 py-20 md:py-28">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8 text-center">
+              What Makes Me Different
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  title: "Rare Skill Combination",
+                  description: "Deep user research + technical product development (AI, APIs) + 0-to-1 building + cross-functional leadership. Most PMs excel in 1-2 areas; I actively work across all four."
+                },
+                {
+                  title: "Systematic Methodology",
+                  description: "UX teardown process that's repeatable, visual, collaborative, and actionable. Not just 'user interviews' - a structured framework that surfaces hidden insights."
+                },
+                {
+                  title: "Hands-On Builder",
+                  description: "From debugging in release candidate environments to prototyping with AI APIs to negotiating partner agreements - I'm in the details while maintaining strategic perspective."
+                },
+                {
+                  title: "Domain Depth",
+                  description: "15+ years in healthcare technology gives me deep understanding of complex workflows, regulatory considerations, and multi-stakeholder coordination. This expertise transfers to any domain-specific product role."
+                },
+                {
+                  title: "0-to-1 Track Record",
+                  description: "Shipped three products from concept to production. I know how to validate ideas fast, build beta programs, gather real feedback, and iterate based on actual usage."
+                },
+                {
+                  title: "Systems Thinker",
+                  description: "Don't just ship features, design how information flows, how teams coordinate, how processes scale. Build infrastructure that enables others to work better."
+                }
+              ].map((item, index) => (
+                <div
+                  key={item.title}
+                  className="p-6 bg-card border border-border rounded-lg opacity-0 animate-fade-in hover:shadow-warm transition-all duration-300"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="font-body text-muted-foreground leading-relaxed">
                     {item.description}
                   </p>
                 </div>
