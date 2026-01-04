@@ -40,7 +40,7 @@ const Header = () => {
               </Link>
             ))}
             <Button asChild size="sm" className="font-body">
-              <a href="/Jennifer%20Rumery%20SrPM%20Resume.pdf" download>
+              <a href="/Jennifer%20Rumery%20SrPM%20Resume.pdf" download className="flex items-center">
                 <Download className="mr-2 h-4 w-4" /> Resume
               </a>
             </Button>
@@ -75,7 +75,7 @@ const Header = () => {
               </Link>
             ))}
             <Button asChild size="sm" className="font-body w-full mt-4">
-              <a href="/Jennifer%20Rumery%20SrPM%20Resume.pdf" download onClick={() => setMobileMenuOpen(false)}>
+              <a href="/Jennifer%20Rumery%20SrPM%20Resume.pdf" download onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center">
                 <Download className="mr-2 h-4 w-4" /> Download Resume
               </a>
             </Button>
