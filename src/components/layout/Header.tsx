@@ -6,7 +6,6 @@ import { ROUTES } from "@/lib/routes";
 
 const navLinks = [
   { name: "Home", path: ROUTES.HOME },
-  { name: "About", path: ROUTES.ABOUT },
   { name: "Projects", path: ROUTES.PROJECTS },
   { name: "Blog", path: ROUTES.BLOG },
   { name: "Education", path: ROUTES.EDUCATION_CERTIFICATIONS },
