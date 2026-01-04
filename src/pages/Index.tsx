@@ -202,7 +202,7 @@ const Index = () => {
                 },
                 {
                   title: "Technical PM Who Ships",
-                  description: "Built this portfolio from scratch with React and TypeScript, leveraging Claude Code to accelerate development. I don't just write specs—I prototype, debug alongside engineers, and understand the technical constraints that shape product decisions."
+                  description: "Built this portfolio from scratch with React and TypeScript, leveraging Claude Code to accelerate development. I don't just write specs - I prototype, debug alongside engineers, and understand the technical constraints that shape product decisions."
                 },
                 {
                   title: "Systematic Methodology",

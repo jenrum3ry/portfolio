@@ -420,7 +420,7 @@ const EducationCertifications = () => {
                 Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="font-body border-primary-foreground !text-primary-foreground hover:bg-primary-foreground hover:!text-primary">
+            <Button asChild size="lg" variant="outline" className="font-body bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <a href={`${import.meta.env.BASE_URL}Jennifer%20Rumery%20SrPM%20Resume.pdf`} download className="flex items-center">
                 <Download className="mr-2 h-4 w-4" /> Download Resume
               </a>
