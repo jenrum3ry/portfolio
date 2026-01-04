@@ -104,22 +104,22 @@ const Index = () => {
             </h2>
             <div className="space-y-6 font-body text-lg text-muted-foreground leading-relaxed">
               <p>
-                I started as an implementation specialist at IDEXX, working directly with
-                customers to deploy practice management software. I spent years in the field,
-                training users, troubleshooting workflows, and learning what actually matters
-                when people are trying to get work done.
+                I started as an implementation specialist at IDEXX (a leading veterinary healthcare
+                technology company), working directly with customers to deploy practice management
+                software. I spent years in the field, training users, troubleshooting workflows,
+                and learning what actually matters when people are trying to get work done.
               </p>
               <p>
-                Over 14 years, I progressed from implementation specialist to business
-                analyst to product owner, eventually leading digital product strategy for an
-                enterprise platform serving thousands of locations globally. I learned how to ship
-                products at scale, coordinate across stakeholders, and build systems that work
-                for diverse user bases.
+                Over 14 years, I progressed from implementation specialist to business analyst
+                to product owner and product manager, eventually leading digital product strategy
+                for an enterprise platform serving thousands of locations globally. I learned how
+                to ship products at scale, coordinate across stakeholders, and build systems that
+                work for diverse user bases.
               </p>
               <p>
-                My next chapter took me to a high-growth startup building AI products for veterinary medicine.
-                At Shepherd, I shipped three products from concept to production,
-                managed a platform with 20+ partner integrations, and developed systematic
+                My next chapter took me to Shepherd, a VC-backed startup where I led AI product
+                development for veterinary medicine. I shipped three products from concept to production,
+                managed a platform with 40+ vendor integrations, and developed systematic
                 approaches to user research that combine deep empathy with rapid execution.
               </p>
               <p>
