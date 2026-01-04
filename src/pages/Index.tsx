@@ -110,16 +110,23 @@ const Index = () => {
                 when people are trying to get work done.
               </p>
               <p>
-                Over 14 years at IDEXX, I progressed from implementation specialist to business
+                Over 14 years, I progressed from implementation specialist to business
                 analyst to product owner, eventually leading digital product strategy for an
-                enterprise platform serving thousands of locations globally.
+                enterprise platform serving thousands of locations globally. I learned how to ship
+                products at scale, coordinate across stakeholders, and build systems that work
+                for diverse user bases.
               </p>
               <p>
-                But I wanted to build faster. I wanted to stay closer to users. So I
-                moved to a high-growth startup where I could ship products in
-                weeks instead of quarters. At Shepherd, I built three AI products from concept to production,
-                managed a platform with 20+ partner integrations, and developed a systematic
-                methodology for understanding users that became my signature approach.
+                My next chapter took me to a high-growth startup building AI products for veterinary medicine.
+                At Shepherd, I shipped three products from concept to production,
+                managed a platform with 20+ partner integrations, and developed systematic
+                approaches to user research that combine deep empathy with rapid execution.
+              </p>
+              <p>
+                What drives me is the opportunity to solve hard problems for people doing important work.
+                Whether it's enterprise platforms serving thousands of clinics or 0-to-1 AI products,
+                I bring the same approach: watch users work, find the hidden friction, and ship solutions
+                that make their jobs easier.
               </p>
             </div>
           </div>
@@ -175,93 +182,6 @@ const Index = () => {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* UX Teardown Methodology */}
-      <section className="py-20 md:py-28">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <p className="font-body text-sm font-bold text-primary uppercase tracking-[0.2em] mb-3">
-              My Methodology
-            </p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-8">
-              UX Teardown: My Signature Approach
-            </h2>
-            <div className="space-y-6 font-body text-lg text-muted-foreground leading-relaxed">
-              <p>
-                I developed an approach to evaluating end-to-end user journeys by
-                systematically mapping workflows, visually annotating screens, and tagging
-                friction points in a way that translates directly into actionable product roadmaps.
-              </p>
-
-              <div className="bg-card border border-border rounded-lg p-8 my-8">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-6">
-                  The 7-Step Process:
-                </h3>
-                <ol className="space-y-4 font-body text-base text-muted-foreground">
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">1</span>
-                    <div>
-                      <strong className="text-foreground">Journey Mapping</strong> - Break complete
-                      workflows into distinct phases, focusing on the 80/80 rule (80% most common
-                      workflows, 80% most common screens)
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">2</span>
-                    <div>
-                      <strong className="text-foreground">Screen-by-Screen Walkthrough</strong> - Navigate
-                      through every screen, every interaction, documenting the complete user experience
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">3</span>
-                    <div>
-                      <strong className="text-foreground">Visual Annotation</strong> - Use collaborative
-                      tools like FigJam to add comments, drawings, and observations directly on screen images
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">4</span>
-                    <div>
-                      <strong className="text-foreground">Systematic Tagging</strong> - Color-coded
-                      categories (UX friction, AI opportunities, feature areas, duplicate entry, etc.)
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">5</span>
-                    <div>
-                      <strong className="text-foreground">Structured Data Capture</strong> - Transfer
-                      tagged observations into spreadsheets for sorting, filtering, and analysis
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">6</span>
-                    <div>
-                      <strong className="text-foreground">Heat Mapping</strong> - Zoom out to see where
-                      friction clusters, identify patterns across screens, prioritize based on density
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold text-sm">7</span>
-                    <div>
-                      <strong className="text-foreground">Translation to Action</strong> - Convert
-                      insights into Jira tickets, ProductBoard features, and prioritized roadmaps within 24 hours
-                    </div>
-                  </li>
-                </ol>
-              </div>
-
-              <p>
-                <strong className="text-foreground">The impact:</strong> Using this methodology
-                across 14+ user studies, I discovered that 50% of users were facing blocking
-                technical issues preventing product adoption, not a lack of features. This insight
-                fundamentally shifted the entire product roadmap from feature enhancement to
-                foundational reliability improvements.
-              </p>
             </div>
           </div>
         </div>
