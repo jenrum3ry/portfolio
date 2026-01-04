@@ -86,6 +86,17 @@ export default function Footer() {
         {/* Copyright & Privacy */}
         <div className="mt-8 pt-8 border-t border-gray-600 text-center text-sm text-gray-400">
           <p className="mb-2">&copy; {new Date().getFullYear()} Jennifer Rumery. All rights reserved.</p>
+          <p className="text-xs mb-2">
+            Built with React, TypeScript, and{' '}
+            <a
+              href="https://claude.ai/code"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[#B8733E] transition-colors"
+            >
+              Claude Code
+            </a>
+          </p>
           <p className="text-xs">
             This site uses{' '}
             <a

@@ -201,6 +201,10 @@ const Index = () => {
                   description: "Deep user research + technical product development (AI, APIs) + 0-to-1 building + cross-functional leadership. Most PMs excel in 1-2 areas; I actively work across all four."
                 },
                 {
+                  title: "Technical PM Who Ships",
+                  description: "Built this portfolio from scratch with React and TypeScript, leveraging Claude Code to accelerate development. I don't just write specs—I prototype, debug alongside engineers, and understand the technical constraints that shape product decisions."
+                },
+                {
                   title: "Systematic Methodology",
                   description: "UX teardown process that's repeatable, visual, collaborative, and actionable. Not just 'user interviews' - a structured framework that surfaces hidden insights."
                 },
