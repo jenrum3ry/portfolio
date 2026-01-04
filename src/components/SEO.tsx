@@ -10,7 +10,7 @@ interface SEOProps {
 
 const SEO = ({ title, description, image, type = "website", url }: SEOProps) => {
   const baseUrl = "https://jenrum3ry.github.io/portfolio";
-  const defaultImage = `${baseUrl}/thumbnail1.png`;
+  const defaultImage = `${baseUrl}/thumbnail1.png?v=2`;
   const fullUrl = url ? `${baseUrl}${url}` : baseUrl;
   const ogImage = image ? `${baseUrl}${image}` : defaultImage;
 
