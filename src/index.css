@@ -422,4 +422,43 @@
     font-size: 1.125rem;
     color: hsl(var(--foreground) / 0.8);
   }
+
+  /* Checkbox list styling */
+  .blog-content ul.checklist {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .blog-content ul.checklist li {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-content ul.checklist li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid hsl(var(--primary));
+    border-radius: 0.25rem;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: hsl(var(--primary));
+    line-height: 1;
+  }
+
+  @media (min-width: 768px) {
+    .blog-content ul.checklist li::before {
+      width: 1.625rem;
+      height: 1.625rem;
+      font-size: 1.25rem;
+    }
+  }
 }
