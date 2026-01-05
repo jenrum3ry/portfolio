@@ -375,15 +375,15 @@ export const blogPosts: BlogPost[] = [
 
 <p><strong>Lightweight observation sessions.</strong> Instead of formal usability testing, I'd ask users to share their screen and walk me through their actual workflow. Not a task I assigned them. The real thing they're trying to do. This is where you learn what's actually hard, not what's hard in your test scenario.</p>
 
-<p><strong>Structured but simple methodology.</strong> I developed what I call "UX Teardowns" - a repeatable approach that takes 45 minutes per session, requires no special tools, and generates insights you can act on immediately. The goal isn't comprehensive research. It's systematic learning.</p>
+<p><strong>Structured but simple methodology.</strong> I use a lightweight approach - a repeatable 45-minute session format that requires no special tools and generates insights you can act on immediately. The goal isn't comprehensive research. It's systematic learning.</p>
 
 <p>The key is consistency over intensity. Five conversations every month for a year teaches you more than 60 conversations crammed into one month, because you're learning over time how things change, what patterns persist, and what your changes actually impact.</p>
 
 <div class="section-callout">
-<h2>The UX Teardown Methodology</h2>
+<h2>A Simple, Repeatable Approach</h2>
 </div>
 
-<p>Here's the approach I've refined through 14+ studies. It's lightweight, repeatable, and doesn't require a research background:</p>
+<p>Here's the basic format I use. It's lightweight, repeatable, and doesn't require a research background:</p>
 
 <p><strong>Setup (5 minutes):</strong></p>
 <ul>
@@ -419,13 +419,13 @@ export const blogPosts: BlogPost[] = [
 
 <p>Total time: 45 minutes. No special software. No incentive budget (though offering a small gift card helps recruiting). No lab.</p>
 
-<p>The magic isn't in the methodology. It's in doing it repeatedly so you start seeing patterns.</p>
+<p>The value isn't in the specific format. It's in doing it repeatedly so you start seeing patterns.</p>
 
 <h2>What You Actually Learn</h2>
 
 <p>Formal research is great at answering specific, well-formed questions. Lightweight continuous research is great at discovering the questions you should have been asking.</p>
 
-<p>Through our UX Teardown sessions, I discovered:</p>
+<p>Through these lightweight observation sessions, I discovered:</p>
 
 <p><strong>The problem behind the feature request.</strong> A customer asked for "better filtering options." Watching her screen, I realized the issue wasn't the filters. It was that our search returned 300 results and she had to manually check each one because the preview didn't show the information she needed. We didn't need better filters. We needed better result previews.</p>
 
@@ -443,7 +443,7 @@ export const blogPosts: BlogPost[] = [
 
 <p><strong>Piggyback on existing touchpoints.</strong> Don't create new customer contacts. Join calls that customer success, sales, or support are already having. They're talking to users all day. You just need access.</p>
 
-<p><strong>Rotate the work.</strong> You don't have to do all the research yourself. Train your team on the UX Teardown methodology and rotate who conducts sessions. This distributes the work and builds empathy across the team.</p>
+<p><strong>Rotate the work.</strong> You don't have to do all the research yourself. Share this lightweight format with your team and rotate who conducts sessions. This distributes the work and builds empathy across the team.</p>
 
 <p><strong>Share insights immediately.</strong> Don't wait to compile a formal report. After each session, send a quick summary to your team: "Talked to Customer X. Three key insights: [...]" The faster you share, the faster insights inform decisions.</p>
 
