@@ -139,7 +139,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>The Takeaway</h2>
 
-<img src="/portfolio/being-wrong-faster-infographic.png" alt="Being Wrong Faster Framework - comparing elaborate planning vs quick learning cycles" />
+<img src="/portfolio/being-wrong-faster-infographic.png" alt="Being Wrong Faster Framework - comparing elaborate planning vs quick learning cycles" style="max-width: 700px; margin: 2rem auto; display: block;" />
 
 <p>The myth of product management is that great PMs have great instincts. They just know what to build.</p>
 
