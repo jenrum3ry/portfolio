@@ -127,12 +127,12 @@ export const blogPosts: BlogPost[] = [
 
 <p>Before committing to build anything significant, I run through this:</p>
 
-<ul>
-<li>✓ What's the assumption that needs to be true?</li>
-<li>✓ What's the cheapest way to test it?</li>
-<li>✓ What would prove me wrong?</li>
-<li>✓ Can I test this in 2 weeks or less?</li>
-<li>✓ If I'm wrong, what did I learn?</li>
+<ul class="checklist">
+<li>What's the assumption that needs to be true?</li>
+<li>What's the cheapest way to test it?</li>
+<li>What would prove me wrong?</li>
+<li>Can I test this in 2 weeks or less?</li>
+<li>If I'm wrong, what did I learn?</li>
 </ul>
 
 <p>If I can't answer these in under 5 minutes, I'm not ready to build.</p>
