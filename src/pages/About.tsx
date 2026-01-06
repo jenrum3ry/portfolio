@@ -61,10 +61,10 @@ const About = () => {
                 weeks instead of quarters.
               </p>
               <p>
-                At Shepherd, I built three AI products from concept to production (patient 
-                summarization, speech-to-text clinical notes, and diagnostic support), managed 
-                a platform with 20+ partner integrations, and led cross-functional teams across 
-                time zones. Most importantly, I developed a systematic methodology for understanding 
+                At Shepherd, I built three AI products from concept to production (patient
+                summarization, speech-to-text clinical notes, and diagnostic support), managed
+                a platform with 40+ partner integrations, and led cross-functional teams across
+                time zones. Most importantly, I developed a systematic methodology for understanding
                 users that became my signature approach.
               </p>
             </div>

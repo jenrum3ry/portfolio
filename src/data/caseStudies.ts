@@ -71,7 +71,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "WAVE 1 BETA", value: "Initial cohort" }
     ],
     learnings:
-      "The biggest learning was that deep clinical partnership beats speed. Working directly with a practicing veterinarian surfaced edge cases and workflow issues we would never have anticipated internally. For example, she immediately identified that the AI-generated summary structure didn't match how vets actually present cases to colleagues. This would have killed adoption if we'd discovered it after launch.\n\nThe beta program design was critical. By structuring a phased rollout (5-7 practices initially, then gradual expansion), we protected against both technical overload (preventing 1,300 clinics from generating summaries simultaneously) and gave ourselves a controlled environment for fast iteration without enterprise-wide impact.",
+      "The biggest learning was that deep clinical partnership beats speed. Working directly with a practicing veterinarian surfaced edge cases and workflow issues we would never have anticipated internally. For example, she immediately identified that the AI-generated summary structure didn't match how vets actually present cases to colleagues. This would have killed adoption if we'd discovered it after launch.\n\nThe beta program design was critical. By structuring a phased rollout (initial cohort, then gradual expansion), we protected against both technical overload (preventing simultaneous load from the full customer base) and gave ourselves a controlled environment for fast iteration without enterprise-wide impact.",
     tags: ["AI Product", "0-to-1", "Production Launch"],
     image: "SAI mockup example.png",
     imageAlt: "AI-powered patient summarization interface mockup showing clinical documentation workflow"
@@ -122,13 +122,13 @@ export const caseStudies: CaseStudy[] = [
     description:
       "Developed systematic research approach across 14+ user studies that uncovered 50% of users facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
     problem:
-      "AI-powered clinical documentation tools were launching across 1,300+ veterinary practices with unknown adoption patterns. Traditional user surveys and product analytics weren't revealing why adoption varied so dramatically between practices - some thrived while others abandoned the tools entirely within weeks.",
+      "AI-powered clinical documentation tools were launching across hundreds of veterinary practices with unknown adoption patterns. Traditional user surveys and product analytics weren't revealing why adoption varied so dramatically between practices - some thrived while others abandoned the tools entirely within weeks.",
     myRole:
       "Led user research strategy and execution. Designed and conducted 14+ ethnographic studies, developed the UX Teardown methodology, synthesized insights into actionable roadmap changes, and presented findings to executive leadership that shifted product strategy.",
     approach:
       "I developed a systematic, ethnographic research approach that combined journey mapping, visual annotation, and pattern analysis. Rather than asking users what they wanted, I watched them work - mapping complete workflows across 60+ screens and 7 workflow stages, identifying friction points in real time, and using color-coded tagging to surface patterns across multiple practices. This translated directly into prioritized product roadmaps.",
     challenge:
-      "AI-powered clinical documentation tools were launching across 1,300+ veterinary practices with unknown adoption patterns. The product team needed to understand why some practices thrived while others struggled, but traditional user surveys weren't revealing the root causes.",
+      "AI-powered clinical documentation tools were launching across hundreds of veterinary practices with unknown adoption patterns. The product team needed to understand why some practices thrived while others struggled, but traditional user surveys weren't revealing the root causes.",
     solution:
       "Applied a systematic, ethnographic research approach combining journey mapping, visual annotation, pattern analysis, and heat mapping across 14+ veterinary practices. The process involved mapping complete workflows (60+ screens across 7 workflow stages), color-coded tagging for friction points, and structured data capture that translated directly into actionable product roadmaps.",
     results: [
@@ -141,7 +141,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "Increase in Feature Adoption", value: "40%" },
       { label: "Reduction in Support Tickets", value: "30%" },
       { label: "User Studies Conducted", value: "14+" },
-      { label: "Practices Impacted", value: "1,300+" }
+      { label: "Scale", value: "Enterprise" }
     ],
     learnings:
       "The biggest insight was realizing that what users say they need and what actually blocks them are often completely different. Traditional surveys captured feature requests, but ethnographic observation revealed systemic reliability issues that surveys would never uncover. This reinforced that the best product insights come from watching people work, not asking them what they want.",
