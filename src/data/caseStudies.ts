@@ -99,7 +99,6 @@ export const caseStudies: CaseStudy[] = [
       "Improved developer onboarding time by 50% through clearer documentation",
       "Achieved 2x increase in third-party app adoption",
       "Reduced integration support tickets by 40%",
-      "Secured $500K+ infrastructure investment through data-driven advocacy",
       "Redesigned high-volume endpoint pattern after production incident"
     ],
     metrics: [
