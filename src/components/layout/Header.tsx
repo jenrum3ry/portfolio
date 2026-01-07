@@ -20,7 +20,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-[#3a3a3a] backdrop-blur-md border-b border-gray-600">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to={ROUTES.HOME} className="font-display text-2xl font-semibold text-white">
+          <Link to={ROUTES.HOME} className="font-display text-3xl font-semibold text-white">
             Jennifer Rumery
           </Link>
 
