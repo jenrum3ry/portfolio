@@ -66,7 +66,7 @@ export default function Contact() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8">
           {/* Left Column - Contact Info */}
           <div className="space-y-6">
             <h2 className="text-2xl font-serif text-gray-900 mb-4">Get in Touch</h2>
@@ -168,7 +168,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+          <div className="bg-white rounded-lg p-4 sm:p-8 shadow-sm border border-gray-200">
             <h2 className="text-2xl font-serif text-gray-900 mb-2">Send a Message</h2>
             <p className="text-gray-600 text-sm mb-6">
               Fill out the form below and I'll get back to you as soon as possible.

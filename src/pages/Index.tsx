@@ -18,7 +18,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/50 to-background" />
-        <div className="container mx-auto px-6 py-28 md:py-40 relative">
+        <div className="container mx-auto px-6 py-16 md:py-28 lg:py-40 relative">
           <div className="max-w-4xl animate-fade-in">
             <p className="font-body text-sm md:text-base font-bold text-primary uppercase tracking-[0.2em] mb-6">
               Product Manager
@@ -260,7 +260,7 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="relative px-12">
+          <div className="relative px-6 md:px-12">
             <Carousel
               opts={{
                 align: "start",
