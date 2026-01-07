@@ -5,8 +5,8 @@ import { ROUTES } from '@/lib/routes';
 export default function Footer() {
   return (
     <footer className="bg-[#3a3a3a] text-white py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
             <h3 className="text-xl font-serif mb-4">Jennifer Rumery</h3>
@@ -25,7 +25,7 @@ export default function Footer() {
               <li>
                 <Link
                   to={ROUTES.PROJECTS}
-                  className="text-gray-300 hover:text-[#B8733E] transition-colors"
+                  className="inline-block py-1.5 text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Projects
                 </Link>
@@ -33,7 +33,7 @@ export default function Footer() {
               <li>
                 <Link
                   to={ROUTES.BLOG}
-                  className="text-gray-300 hover:text-[#B8733E] transition-colors"
+                  className="inline-block py-1.5 text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Blog
                 </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
               <li>
                 <Link
                   to={ROUTES.EDUCATION_CERTIFICATIONS}
-                  className="text-gray-300 hover:text-[#B8733E] transition-colors"
+                  className="inline-block py-1.5 text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Education
                 </Link>
@@ -49,7 +49,7 @@ export default function Footer() {
               <li>
                 <Link
                   to={ROUTES.CONTACT}
-                  className="text-gray-300 hover:text-[#B8733E] transition-colors"
+                  className="inline-block py-1.5 text-gray-300 hover:text-[#B8733E] transition-colors"
                 >
                   Contact
                 </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
             <div className="flex flex-col space-y-3">
               <a
                 href="mailto:jennifer-rumery@outlook.com"
-                className="flex items-center gap-2 text-gray-300 hover:text-[#B8733E] transition-colors"
+                className="flex items-center gap-2 py-1.5 text-gray-300 hover:text-[#B8733E] transition-colors"
               >
                 <Mail size={20} />
                 <span className="text-sm">jennifer-rumery@outlook.com</span>
@@ -74,7 +74,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/jennifer-rumery/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-300 hover:text-[#B8733E] transition-colors"
+                className="flex items-center gap-2 py-1.5 text-gray-300 hover:text-[#B8733E] transition-colors"
               >
                 <Linkedin size={20} />
                 <span className="text-sm">LinkedIn</span>

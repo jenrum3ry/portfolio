@@ -134,7 +134,7 @@ const EducationCertifications = () => {
               business domains.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {Object.values(badgeData).map((badge, index) => (
                 <button
                   key={badge.name}
@@ -143,7 +143,7 @@ const EducationCertifications = () => {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
                       <img
                         src={badge.imagePath}
                         alt={`${badge.name} Badge`}
@@ -262,7 +262,7 @@ const EducationCertifications = () => {
               {/* CSPO Certification */}
               <div className="flex flex-col items-start p-6 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300">
                 <div className="flex items-start gap-4 mb-4 w-full">
-                  <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
+                  <div className="w-16 h-16 sm:w-24 sm:h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
                     <img
                       src="/portfolio/sa-cspo-600.png"
                       alt="Certified Scrum Product Owner Badge"
@@ -295,7 +295,7 @@ const EducationCertifications = () => {
               {/* A-CSPO Certification */}
               <div className="flex flex-col items-start p-6 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300">
                 <div className="flex items-start gap-4 mb-4 w-full">
-                  <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
+                  <div className="w-16 h-16 sm:w-24 sm:h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20">
                     <img
                       src="/portfolio/sa-adv_cspo-600.png"
                       alt="Advanced Certified Scrum Product Owner Badge"
@@ -342,7 +342,7 @@ const EducationCertifications = () => {
             </h2>
 
             <div className="flex items-start gap-6 p-6 rounded-lg border border-border bg-background">
-              <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20 bg-white flex items-center justify-center">
+              <div className="w-16 h-16 sm:w-24 sm:h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20 bg-white flex items-center justify-center">
                 <img
                   src="/portfolio/USAF.png"
                   alt="United States Air Force Logo"
@@ -380,7 +380,7 @@ const EducationCertifications = () => {
             </h2>
 
             <div className="flex items-start gap-6 p-6 rounded-lg border border-border bg-background">
-              <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20 bg-white flex items-center justify-center">
+              <div className="w-16 h-16 sm:w-24 sm:h-24 flex-shrink-0 overflow-hidden rounded-full border-2 border-primary/20 bg-white flex items-center justify-center">
                 <img
                   src="/portfolio/CCSD.jpg"
                   alt="California College San Diego Logo"

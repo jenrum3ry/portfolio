@@ -88,7 +88,7 @@ const CaseStudies = () => {
                 {/* Image - FIXED: No cropping, full image visible */}
                 <div className="lg:col-span-2">
                   <div
-                    className="bg-card border border-border rounded-lg overflow-hidden flex items-center justify-center p-2 cursor-pointer hover:border-primary/50 transition-colors group"
+                    className="bg-card border border-border rounded-lg overflow-hidden flex items-center justify-center p-2 sm:p-4 cursor-pointer hover:border-primary/50 transition-colors group"
                     onClick={() => handleImageClick(study)}
                   >
                     <img

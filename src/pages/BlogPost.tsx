@@ -57,7 +57,7 @@ const BlogPost = () => {
         <div className="container mx-auto px-6">
           <Link
             to={ROUTES.BLOG}
-            className="inline-flex items-center font-body text-sm text-muted-foreground hover:text-primary transition-colors group"
+            className="inline-flex items-center py-2 px-3 font-body text-sm text-muted-foreground hover:text-primary transition-colors group"
           >
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
             Back to Blog

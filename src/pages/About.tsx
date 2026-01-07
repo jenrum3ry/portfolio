@@ -322,7 +322,7 @@ const About = () => {
                     className="group flex flex-col items-center text-center p-4 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div className="w-24 h-24 mb-3 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 mb-3 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
                       <img
                         src={`https://api.badgr.io/public/assertions/${badge.assertionId}/image`}
                         alt={`${badge.name} Badge`}
@@ -357,7 +357,7 @@ const About = () => {
                 className="group inline-flex flex-col items-center text-center p-6 rounded-lg border border-border bg-background hover:shadow-warm transition-all duration-300 opacity-0 animate-fade-in"
                 style={{ animationDelay: "400ms" }}
               >
-                <div className="w-32 h-32 mb-4 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
+                <div className="w-20 h-20 md:w-32 md:h-32 mb-4 overflow-hidden rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-colors">
                   <img
                     src="https://www.scrumalliance.org/badges/sa-adv_cspo-600.png"
                     alt="Advanced Certified Scrum Product Owner Badge"
