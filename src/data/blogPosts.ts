@@ -1,6 +1,7 @@
 import { BlogPost } from "@/types";
 
 export const blogPosts: BlogPost[] = [
+  {
     id: 1,
     slug: "being-wrong-faster",
     title: "The PM's Real Job: Being Wrong Faster",
@@ -148,7 +149,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Be wrong faster. It's the only way to end up right.</p>`
   },
-  },
+  {
     id: 2,
     slug: "80-solution-time-to-first-value",
     title: "The 80% Solution: Time to First Value",
@@ -299,7 +300,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Sometimes, 80% shipped - delivered quickly and intentionally - is infinitely more valuable than 100% stuck in your head.</p>`
   },
-  },
+  {
     id: 3,
     slug: "prioritization-beyond-rice",
     title: "The Art of Prioritization: Beyond the RICE Framework",
@@ -469,7 +470,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Your roadmap will be better for it.</p>`
   },
-  },
+  {
     id: 4,
     slug: "continuous-user-research",
     title: "Continuous User Research Without Breaking the Bank",
@@ -635,7 +636,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>And you'll build better products because of it.</p>`
   },
-  },
+  {
     id: 5,
     slug: "when-users-reject-your-product",
     title: "When Your Best Beta Tester Rejects Your Product (And Why That's Good)",
@@ -874,6 +875,5 @@ Start where the unmet need is greatest and expectations are lowest.</p>
 <li>Rapid prototypes ($50, 2 days) can answer strategic questions without engineering investment</li>
 <li>One solution rarely fits all segments; trying to serve everyone means serving no one well</li>
 </ul>`
-  }
   }
 ];
