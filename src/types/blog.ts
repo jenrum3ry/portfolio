@@ -8,5 +8,6 @@ export interface BlogPost {
   category: string;
   image: string;
   imageAlt: string;
+  showHeroImage?: boolean; // Optional: controls if image displays on page (defaults to true)
   content: string;
 }
