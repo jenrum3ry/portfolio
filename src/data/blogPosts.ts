@@ -640,12 +640,12 @@ export const blogPosts: BlogPost[] = [
     id: 5,
     slug: "when-users-reject-your-product",
     title: "When Your Best Beta Tester Rejects Your Product (And Why That's Good)",
-    excerpt: "Practice A loved our prototype in the first week, raved about it by week two, then stopped using it entirely by week three. That's when I knew we'd done discovery research right.",
+    excerpt: "What you can learn when beta testers walk away from your product idea and how to turn it into actionable insights.",
     date: "April 15, 2022",
     readTime: "10 min read",
     category: "Product Strategy",
-    image: "",
-    imageAlt: "",
+    image: "/beta-tester-walks-away.png",
+    imageAlt: "Beta tester walking away from product prototype, representing discovery research insights",
     content: `<h1>When Your Best Beta Tester Rejects Your Product (And Why That's Good)</h1>
 
 <p>Practice A loved our prototype in the first week. By week two, they were raving about it to colleagues. By week three, they'd stopped using it entirely.</p>
