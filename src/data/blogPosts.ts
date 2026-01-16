@@ -644,8 +644,9 @@ export const blogPosts: BlogPost[] = [
     date: "April 15, 2022",
     readTime: "10 min read",
     category: "Product Strategy",
-    image: "/beta-tester-walks-away.png",
+    image: "/beta-tester-walks-away.PNG",
     imageAlt: "Beta tester walking away from product prototype, representing discovery research insights",
+    showHeroImage: false,
     content: `<h1>When Your Best Beta Tester Rejects Your Product (And Why That's Good)</h1>
 
 <p>Practice A loved our prototype in the first week. By week two, they were raving about it to colleagues. By week three, they'd stopped using it entirely.</p>

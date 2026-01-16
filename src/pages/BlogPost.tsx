@@ -89,7 +89,7 @@ const BlogPost = () => {
             </h1>
 
             {/* Hero Image */}
-            {post.image && (
+            {post.image && post.showHeroImage !== false && (
               <div className="mb-16">
                 <img
                   src={post.image}
