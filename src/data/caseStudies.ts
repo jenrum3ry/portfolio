@@ -119,13 +119,13 @@ export const caseStudies: CaseStudy[] = [
     platform: "Veterinary Practice Management Software",
     year: "2025",
     description:
-      "Developed systematic research approach across 14+ user studies that uncovered 50% of users facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
+      "Applied UX Teardown methodology systematically across 14+ user studies that uncovered 50% of users facing blocking technical issues. Shifted entire product roadmap from feature polish to foundational reliability.",
     problem:
-      "AI-powered clinical documentation tools were launching across hundreds of veterinary practices with unknown adoption patterns. Traditional user surveys and product analytics weren't revealing why adoption varied so dramatically between practices - some thrived while others abandoned the tools entirely within weeks.",
+      "AI-powered clinical documentation tools were launching across hundreds of veterinary practices with unknown adoption patterns. Traditional user surveys and product analytics weren't revealing why adoption varied so dramatically between practices. Some thrived while others abandoned the tools entirely within weeks.",
     myRole:
-      "Led user research strategy and execution. Designed and conducted 14+ ethnographic studies, developed the UX Teardown methodology, synthesized insights into actionable roadmap changes, and presented findings to executive leadership that shifted product strategy.",
+      "Led user research strategy and execution. Conducted 14+ ethnographic studies using the UX Teardown methodology, systematized the approach for repeatable use across the organization, synthesized insights into actionable roadmap changes, and presented findings to executive leadership that shifted product strategy.",
     approach:
-      "I developed a systematic, ethnographic research approach that combined journey mapping, visual annotation, and pattern analysis. Rather than asking users what they wanted, I watched them work - mapping complete workflows across 60+ screens and 7 workflow stages, identifying friction points in real time, and using color-coded tagging to surface patterns across multiple practices. This translated directly into prioritized product roadmaps.",
+      "I applied a systematic, ethnographic research approach that combined journey mapping, visual annotation, and pattern analysis. Rather than asking users what they wanted, I watched them work. I mapped complete workflows across 60+ screens and 7 workflow stages, identifying friction points in real time, and using color-coded tagging to surface patterns across multiple practices. This translated directly into prioritized product roadmaps.",
     challenge:
       "AI-powered clinical documentation tools were launching across hundreds of veterinary practices with unknown adoption patterns. The product team needed to understand why some practices thrived while others struggled, but traditional user surveys weren't revealing the root causes.",
     solution:
@@ -134,7 +134,7 @@ export const caseStudies: CaseStudy[] = [
       "Discovered 50% of practices had blocking reliability issues (not feature requests)",
       "Identified 3 distinct customer segments with different needs",
       "Shifted product roadmap from feature polish to foundational improvements",
-      "Built repeatable research framework adopted across product organization",
+      "Systematized UX Teardown methodology for repeatable use across product organization",
     ],
     metrics: [
       { label: "Increase in Feature Adoption", value: "40%" },
