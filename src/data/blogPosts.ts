@@ -1,7 +1,6 @@
 import { BlogPost } from "@/types";
 
 export const blogPosts: BlogPost[] = [
-  {
     id: 1,
     slug: "being-wrong-faster",
     title: "The PM's Real Job: Being Wrong Faster",
@@ -149,8 +148,159 @@ export const blogPosts: BlogPost[] = [
 
 <p>Be wrong faster. It's the only way to end up right.</p>`
   },
-  {
+  },
     id: 2,
+    slug: "80-solution-time-to-first-value",
+    title: "The 80% Solution: Time to First Value",
+    excerpt: "How I learned that shipping an 80% solution to the majority beats waiting indefinitely for 100% perfection - and gave veterinarians their nights back.",
+    date: "December 5, 2025",
+    readTime: "8 min read",
+    category: "Product Strategy",
+    image: "/portfolio/veterinarian-upgrade-service.jpg",
+    imageAlt: "Doctor in scrubs working at computer in medical facility",
+    content: `<h1>The 80% Solution: Time to First Value</h1>
+
+<p>It's 8:32 PM on a Tuesday night at a veterinary practice.</p>
+
+<p>The last client has paid. The doors are locked. After a twelve-hour day spent saving animals, you should be heading home. Instead, you're standing in an empty hospital rebooting a server so you can start a software upgrade.</p>
+
+<p>Three hours later, you're still there.</p>
+
+<p>You walk the same path again and again - exam rooms, surgery suites, front desk - clicking "Next" on one of eleven computers. Then waiting. Then walking the loop again. Clicking "Next." Waiting. Over and over.</p>
+
+<p>You're a doctor. A highly trained medical professional. And tonight, your job is human automation.</p>
+
+<p>This was the problem that landed on my desk as a young product manager, and it made me furious. I was determined to build something that would make this absurd waste of time disappear.</p>
+
+<p>What I didn't realize was how badly I misunderstood what "solving the problem" actually meant.</p>
+
+<h2>Starting With the Wrong Definition of Success</h2>
+
+<p>When I first learned about how painful upgrades were, my reaction was immediate: <em>we need to do everything for them.</em></p>
+
+<p>Veterinary practices don't have IT teams. They're small businesses focused on patient care. Obviously, the right answer was total automation - a system that upgraded every computer in every practice with zero involvement required.</p>
+
+<p>Complete control. Perfect execution.</p>
+
+<p>Sounds reasonable.</p>
+
+<p>Except I couldn't ship it.</p>
+
+<p>Month after month, the product stayed in beta. There was always one more edge case. One more configuration we couldn't fully support. One more scenario where the automation might fail for a subset of users.</p>
+
+<p>My team was ready. The infrastructure worked. But I wouldn't release it.</p>
+
+<p>Because in my mind, success meant upgrading <em>every</em> computer. Anything less felt like failure. Like we were letting users down.</p>
+
+<p>In reality, I was letting most of them down by waiting.</p>
+
+<h2>The Question That Changed Everything</h2>
+
+<p>A senior PM finally pulled me aside and asked a deceptively simple question:</p>
+
+<blockquote>"What does <em>good enough</em> look like?"</blockquote>
+
+<p>I didn't have an answer.</p>
+
+<p>So I did something I should have done much earlier, I went to the data.</p>
+
+<p>I queried our install base to understand what we were actually dealing with. Which practices could upgrade cleanly? Which couldn't? How many machines did they really have?</p>
+
+<p>The results were eye-opening.</p>
+
+<p>Roughly 80% of practices were on versions we could already support with our new upgrade service. Most of them weren't massive hospitals with complex setups - they had nine to eleven computers, not the twenty-plus I had been designing for.</p>
+
+<p>The remaining 20% were on much older or heavily customized configurations. Many had their own IT support or environments that were never going to be compatible with full automation anyway.</p>
+
+<p>And that's when I realized I'd been asking the wrong question the entire time.</p>
+
+<div class="section-callout">
+<h2>Defining Time to First Value</h2>
+</div>
+
+<p>The real question wasn't: <em>Can we upgrade every computer?</em></p>
+
+<p>It was:</p>
+
+<p><strong>What is the time to first value for this product?</strong></p>
+
+<p>For this service, time to first value wasn't perfection. It wasn't 100% coverage. It was the moment a veterinary practice could get onto the latest version of the software without staying late in the hospital.</p>
+
+<p>It was when they could:</p>
+<ul>
+<li>Schedule an upgrade instead of babysitting it</li>
+<li>Go home on Tuesday night</li>
+<li>Wake up on the latest version with bug fixes, security patches, and new features designed to make their workday easier</li>
+</ul>
+
+<p>Once I framed the problem that way, the answer became obvious.</p>
+
+<p>Shipping something that delivered immediate value to 80% of practices was far more impactful than delaying value indefinitely while chasing edge cases that either didn't need us - or couldn't use the service at all.</p>
+
+<h2>Reframing the Real Problem</h2>
+
+<p>Upgrades weren't just painful because they were manual.</p>
+
+<p>They were painful because they:</p>
+<ul>
+<li>Kept doctors in the hospital long after their workday should have ended</li>
+<li>Prevented practices from accessing improvements meant to help them</li>
+<li>Increased support burden by keeping customers on outdated versions</li>
+</ul>
+
+<p>The real problem we were solving was twofold:</p>
+<ol>
+<li>Get practices onto the latest version so they could benefit from fixes, features, and improvements</li>
+<li>Do it without stealing more time from people whose time was already stretched thin</li>
+</ol>
+
+<p>That clarity changed everything.</p>
+
+<h2>What We Actually Shipped</h2>
+
+<p>We stopped trying to do everything.</p>
+
+<p>Instead, we focused on removing the biggest barrier to value: the hours of manual, late-night work required to upgrade nine to eleven computers.</p>
+
+<p>We built:</p>
+<ul>
+<li>Pre-qualification checks so practices could see upfront which machines would upgrade successfully</li>
+<li>Scheduling so upgrades could run overnight</li>
+<li>Clear communication about what would happen, what wouldn't, and what to do if something failed</li>
+</ul>
+
+<p>We automated what we could control and gave users control where it mattered most.</p>
+
+<p>Now, that exhausted veterinarian at 8:32 PM could schedule an upgrade for the next night and go home, confident the system would handle the tedious work while they slept.</p>
+
+<h2>The Silent Success</h2>
+
+<p>The moment I knew we'd gotten it right didn't come from a meeting or a metric.</p>
+
+<p>It came from watching the first upgrade complete.</p>
+
+<p>No emergency messages. No support calls. No manual intervention from our team.</p>
+
+<p>The practice scheduled the upgrade. The system qualified their computers. The upgrade ran overnight. And the next morning, they were on the latest version.</p>
+
+<p>That silent success - the thing I thought required perfection - only happened once we shipped something "good enough" and let real users validate it.</p>
+
+<h2>What I Learned</h2>
+
+<p>Looking back, my perfectionism wasn't really about protecting users. It was about protecting myself from being wrong.</p>
+
+<p>But by holding the product back, I wasn't avoiding failure, I was prolonging user pain.</p>
+
+<img src="/portfolio/80 percent info graphic.png" alt="Five key learnings: Time to first value matters more than theoretical completeness, Solving for edge cases can block the majority, Automation without trust isn't helpful, Perfectionism often disguises fear, Your job isn't to be right - it's to learn fast" style="max-width: 600px; margin: 2rem auto; display: block;" />
+
+<p>The MyCornerstone Upgrade Service ultimately helped thousands of veterinary practices stay current, reduced support burden, and gave doctors their nights back.</p>
+
+<p>None of that would have happened if I'd kept chasing the 100% solution.</p>
+
+<p>Sometimes, 80% shipped - delivered quickly and intentionally - is infinitely more valuable than 100% stuck in your head.</p>`
+  },
+  },
+    id: 3,
     slug: "prioritization-beyond-rice",
     title: "The Art of Prioritization: Beyond the RICE Framework",
     excerpt: "Why scoring frameworks fail and what actually drives strategic prioritization in product management.",
@@ -319,8 +469,8 @@ export const blogPosts: BlogPost[] = [
 
 <p>Your roadmap will be better for it.</p>`
   },
-  {
-    id: 3,
+  },
+    id: 4,
     slug: "continuous-user-research",
     title: "Continuous User Research Without Breaking the Bank",
     excerpt: "How to build a systematic user research practice with no budget, no researchers, and 45 minutes per session.",
@@ -485,158 +635,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>And you'll build better products because of it.</p>`
   },
-  {
-    id: 4,
-    slug: "80-solution-time-to-first-value",
-    title: "The 80% Solution: Time to First Value",
-    excerpt: "How I learned that shipping an 80% solution to the majority beats waiting indefinitely for 100% perfection - and gave veterinarians their nights back.",
-    date: "December 5, 2025",
-    readTime: "8 min read",
-    category: "Product Strategy",
-    image: "/portfolio/veterinarian-upgrade-service.jpg",
-    imageAlt: "Doctor in scrubs working at computer in medical facility",
-    content: `<h1>The 80% Solution: Time to First Value</h1>
-
-<p>It's 8:32 PM on a Tuesday night at a veterinary practice.</p>
-
-<p>The last client has paid. The doors are locked. After a twelve-hour day spent saving animals, you should be heading home. Instead, you're standing in an empty hospital rebooting a server so you can start a software upgrade.</p>
-
-<p>Three hours later, you're still there.</p>
-
-<p>You walk the same path again and again - exam rooms, surgery suites, front desk - clicking "Next" on one of eleven computers. Then waiting. Then walking the loop again. Clicking "Next." Waiting. Over and over.</p>
-
-<p>You're a doctor. A highly trained medical professional. And tonight, your job is human automation.</p>
-
-<p>This was the problem that landed on my desk as a young product manager, and it made me furious. I was determined to build something that would make this absurd waste of time disappear.</p>
-
-<p>What I didn't realize was how badly I misunderstood what "solving the problem" actually meant.</p>
-
-<h2>Starting With the Wrong Definition of Success</h2>
-
-<p>When I first learned about how painful upgrades were, my reaction was immediate: <em>we need to do everything for them.</em></p>
-
-<p>Veterinary practices don't have IT teams. They're small businesses focused on patient care. Obviously, the right answer was total automation - a system that upgraded every computer in every practice with zero involvement required.</p>
-
-<p>Complete control. Perfect execution.</p>
-
-<p>Sounds reasonable.</p>
-
-<p>Except I couldn't ship it.</p>
-
-<p>Month after month, the product stayed in beta. There was always one more edge case. One more configuration we couldn't fully support. One more scenario where the automation might fail for a subset of users.</p>
-
-<p>My team was ready. The infrastructure worked. But I wouldn't release it.</p>
-
-<p>Because in my mind, success meant upgrading <em>every</em> computer. Anything less felt like failure. Like we were letting users down.</p>
-
-<p>In reality, I was letting most of them down by waiting.</p>
-
-<h2>The Question That Changed Everything</h2>
-
-<p>A senior PM finally pulled me aside and asked a deceptively simple question:</p>
-
-<blockquote>"What does <em>good enough</em> look like?"</blockquote>
-
-<p>I didn't have an answer.</p>
-
-<p>So I did something I should have done much earlier, I went to the data.</p>
-
-<p>I queried our install base to understand what we were actually dealing with. Which practices could upgrade cleanly? Which couldn't? How many machines did they really have?</p>
-
-<p>The results were eye-opening.</p>
-
-<p>Roughly 80% of practices were on versions we could already support with our new upgrade service. Most of them weren't massive hospitals with complex setups - they had nine to eleven computers, not the twenty-plus I had been designing for.</p>
-
-<p>The remaining 20% were on much older or heavily customized configurations. Many had their own IT support or environments that were never going to be compatible with full automation anyway.</p>
-
-<p>And that's when I realized I'd been asking the wrong question the entire time.</p>
-
-<div class="section-callout">
-<h2>Defining Time to First Value</h2>
-</div>
-
-<p>The real question wasn't: <em>Can we upgrade every computer?</em></p>
-
-<p>It was:</p>
-
-<p><strong>What is the time to first value for this product?</strong></p>
-
-<p>For this service, time to first value wasn't perfection. It wasn't 100% coverage. It was the moment a veterinary practice could get onto the latest version of the software without staying late in the hospital.</p>
-
-<p>It was when they could:</p>
-<ul>
-<li>Schedule an upgrade instead of babysitting it</li>
-<li>Go home on Tuesday night</li>
-<li>Wake up on the latest version with bug fixes, security patches, and new features designed to make their workday easier</li>
-</ul>
-
-<p>Once I framed the problem that way, the answer became obvious.</p>
-
-<p>Shipping something that delivered immediate value to 80% of practices was far more impactful than delaying value indefinitely while chasing edge cases that either didn't need us - or couldn't use the service at all.</p>
-
-<h2>Reframing the Real Problem</h2>
-
-<p>Upgrades weren't just painful because they were manual.</p>
-
-<p>They were painful because they:</p>
-<ul>
-<li>Kept doctors in the hospital long after their workday should have ended</li>
-<li>Prevented practices from accessing improvements meant to help them</li>
-<li>Increased support burden by keeping customers on outdated versions</li>
-</ul>
-
-<p>The real problem we were solving was twofold:</p>
-<ol>
-<li>Get practices onto the latest version so they could benefit from fixes, features, and improvements</li>
-<li>Do it without stealing more time from people whose time was already stretched thin</li>
-</ol>
-
-<p>That clarity changed everything.</p>
-
-<h2>What We Actually Shipped</h2>
-
-<p>We stopped trying to do everything.</p>
-
-<p>Instead, we focused on removing the biggest barrier to value: the hours of manual, late-night work required to upgrade nine to eleven computers.</p>
-
-<p>We built:</p>
-<ul>
-<li>Pre-qualification checks so practices could see upfront which machines would upgrade successfully</li>
-<li>Scheduling so upgrades could run overnight</li>
-<li>Clear communication about what would happen, what wouldn't, and what to do if something failed</li>
-</ul>
-
-<p>We automated what we could control and gave users control where it mattered most.</p>
-
-<p>Now, that exhausted veterinarian at 8:32 PM could schedule an upgrade for the next night and go home, confident the system would handle the tedious work while they slept.</p>
-
-<h2>The Silent Success</h2>
-
-<p>The moment I knew we'd gotten it right didn't come from a meeting or a metric.</p>
-
-<p>It came from watching the first upgrade complete.</p>
-
-<p>No emergency messages. No support calls. No manual intervention from our team.</p>
-
-<p>The practice scheduled the upgrade. The system qualified their computers. The upgrade ran overnight. And the next morning, they were on the latest version.</p>
-
-<p>That silent success - the thing I thought required perfection - only happened once we shipped something "good enough" and let real users validate it.</p>
-
-<h2>What I Learned</h2>
-
-<p>Looking back, my perfectionism wasn't really about protecting users. It was about protecting myself from being wrong.</p>
-
-<p>But by holding the product back, I wasn't avoiding failure, I was prolonging user pain.</p>
-
-<img src="/portfolio/80 percent info graphic.png" alt="Five key learnings: Time to first value matters more than theoretical completeness, Solving for edge cases can block the majority, Automation without trust isn't helpful, Perfectionism often disguises fear, Your job isn't to be right - it's to learn fast" style="max-width: 600px; margin: 2rem auto; display: block;" />
-
-<p>The MyCornerstone Upgrade Service ultimately helped thousands of veterinary practices stay current, reduced support burden, and gave doctors their nights back.</p>
-
-<p>None of that would have happened if I'd kept chasing the 100% solution.</p>
-
-<p>Sometimes, 80% shipped - delivered quickly and intentionally - is infinitely more valuable than 100% stuck in your head.</p>`
   },
-  {
     id: 5,
     slug: "when-users-reject-your-product",
     title: "When Your Best Beta Tester Rejects Your Product (And Why That's Good)",
@@ -875,5 +874,6 @@ Start where the unmet need is greatest and expectations are lowest.</p>
 <li>Rapid prototypes ($50, 2 days) can answer strategic questions without engineering investment</li>
 <li>One solution rarely fits all segments; trying to serve everyone means serving no one well</li>
 </ul>`
+  }
   }
 ];
