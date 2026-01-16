@@ -29,7 +29,7 @@ const Index = () => {
             </h1>
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-6 max-w-3xl">
               I'm a product manager obsessed with uncovering the hidden friction that blocks real users.
-              My 15+ years in healthcare taught me to uncover hidden friction and translate it into intuitive
+              My 15+ years in healthcare taught me to translate complex problems into intuitive
               products. That same methodology works in any complex domain. I ship products that solve problems others
               don't even see yet.
             </p>
@@ -117,14 +117,11 @@ const Index = () => {
                 work for diverse user bases.
               </p>
               <p>
-                My next chapter took me to Shepherd, a VC-backed startup where I led AI product
-                development for veterinary medicine. I shipped three products from concept to production,
-                managed a platform with 40+ vendor integrations, and developed systematic
-                approaches to user research that combine deep empathy with rapid execution.
+                Most recently, I led AI product development at a veterinary startup, shipping three products from concept to production and managing a platform with 40+ vendor integrations.
               </p>
               <p>
-                What drives me is the opportunity to solve hard problems for people doing important work.
-                Whether it's enterprise platforms serving thousands of clinics or 0-to-1 AI products,
+                Now I'm looking for my next opportunity to solve hard problems for people doing important work.
+                Whether it's enterprise platforms serving thousands or 0-to-1 AI products,
                 I bring the same approach: watch users work, find the hidden friction, and ship solutions
                 that make their jobs easier.
               </p>
@@ -202,15 +199,15 @@ const Index = () => {
                 },
                 {
                   title: "Technical PM Who Ships",
-                  description: "Built this portfolio from scratch with React and TypeScript, leveraging Claude Code to accelerate development. I don't just write specs - I prototype, debug alongside engineers, and understand the technical constraints that shape product decisions."
+                  description: "Built this portfolio from scratch with React and TypeScript, leveraging Claude Code to accelerate development. I don't just write specs. I prototype, debug alongside engineers, and understand the technical constraints that shape product decisions."
                 },
                 {
                   title: "Systematic Methodology",
-                  description: "UX teardown process that's repeatable, visual, collaborative, and actionable. Not just 'user interviews' - a structured framework that surfaces hidden insights."
+                  description: "UX teardown process that's repeatable, visual, collaborative, and actionable. Not just 'user interviews,' but a structured framework that surfaces hidden insights."
                 },
                 {
                   title: "Hands-On Builder",
-                  description: "From debugging in release candidate environments to prototyping with AI APIs to negotiating partner agreements - I'm in the details while maintaining strategic perspective."
+                  description: "From debugging in release candidate environments to prototyping with AI APIs to negotiating partner agreements. I'm in the details while maintaining strategic perspective."
                 },
                 {
                   title: "Domain Depth",
