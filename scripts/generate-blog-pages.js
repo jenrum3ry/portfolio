@@ -1,3 +1,28 @@
+/**
+ * Generate Static HTML for Blog Posts (Social Media Crawler Support)
+ *
+ * WHY THIS EXISTS:
+ * Social media crawlers (LinkedIn, Facebook, Twitter) don't execute JavaScript.
+ * Our React SPA generates meta tags dynamically, which crawlers never see.
+ * This script pre-generates static HTML files with Open Graph meta tags
+ * so crawlers can properly preview blog posts when shared on social media.
+ *
+ * WHEN TO UPDATE:
+ * Add new blog posts to the blogPosts array below whenever you add a post
+ * to src/data/blogPosts.ts. Only include: slug, title, excerpt, image, imageAlt
+ *
+ * HOW IT WORKS:
+ * 1. Runs automatically before build (prebuild script in package.json)
+ * 2. Creates public/blog/{slug}/index.html for each blog post
+ * 3. HTML includes all meta tags + redirect script for browsers
+ * 4. Vite copies these to dist/ during build
+ * 5. Crawlers get meta tags, browsers get redirected to SPA
+ *
+ * TESTING:
+ * After deployment, test with LinkedIn Post Inspector:
+ * https://www.linkedin.com/post-inspector/
+ */
+
 import { writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -5,7 +30,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Import blog posts data
+// ⚠️ IMPORTANT: Keep this in sync with src/data/blogPosts.ts
+// Add new blog posts here whenever you add them to blogPosts.ts
 const blogPosts = [
   {
     slug: "being-wrong-faster",
