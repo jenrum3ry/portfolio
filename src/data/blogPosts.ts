@@ -649,19 +649,21 @@ export const blogPosts: BlogPost[] = [
     showHeroImage: false,
     content: `<h1>When Your Best Beta Tester Rejects Your Product (And Why That's Good)</h1>
 
+<p>The best validation isn't when customers love your prototype. It's when the right customers reject it for the right reasons.</p>
+
 <p>Practice A loved our prototype in the first week. By week two, they were raving about it to colleagues. By week three, they'd stopped using it entirely.</p>
 
-<p>That's when I knew we'd actually done discovery research right.</p>
+<p>That rejection was more valuable than a dozen successful pilots. Here's why.</p>
 
-<h2>The Research Question Nobody Asked</h2>
+<h2>The Product Opportunity That Seemed Obvious</h2>
 
-<p>We started with what seemed like a straightforward product hypothesis: veterinarians prescribe medication all the time, but they have no systematic way to know if it's actually working. Clients go home with antibiotics or pain meds or arthritis treatments, and unless something goes dramatically wrong, the vet never hears back.</p>
+<p>Veterinarians prescribe medication constantly, but they have no systematic way to know if it's actually working. Clients go home with antibiotics or pain meds or arthritis treatments, and unless something goes dramatically wrong, the vet never hears back.</p>
 
-<p>The product opportunity seemed obvious: build an automated medication follow-up system. Simple SMS check-ins. Day 3: "Has Bella started her medication?" Day 7: "Any concerns?" Day 14: "Is she improving?"</p>
+<p>The solution seemed straightforward: build an automated medication follow-up system. Simple SMS check-ins. Day 3: "Has Bella started her medication?" Day 7: "Any concerns?" Day 14: "Is she improving?"</p>
 
-<p>But before we committed engineering resources to building this, we wanted to talk to actual veterinarians. Not to validate our brilliant idea. To understand what problem we were actually trying to solve.</p>
+<p>But before we committed engineering resources, we wanted to understand what problem we were actually trying to solve. Not validate our brilliant idea. Understand the job that needed doing.</p>
 
-<p>So we scheduled discovery interviews with 5-7 veterinary practices. Not a survey. Not a focus group. Actual hour-long conversations where we asked them to walk us through their current medication follow-up process.</p>
+<p>So we scheduled discovery interviews with 5-7 veterinary practices. Not surveys. Not focus groups. Hour-long conversations where we asked them to walk us through their current medication follow-up process.</p>
 
 <h2>Three Customer Segments We Didn't Expect</h2>
 
@@ -679,7 +681,7 @@ export const blogPosts: BlogPost[] = [
 
 <h3>Segment 2: The Tech-Forward Practices</h3>
 
-<p>These practices already use automated reminders through their practice management software. They text clients about appointments, vaccine due dates, prescription refills. But they're frustrated because none of their current tools capture <em>outcome data</em>.</p>
+<p>These practices already use automated reminders through their practice management software. They text clients about appointments, vaccine due dates, prescription refills. But they're frustrated because none of their current tools capture outcome data.</p>
 
 <p>One practice manager told us: "I can send a thousand reminder texts. But six months later when the client comes back, I have no idea if that arthritis medication even worked."</p>
 
@@ -690,6 +692,8 @@ export const blogPosts: BlogPost[] = [
 <p>A veterinarian at a volume practice said it best: "I'd love to know if that medication worked, but I don't have time to call 30 clients. And by the time they come back in six months, I've forgotten what we even tried."</p>
 
 <p>Three segments. Three completely different problems. Three incompatible solutions.</p>
+
+<p>This lesson applies beyond veterinary software. Any time you're tempted to build one solution for everyone, you're probably building a solution for no one.</p>
 
 <h2>The $50 Prototype That Changed Everything</h2>
 
@@ -712,20 +716,23 @@ export const blogPosts: BlogPost[] = [
 
 <h2>The Results That Broke Our Assumptions</h2>
 
-<p><strong>The quantitative data looked great:</strong></p>
+<p>The quantitative data looked great:</p>
 <ul>
 <li>60% response rate on the first check-in across all practices</li>
 <li>Practice C (volume) saw the biggest impact: 0% follow-up rate to 60% follow-up rate</li>
 <li>Clients appreciated the check-ins and responded thoughtfully</li>
 </ul>
 
-<p><strong>The qualitative data told a different story:</strong></p>
+<p>The qualitative data told a different story:</p>
 
-<p><strong>Practice B (tech-forward):</strong> Loved it. Wanted it integrated with their practice management system immediately. Started asking about data exports and trend reporting.</p>
+<p><strong>Practice B (tech-forward):</strong><br>
+Loved it. Wanted it integrated with their practice management system immediately. Started asking about data exports and trend reporting.</p>
 
-<p><strong>Practice C (volume):</strong> Enthusiastic. Any systematic follow-up was a massive improvement over nothing. They didn't care about integration or sophistication. They just wanted it to work.</p>
+<p><strong>Practice C (volume):</strong><br>
+Enthusiastic. Any systematic follow-up was a massive improvement over nothing. They didn't care about integration or sophistication. They just wanted it to work.</p>
 
-<p><strong>Practice A (high-touch):</strong> Used it religiously for two weeks. Then stopped completely.</p>
+<p><strong>Practice A (high-touch):</strong><br>
+Used it religiously for two weeks. Then stopped completely.</p>
 
 <h2>What Practice A Taught Us About Discovery</h2>
 
@@ -737,7 +744,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>This wasn't a feature request. This wasn't a UX problem. This was us solving the wrong problem for the wrong customer.</p>
 
-<p>Practice A didn't need automation. They needed <em>support</em> for their personal approach. They needed tools that made their calls more effective, not tools that replaced their calls entirely.</p>
+<p>Practice A didn't need automation. They needed support for their personal approach. They needed tools that made their calls more effective, not tools that replaced their calls entirely.</p>
 
 <p>We'd built a solution that actively worked against their business model.</p>
 
@@ -745,28 +752,16 @@ export const blogPosts: BlogPost[] = [
 
 <p>Now we had a problem. We had proof that medication follow-up systems work (60% response rate). We had three customer segments who all acknowledged the problem. But they needed three fundamentally different solutions.</p>
 
-<p><strong>Option 1: Build for everyone</strong><br>
-Make it configurable. Toggle switches for high-touch vs. automated. Customizable message templates. Integration options. Flexible workflows.</p>
+<p>I sat with the team and we talked through the options. We could try to build something configurable that worked for everyone. Toggle switches for high-touch versus automated, customizable workflows, optional integrations. It would take longer to build and we'd risk serving no one well, but at least we wouldn't exclude anyone.</p>
 
-<p><em>Pros:</em> Broader market appeal. Future-proof. No one feels excluded.<br>
-<em>Cons:</em> More complex. Slower to ship. Risk of serving no one well.</p>
+<p>Or we could build for high-touch practices first. They had the strongest feelings about relationships and the highest willingness to pay. But they were also the smallest segment with the most sophisticated needs and would be the hardest to satisfy.</p>
 
-<p><strong>Option 2: Build for high-touch practices first</strong><br>
-Start with the segment that has the strongest feelings about relationships and personal touch.</p>
+<p>Or we could start with volume practices. The largest market opportunity where any solution would be better than nothing, where expectations were low and feedback would be immediate.</p>
 
-<p><em>Pros:</em> Differentiated solution. Higher willingness to pay. Sticky relationships.<br>
-<em>Cons:</em> Smallest market segment. Most sophisticated needs. Hardest to satisfy.</p>
-
-<p><strong>Option 3: Build for volume practices first</strong><br>
-Start where the unmet need is greatest and expectations are lowest.</p>
-
-<p><em>Pros:</em> Largest market opportunity (40% of practices). Any solution is better than nothing. Easier to satisfy. Can add sophistication later.<br>
-<em>Cons:</em> May need significant redesign for other segments. Lower willingness to pay. Less differentiation.</p>
-
-<p>We chose Option 3. Here's why:</p>
+<p>We chose volume practices. Here's why:</p>
 
 <ol>
-<li><strong>Volume practices have no solution today.</strong> Going from 0% to 60% follow-up is transformational. Going from 90% (manual calls) to 95% (automated) is incremental.</li>
+<li><strong>They have no solution today.</strong> Going from 0% to 60% follow-up is transformational. Going from 90% (manual calls) to 95% (automated) is incremental.</li>
 
 <li><strong>Their expectations are low.</strong> They're not comparing us to their existing perfect process. They're comparing us to nothing.</li>
 
@@ -777,11 +772,13 @@ Start where the unmet need is greatest and expectations are lowest.</p>
 <li><strong>High-touch practices need a different product.</strong> Practice A's rejection taught us they don't want automation. They want amplification. That's a separate product with a separate roadmap.</li>
 </ol>
 
+<p>That clarity changed everything. Our roadmap became obvious. Our marketing became clear. Our engineering team knew exactly what problem we were solving and for whom.</p>
+
 <h2>The Broader Lesson: Discovery Isn't About Validation</h2>
 
 <p>Most teams do discovery research to validate what they already want to build. They're looking for quotes they can put in slide decks. They're hunting for confirmation.</p>
 
-<p>Real discovery research finds the customers you <em>can't</em> help.</p>
+<p>Real discovery research finds the customers you can't help.</p>
 
 <p>Practice A rejecting our prototype wasn't a failure. It was them telling us: "You're solving the wrong problem for us." That's worth more than a dozen successful pilots with the wrong segment.</p>
 
@@ -798,13 +795,13 @@ Start where the unmet need is greatest and expectations are lowest.</p>
 
 <h2>What You Actually Learn From Discovery</h2>
 
-<p>Discovery research isn't about asking people what features they want. It's about understanding the job they're trying to do and the constraints they're working within.</p>
+<p>Discovery research isn't about asking people what features they want. It's about understanding the job they're trying to do. The specific circumstances where they need to make progress, and the constraints they're working within.</p>
 
 <p><strong>What we learned from Practice A:</strong></p>
 <ul>
 <li>High-touch practices build their competitive advantage on relationships</li>
 <li>Automation that replaces personal touch threatens their business model</li>
-<li>They need tools that <em>support</em> their process, not replace it</li>
+<li>They need tools that support their process, not replace it</li>
 <li>Any solution for them must preserve the personal connection they value</li>
 </ul>
 
@@ -835,14 +832,14 @@ Start where the unmet need is greatest and expectations are lowest.</p>
 <p>Instead, we learned:</p>
 <ul>
 <li>Not all practices should be our customers</li>
-<li>Customer segmentation isn't about demographics. It's about jobs-to-be-done</li>
+<li>Customer segmentation isn't about demographics. It's about the job that needs doing</li>
 <li>The best validation is when someone rejects your solution and you understand why</li>
-<li>Strategic focus means choosing who you <em>won't</em> serve</li>
+<li>Strategic focus means choosing who you won't serve</li>
 </ul>
 
-<p>We built for volume practices. We said no to high-touch practices (not because they weren't valuable, but because we couldn't serve them well without building an entirely different product).</p>
+<p>We shipped to volume practices six weeks later. The response rate held at 58%. Practices started asking if they could use it for other protocols beyond medication follow-up. Within three months, we had waiting lists from practices who'd heard about it from colleagues.</p>
 
-<p>That clarity made everything easier. Our roadmap became obvious. Our marketing became clear. Our engineering team knew exactly what problem we were solving and for whom.</p>
+<p>And Practice A? They're still manually calling every client. They're still building relationships over the phone. They're still Mrs. Johnson's favorite vet clinic. That's exactly as it should be.</p>
 
 <h2>Your Turn: When Users Reject Your Product</h2>
 
@@ -870,7 +867,7 @@ Start where the unmet need is greatest and expectations are lowest.</p>
 <p><strong>Key Takeaways:</strong></p>
 <ul>
 <li>Discovery research should find the customers you can't serve, not just validate what you want to build</li>
-<li>Customer segmentation based on jobs-to-be-done reveals fundamentally incompatible needs</li>
+<li>Customer segmentation based on the job-to-be-done reveals fundamentally incompatible needs</li>
 <li>When a beta tester rejects your product, that's data (not failure)</li>
 <li>Strategic focus means choosing who you won't serve so you can serve someone else well</li>
 <li>Rapid prototypes ($50, 2 days) can answer strategic questions without engineering investment</li>
