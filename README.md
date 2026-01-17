@@ -77,9 +77,10 @@ portfolio/
 - **Type Safety** - Full TypeScript implementation with strict mode
 - **Component Library** - Extensive shadcn-ui component collection (48 components)
 - **Code Splitting** - Route-level lazy loading for optimal performance
-- **SEO Optimized** - Dynamic meta tags with react-helmet-async
+- **SEO Optimized** - Dynamic meta tags with react-helmet-async + static HTML for crawlers
+- **Social Media Ready** - Pre-rendered Open Graph tags for LinkedIn, Facebook, Twitter
 - **Error Handling** - Error boundaries for graceful error recovery
-- **Routing** - React Router with `/portfolio` base path
+- **Routing** - React Router with `/portfolio` base path + GitHub Pages SPA support
 - **Dark Mode Support** - Theme switching with next-themes
 - **Professional Portfolio** - Showcases work experience, projects, and blog posts
 - **Image Lightbox** - Click project images to view enlarged in modal dialog
@@ -91,10 +92,13 @@ portfolio/
 | Command | Description |
 |---------|-------------|
 | `npm run dev` | Start development server |
-| `npm run build` | Production build |
+| `npm run build` | Production build (runs prebuild automatically) |
+| `npm run prebuild` | Generate static HTML for blog posts (runs before build) |
 | `npm run build:dev` | Development build |
 | `npm run preview` | Preview production build |
 | `npm run lint` | Run ESLint |
+
+**Note**: The `prebuild` script runs automatically before `build` to generate static HTML files for social media crawler compatibility.
 
 ## 🎨 Design System
 
@@ -160,6 +164,66 @@ VITE_WEB3FORMS_ACCESS_KEY=your-api-key-here
 - **Static data only**: No backend/API (except Web3Forms for contact form)
 - **Type safety**: All data uses centralized TypeScript interfaces
 
+### Adding New Blog Posts
+
+When adding a new blog post, you need to update **TWO files**:
+
+1. **Add blog data** to `src/data/blogPosts.ts`:
+   ```typescript
+   {
+     id: 6,
+     slug: "new-blog-post",
+     title: "Your Blog Post Title",
+     excerpt: "Brief description for social media previews",
+     image: "/your-image.png",
+     imageAlt: "Image description",
+     // ... other fields
+   }
+   ```
+
+2. **Update static HTML generator** in `scripts/generate-blog-pages.js`:
+   ```javascript
+   const blogPosts = [
+     // ... existing posts
+     {
+       slug: "new-blog-post",
+       title: "Your Blog Post Title",
+       excerpt: "Brief description for social media previews",
+       image: "/your-image.png",
+       imageAlt: "Image description",
+     },
+   ];
+   ```
+
+**Why both?** The SPA uses `blogPosts.ts` for the interactive site. The script generates static HTML for social media crawlers (LinkedIn, Facebook, Twitter) that don't execute JavaScript. See `scripts/README.md` for details.
+
+## 🔍 SEO & Social Media Optimization
+
+This portfolio implements a dual-layer approach for optimal SEO and social media sharing:
+
+### Dynamic Meta Tags (SPA)
+- **Component**: `src/components/SEO.tsx` with `react-helmet-async`
+- **Purpose**: Provides meta tags for browsers and search engines that execute JavaScript
+- **Used by**: Google, Bing, and human visitors
+
+### Static HTML Generation (Crawlers)
+- **Script**: `scripts/generate-blog-pages.js`
+- **Purpose**: Pre-renders HTML with Open Graph meta tags for social media crawlers
+- **Used by**: LinkedIn Post Inspector, Facebook, Twitter, and other social platforms
+
+**How it works:**
+1. Social media crawlers access `/portfolio/blog/your-post`
+2. They receive static HTML with complete meta tags (no JavaScript needed)
+3. Browsers execute a redirect to load the full SPA experience
+4. Users get the interactive React app, crawlers get the meta tags
+
+**Testing social media previews:**
+- LinkedIn: https://www.linkedin.com/post-inspector/
+- Facebook: https://developers.facebook.com/tools/debug/
+- Twitter: https://cards-dev.twitter.com/validator
+
+For detailed documentation, see `scripts/README.md`.
+
 ## 📁 Portfolio Projects
 
 The portfolio showcases 4 case studies in priority order:
@@ -177,14 +241,43 @@ This project is configured for deployment with a `/portfolio` base path (e.g., G
 
 The router has `basename="/portfolio"` configured for proper routing in deployed environments.
 
-### GitHub Pages SPA Routing
+### GitHub Pages Configuration
 
-For client-side routing to work on GitHub Pages:
-- The build process automatically copies `index.html` → `404.html`
-- This ensures direct navigation to routes (e.g., `/portfolio/blog`) loads the React app
-- See `.github/workflows/deploy.yml` for the automated copy step
+The portfolio implements a complete GitHub Pages setup with SPA routing and crawler support:
 
-**Important**: Set the `VITE_WEB3FORMS_ACCESS_KEY` environment variable in your deployment platform for the contact form to work.
+#### SPA Routing (For Browsers)
+1. **404.html** (`public/404.html`) - Catches 404s and redirects to the main app
+2. **Redirect Handler** (`index.html`) - Restores the original URL via sessionStorage
+3. **.nojekyll** (`public/.nojekyll`) - Prevents Jekyll from processing files
+
+**How it works:**
+- User navigates to `/portfolio/blog/post-name`
+- GitHub Pages serves `404.html` (path doesn't exist as a file)
+- `404.html` stores path in sessionStorage and redirects to `/portfolio/`
+- `index.html` reads sessionStorage and restores the original URL
+- React Router handles the route normally
+
+#### Social Media Crawler Support (For LinkedIn/Facebook/Twitter)
+1. **Static HTML Generation** (`scripts/generate-blog-pages.js`) - Creates static HTML for each blog post
+2. **Pre-rendered Meta Tags** - All Open Graph tags included without JavaScript
+3. **Automatic Build Integration** - Runs via `prebuild` script before every build
+
+**How it works:**
+- Crawler accesses `/portfolio/blog/post-name/`
+- Gets static `index.html` with complete meta tags
+- Crawler reads tags without executing JavaScript
+- Result: Perfect social media previews with images
+
+#### Deployment Checklist
+- ✅ Set `VITE_WEB3FORMS_ACCESS_KEY` environment variable for contact form
+- ✅ Ensure all blog posts are in `scripts/generate-blog-pages.js`
+- ✅ Run `npm run build` to generate static HTML and bundle
+- ✅ Test social media previews with LinkedIn Post Inspector after deployment
+
+**Testing After Deployment:**
+- SPA routing: Navigate directly to `/portfolio/blog/any-post` (should work)
+- Social previews: Test URLs at https://www.linkedin.com/post-inspector/
+- Contact form: Submit test form (requires API key set)
 
 ### Bundle Sizes (Production Build)
 - Main bundle: 182KB
