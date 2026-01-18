@@ -7,6 +7,7 @@ import SEO from "@/components/SEO";
 import { ROUTES } from "@/lib/routes";
 import { trackBlogPostView } from "@/lib/analytics";
 import { useScrollTracking } from "@/hooks/use-analytics";
+import { useBlogPostTracking } from "@/hooks/use-clarity-tracking";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -15,12 +16,15 @@ const BlogPost = () => {
   // Track scroll depth for engagement metrics
   useScrollTracking();
 
-  // Track blog post view
+  // Track blog post view (existing analytics)
   useEffect(() => {
     if (post) {
       trackBlogPostView(post.title, post.slug);
     }
   }, [post]);
+
+  // Track blog post view with Clarity
+  useBlogPostTracking(post?.slug || '', post?.title || '');
 
   if (!post) {
     return (

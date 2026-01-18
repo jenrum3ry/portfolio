@@ -5,6 +5,7 @@ import ErrorBoundary from "@/components/ErrorBoundary";
 import PageLoader from "@/components/PageLoader";
 import { ROUTES } from "@/lib/routes";
 import { usePageTracking } from "@/hooks/use-analytics";
+import { useClarityTracking } from "@/hooks/use-clarity-tracking";
 
 // Lazy load all pages for code splitting
 const Index = lazy(() => import("@/pages/Index"));
@@ -19,6 +20,7 @@ const NotFound = lazy(() => import("@/pages/NotFound"));
 // Analytics wrapper component
 function AnalyticsProvider({ children }: { children: React.ReactNode }) {
   usePageTracking();
+  useClarityTracking(); // Microsoft Clarity tracking
   return <>{children}</>;
 }
 
