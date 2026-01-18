@@ -11,6 +11,7 @@ import SEO from "@/components/SEO";
 import { ROUTES } from "@/lib/routes";
 import { trackProjectView, trackProjectClick, trackExternalLink } from "@/lib/analytics";
 import { useScrollTracking } from "@/hooks/use-analytics";
+import { trackCaseStudyView } from "@/hooks/use-clarity-tracking";
 
 const CaseStudies = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
@@ -40,6 +41,7 @@ const CaseStudies = () => {
 
   const handleImageClick = (study: typeof caseStudies[0]) => {
     trackProjectClick(study.title, study.id);
+    trackCaseStudyView(study.id, study.title); // Clarity tracking
     setSelectedImage({ src: study.image, alt: study.imageAlt });
   };
 
