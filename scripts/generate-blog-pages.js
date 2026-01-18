@@ -111,17 +111,16 @@ function generateBlogPageHTML(post) {
   <!-- Canonical URL -->
   <link rel="canonical" href="${fullUrl}" />
 
-  <!-- Redirect to SPA for browsers (after crawlers read meta tags) -->
+  <!-- Redirect to SPA for browsers (GitHub Pages routing) -->
   <script>
-    // Only redirect if this is a real browser (not a crawler)
-    // Crawlers typically don't execute JavaScript
-    if (typeof window !== 'undefined') {
-      window.location.href = '${fullUrl}';
-    }
+    // Store the path and redirect to base URL for React Router to handle
+    // This follows the same pattern as 404.html for GitHub Pages SPA routing
+    sessionStorage.setItem('redirect', '/portfolio/blog/${post.slug}');
+    window.location.replace('/portfolio/');
   </script>
 
   <!-- Fallback meta refresh for browsers without JavaScript -->
-  <meta http-equiv="refresh" content="0;url=${fullUrl}">
+  <meta http-equiv="refresh" content="0;url=/portfolio/">
 </head>
 <body>
   <h1>${post.title}</h1>
