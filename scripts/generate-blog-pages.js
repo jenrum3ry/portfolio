@@ -34,11 +34,25 @@ const __dirname = dirname(__filename);
 // Add new blog posts here whenever you add them to blogPosts.ts
 const blogPosts = [
   {
+    slug: "prioritization-beyond-rice",
+    title: "The Art of Prioritization: Beyond the RICE Framework",
+    excerpt: "Why scoring frameworks fail and what actually drives strategic prioritization in product management.",
+    image: "/og-image.png",
+    imageAlt: "Jen Rumery - AI Product Manager",
+  },
+  {
     slug: "being-wrong-faster",
     title: "The PM's Real Job: Being Wrong Faster",
     excerpt: "Beyond 'fail fast': Why the best product managers focus on being wrong faster, and how to build systems that expose bad assumptions before they become expensive mistakes.",
     image: "/portfolio/pm-strategy-illustration.png",
     imageAlt: "Abstract illustration representing product strategy and iteration",
+  },
+  {
+    slug: "when-users-reject-your-product",
+    title: "When Your Best Beta Tester Rejects Your Product (And Why That's Good)",
+    excerpt: "What you can learn when beta testers walk away from your product idea and how to turn it into actionable insights.",
+    image: "/beta-tester-walks-away.PNG",
+    imageAlt: "Beta tester walking away from product prototype, representing discovery research insights",
   },
   {
     slug: "80-solution-time-to-first-value",
@@ -48,25 +62,11 @@ const blogPosts = [
     imageAlt: "Doctor in scrubs working at computer in medical facility",
   },
   {
-    slug: "prioritization-beyond-rice",
-    title: "The Art of Prioritization: Beyond the RICE Framework",
-    excerpt: "Why scoring frameworks fail and what actually drives strategic prioritization in product management.",
-    image: "/og-image.png",
-    imageAlt: "Jen Rumery - AI Product Manager",
-  },
-  {
     slug: "continuous-user-research",
     title: "Continuous User Research Without Breaking the Bank",
     excerpt: "How to build a systematic user research practice with no budget, no researchers, and 45 minutes per session.",
     image: "/og-image.png",
     imageAlt: "Jen Rumery - AI Product Manager",
-  },
-  {
-    slug: "when-users-reject-your-product",
-    title: "When Your Best Beta Tester Rejects Your Product (And Why That's Good)",
-    excerpt: "What you can learn when beta testers walk away from your product idea and how to turn it into actionable insights.",
-    image: "/beta-tester-walks-away.PNG",
-    imageAlt: "Beta tester walking away from product prototype, representing discovery research insights",
   },
 ];
 
