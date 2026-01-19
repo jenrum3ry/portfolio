@@ -128,20 +128,13 @@ export const isClarityAvailable = (): boolean => {
  */
 export const setTag = (key: string, value: string | number | boolean): void => {
   if (!isClarityAvailable()) {
-    if (import.meta.env.DEV) {
-      console.warn('[Clarity] Not available. Tag not set:', key, value);
-    }
     return;
   }
 
   try {
     window.clarity!('set', key, value);
-
-    if (import.meta.env.DEV) {
-      console.log(`[Clarity] Tagged session: ${key}=${value}`);
-    }
   } catch (error) {
-    console.error('[Clarity] Error setting tag:', error);
+    // Silent fail
   }
 };
 
@@ -181,20 +174,13 @@ export const identifyUser = (
   friendlyName?: string
 ): void => {
   if (!isClarityAvailable()) {
-    if (import.meta.env.DEV) {
-      console.warn('[Clarity] Not available. User not identified:', userId);
-    }
     return;
   }
 
   try {
     window.clarity!('identify', userId, sessionId, pageId, friendlyName);
-
-    if (import.meta.env.DEV) {
-      console.log(`[Clarity] Identified user: ${userId}`);
-    }
   } catch (error) {
-    console.error('[Clarity] Error identifying user:', error);
+    // Silent fail
   }
 };
 
@@ -208,12 +194,8 @@ export const requestConsent = (): void => {
 
   try {
     window.clarity!('consent');
-
-    if (import.meta.env.DEV) {
-      console.log('[Clarity] Consent requested');
-    }
   } catch (error) {
-    console.error('[Clarity] Error requesting consent:', error);
+    // Silent fail
   }
 };
 
@@ -232,12 +214,8 @@ export const upgradeSession = (reason: string): void => {
 
   try {
     window.clarity!('upgrade', reason);
-
-    if (import.meta.env.DEV) {
-      console.log(`[Clarity] Session upgraded: ${reason}`);
-    }
   } catch (error) {
-    console.error('[Clarity] Error upgrading session:', error);
+    // Silent fail
   }
 };
 
@@ -281,10 +259,6 @@ export const trackUTMParameters = (utmParams: UTMParameters = getUTMParameters()
 
   if (Object.keys(tags).length > 0) {
     setMultipleTags(tags);
-
-    if (import.meta.env.DEV) {
-      console.log('[Clarity] UTM parameters tracked:', tags);
-    }
   }
 };
 
@@ -320,6 +294,106 @@ export const getTrafficSource = (
 
   // No referrer = direct traffic
   return 'direct';
+};
+
+/**
+ * Get detailed referral information
+ * Automatically extracts platform, domain, and full URL
+ */
+export const getReferralDetails = (referrer: string = document.referrer): {
+  platform: string;
+  domain: string;
+  fullUrl: string;
+} | null => {
+  if (!referrer) return null;
+
+  try {
+    const url = new URL(referrer);
+    const domain = url.hostname.replace('www.', '');
+    let platform = 'other';
+
+    // Detect specific platforms
+    if (domain.includes('linkedin.com')) platform = 'linkedin';
+    else if (domain.includes('github.com')) platform = 'github';
+    else if (domain.includes('twitter.com') || domain.includes('x.com')) platform = 'twitter';
+    else if (domain.includes('facebook.com')) platform = 'facebook';
+    else if (domain.includes('instagram.com')) platform = 'instagram';
+    else if (domain.includes('reddit.com')) platform = 'reddit';
+    else if (domain.includes('hackernews.com') || domain.includes('ycombinator.com')) platform = 'hackernews';
+    else if (domain.includes('medium.com')) platform = 'medium';
+    else if (domain.includes('dev.to')) platform = 'devto';
+    else if (domain.includes('google.com')) platform = 'google';
+    else if (domain.includes('bing.com')) platform = 'bing';
+    else if (domain.includes('duckduckgo.com')) platform = 'duckduckgo';
+    else if (domain.includes('yahoo.com')) platform = 'yahoo';
+
+    return {
+      platform,
+      domain,
+      fullUrl: referrer,
+    };
+  } catch (error) {
+    return null;
+  }
+};
+
+/**
+ * Track referral details automatically
+ */
+export const trackReferralDetails = (): void => {
+  const referralInfo = getReferralDetails();
+
+  if (referralInfo) {
+    setMultipleTags({
+      ref_platform: referralInfo.platform,
+      ref_domain: referralInfo.domain,
+      has_referrer: true,
+    });
+  } else {
+    setTag('has_referrer', false);
+  }
+};
+
+/**
+ * Get landing page (first page visited in session)
+ */
+export const getLandingPage = (): string => {
+  try {
+    const landingPage = sessionStorage.getItem('clarity_landing_page');
+    if (landingPage) return landingPage;
+
+    const currentPath = window.location.pathname;
+    sessionStorage.setItem('clarity_landing_page', currentPath);
+    return currentPath;
+  } catch (error) {
+    return window.location.pathname;
+  }
+};
+
+/**
+ * Get time-based context
+ */
+export const getTimeContext = (): {
+  hour: number;
+  timeOfDay: 'morning' | 'afternoon' | 'evening' | 'night';
+  dayOfWeek: 'weekday' | 'weekend';
+  dayName: string;
+} => {
+  const now = new Date();
+  const hour = now.getHours();
+  const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+
+  let timeOfDay: 'morning' | 'afternoon' | 'evening' | 'night';
+  if (hour >= 5 && hour < 12) timeOfDay = 'morning';
+  else if (hour >= 12 && hour < 17) timeOfDay = 'afternoon';
+  else if (hour >= 17 && hour < 21) timeOfDay = 'evening';
+  else timeOfDay = 'night';
+
+  const dayOfWeek = day === 0 || day === 6 ? 'weekend' : 'weekday';
+  const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+  const dayName = dayNames[day];
+
+  return { hour, timeOfDay, dayOfWeek, dayName };
 };
 
 // ============================================================================
@@ -443,10 +517,6 @@ export const classifyUserType = (visitedPages: PageCategory[]): UserType => {
 export const trackPageView = (pathname: string): void => {
   const category = getPageCategory(pathname);
   setTag('page_category', category);
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] Page view tracked: ${pathname} -> ${category}`);
-  }
 };
 
 /**
@@ -463,10 +533,6 @@ export const trackBlogPostView = (slug: string, title: string): void => {
   });
 
   upgradeSession('blog_post_view');
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] Blog post viewed: ${title} (${slug})`);
-  }
 };
 
 /**
@@ -483,10 +549,6 @@ export const trackCaseStudyView = (studyId: string, title: string): void => {
   });
 
   upgradeSession('case_study_view');
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] Case study viewed: ${title} (${studyId})`);
-  }
 };
 
 /**
@@ -499,10 +561,6 @@ export const trackContactFormAction = (action: 'opened' | 'filled' | 'submitted'
 
   if (action === 'submitted') {
     upgradeSession('contact_form_submission');
-  }
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] Contact form: ${action}`);
   }
 };
 
@@ -517,10 +575,6 @@ export const trackExternalLinkClick = (url: string, context?: string): void => {
     external_link_clicked: url,
     ...(context && { link_context: context }),
   });
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] External link clicked: ${url} (${context || 'no context'})`);
-  }
 };
 
 // ============================================================================
@@ -549,7 +603,7 @@ export const recordVisitedPage = (category: PageCategory): void => {
     visited.push(category);
     sessionStorage.setItem(STORAGE_KEYS.VISITED_PAGES, JSON.stringify(visited));
   } catch (error) {
-    console.error('[Clarity] Error recording visited page:', error);
+    // Silent fail
   }
 };
 
@@ -590,7 +644,7 @@ export const recordInteraction = (): void => {
     const count = parseInt(sessionStorage.getItem(STORAGE_KEYS.INTERACTIONS) || '0', 10);
     sessionStorage.setItem(STORAGE_KEYS.INTERACTIONS, (count + 1).toString());
   } catch (error) {
-    console.error('[Clarity] Error recording interaction:', error);
+    // Silent fail
   }
 };
 
@@ -615,7 +669,7 @@ export const updateMaxScrollDepth = (depth: number): void => {
       sessionStorage.setItem(STORAGE_KEYS.MAX_SCROLL, Math.floor(depth).toString());
     }
   } catch (error) {
-    console.error('[Clarity] Error updating scroll depth:', error);
+    // Silent fail
   }
 };
 
@@ -658,14 +712,6 @@ export const updateEngagementTags = (): void => {
     time_on_site: metrics.timeOnSite,
     max_scroll_depth: metrics.scrollDepth,
   });
-
-  if (import.meta.env.DEV) {
-    console.log('[Clarity] Engagement tags updated:', {
-      engagementLevel,
-      userType,
-      metrics,
-    });
-  }
 };
 
 // ============================================================================
@@ -759,15 +805,10 @@ export const getOrCreateUserId = (): string => {
     if (!userId) {
       userId = generateUserId();
       localStorage.setItem(STORAGE_KEYS.USER_ID, userId);
-
-      if (import.meta.env.DEV) {
-        console.log('[Clarity] New user ID created:', userId);
-      }
     }
 
     return userId;
   } catch (error) {
-    console.error('[Clarity] Error getting/creating user ID:', error);
     return generateUserId(); // Fallback to session-only ID
   }
 };
@@ -808,8 +849,6 @@ export const getUserMetadata = (): UserMetadata => {
 
     return metadata;
   } catch (error) {
-    console.error('[Clarity] Error getting user metadata:', error);
-    // Return minimal metadata
     return {
       userId: generateUserId(),
       visitCount: 1,
@@ -854,6 +893,16 @@ export const initializeUserTracking = (): UserMetadata => {
     // Identify user in Clarity
     identifyUser(userId, undefined, undefined, `Visitor #${visitCount}`);
 
+    // Get time context
+    const timeContext = getTimeContext();
+
+    // Get landing page
+    const landingPage = getLandingPage();
+    const landingCategory = getPageCategory(landingPage);
+
+    // Track referral details automatically
+    trackReferralDetails();
+
     // Tag session with user metadata
     setMultipleTags({
       visitor_id: userId,
@@ -864,15 +913,15 @@ export const initializeUserTracking = (): UserMetadata => {
       os: metadata.os,
       timezone: metadata.timezone,
       screen_resolution: metadata.screenResolution,
+      time_of_day: timeContext.timeOfDay,
+      day_of_week: timeContext.dayOfWeek,
+      day_name: timeContext.dayName,
+      visit_hour: timeContext.hour,
+      landing_page: landingCategory,
     });
-
-    if (import.meta.env.DEV) {
-      console.log('[Clarity] User tracking initialized:', metadata);
-    }
 
     return metadata;
   } catch (error) {
-    console.error('[Clarity] Error initializing user tracking:', error);
     return getUserMetadata();
   }
 };

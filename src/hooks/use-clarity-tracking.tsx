@@ -60,9 +60,6 @@ export const useClarityTracking = () => {
     // Cleanup after 10 seconds if Clarity doesn't load
     const timeout = setTimeout(() => {
       clearInterval(initInterval);
-      if (import.meta.env.DEV) {
-        console.warn('[Clarity] Failed to initialize - timeout');
-      }
     }, 10000);
 
     return () => {
@@ -86,10 +83,6 @@ export const useClarityTracking = () => {
 
     // Update engagement tags
     updateEngagementTags();
-
-    if (import.meta.env.DEV) {
-      console.log(`[Clarity Hook] Page tracked: ${pathname} -> ${category}`);
-    }
   }, [location.pathname]);
 
   // Track scroll depth with milestone tracking
@@ -111,10 +104,6 @@ export const useClarityTracking = () => {
         if (scrollPercent >= milestone && !milestonesReached.has(milestone)) {
           milestonesReached.add(milestone);
           updateEngagementTags();
-
-          if (import.meta.env.DEV) {
-            console.log(`[Clarity] Scroll milestone reached: ${milestone}%`);
-          }
         }
       });
     };
@@ -150,10 +139,6 @@ export const useClarityTracking = () => {
  * Initialize Clarity session with UTM parameters and traffic source
  */
 const initializeSession = () => {
-  if (import.meta.env.DEV) {
-    console.log('[Clarity] Initializing session...');
-  }
-
   // Initialize user identification and visit tracking
   const userMetadata = initializeUserTracking();
 
@@ -173,14 +158,6 @@ const initializeSession = () => {
 
   // Initial engagement update
   updateEngagementTags();
-
-  if (import.meta.env.DEV) {
-    console.log('[Clarity] Session initialized:', {
-      user: userMetadata,
-      trafficSource: source,
-      loyaltyLevel,
-    });
-  }
 };
 
 // ============================================================================
@@ -346,10 +323,6 @@ export const useScrollDepthTracking = (
 
           // Update engagement tags
           updateEngagementTags();
-
-          if (import.meta.env.DEV) {
-            console.log(`[Clarity] Scroll milestone reached: ${milestone}%`);
-          }
         }
       });
     };
@@ -393,30 +366,18 @@ export const useFormTracking = (formName: string) => {
         setTag(`${formName}_opened`, true);
         recordInteraction();
         updateEngagementTags();
-
-        if (import.meta.env.DEV) {
-          console.log(`[Clarity] Form opened: ${formName}`);
-        }
       }
     };
 
     const handleInput = () => {
       setTag(`${formName}_filled`, true);
       recordInteraction();
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Form filled: ${formName}`);
-      }
     };
 
     const handleSubmit = () => {
       setTag(`${formName}_submitted`, true);
       recordInteraction();
       updateEngagementTags();
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Form submitted: ${formName}`);
-      }
     };
 
     form.addEventListener('focus', handleFocus, true);
@@ -472,10 +433,6 @@ export const useExternalLinkTracking = () => {
         setTag('external_link_clicked', href);
         setTag('link_context', context);
         recordInteraction();
-
-        if (import.meta.env.DEV) {
-          console.log(`[Clarity] External link clicked: ${href} (${context})`);
-        }
       }
     };
 
@@ -520,10 +477,6 @@ export const useTimeOnPageTracking = (
       if (onInterval) {
         onInterval(timeOnPage);
       }
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Time on page: ${timeOnPage}s`);
-      }
     }, intervalSeconds * 1000);
 
     return () => clearInterval(interval);
@@ -548,10 +501,6 @@ export const useVisibilityTracking = () => {
     const handleVisibilityChange = () => {
       const isVisible = document.visibilityState === 'visible';
       setTag('page_visible', isVisible);
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Page visibility: ${isVisible ? 'visible' : 'hidden'}`);
-      }
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -595,10 +544,6 @@ export const useEventTracking = (eventName: string) => {
 
       recordInteraction();
       updateEngagementTags();
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Event tracked: ${eventName}`, metadata);
-      }
     },
     [eventName]
   );
