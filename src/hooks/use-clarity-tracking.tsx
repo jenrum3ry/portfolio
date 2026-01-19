@@ -21,6 +21,8 @@ import {
   updateMaxScrollDepth,
   updateEngagementTags,
   getPageCategory,
+  initializeUserTracking,
+  getUserLoyaltyLevel,
 } from '@/lib/clarity';
 
 // ============================================================================
@@ -152,6 +154,9 @@ const initializeSession = () => {
     console.log('[Clarity] Initializing session...');
   }
 
+  // Initialize user identification and visit tracking
+  const userMetadata = initializeUserTracking();
+
   // Record session start time
   recordSessionStart();
 
@@ -162,11 +167,19 @@ const initializeSession = () => {
   const source = getTrafficSource();
   setTag('traffic_source', source);
 
+  // Track user loyalty level
+  const loyaltyLevel = getUserLoyaltyLevel();
+  setTag('user_loyalty', loyaltyLevel);
+
   // Initial engagement update
   updateEngagementTags();
 
   if (import.meta.env.DEV) {
-    console.log('[Clarity] Session initialized with traffic source:', source);
+    console.log('[Clarity] Session initialized:', {
+      user: userMetadata,
+      trafficSource: source,
+      loyaltyLevel,
+    });
   }
 };
 

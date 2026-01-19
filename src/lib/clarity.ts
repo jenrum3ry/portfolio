@@ -89,6 +89,22 @@ export interface SessionMetrics {
   interactions: number; // clicks, form submissions, etc.
 }
 
+/**
+ * User metadata for persistent tracking across sessions
+ */
+export interface UserMetadata {
+  userId: string;
+  visitCount: number;
+  firstVisit: string; // ISO date string
+  lastVisit: string; // ISO date string
+  deviceType: 'mobile' | 'tablet' | 'desktop';
+  browser: string;
+  os: string;
+  timezone: string;
+  screenResolution: string;
+  isReturningVisitor: boolean;
+}
+
 // ============================================================================
 // Core Clarity Functions
 // ============================================================================
@@ -516,6 +532,12 @@ const STORAGE_KEYS = {
   SESSION_START: 'clarity_session_start',
   INTERACTIONS: 'clarity_interactions',
   MAX_SCROLL: 'clarity_max_scroll',
+  // Persistent user identification (localStorage)
+  USER_ID: 'clarity_user_id',
+  VISIT_COUNT: 'clarity_visit_count',
+  FIRST_VISIT: 'clarity_first_visit',
+  LAST_VISIT: 'clarity_last_visit',
+  USER_METADATA: 'clarity_user_metadata',
 } as const;
 
 /**
@@ -644,4 +666,245 @@ export const updateEngagementTags = (): void => {
       metrics,
     });
   }
+};
+
+// ============================================================================
+// Persistent User Identification (Cross-Session Tracking)
+// ============================================================================
+
+/**
+ * Generate a unique user ID
+ * Uses a combination of timestamp and random values for uniqueness
+ */
+const generateUserId = (): string => {
+  const timestamp = Date.now().toString(36);
+  const randomStr = Math.random().toString(36).substring(2, 15);
+  return `user_${timestamp}_${randomStr}`;
+};
+
+/**
+ * Detect device type from user agent and screen size
+ */
+const getDeviceType = (): 'mobile' | 'tablet' | 'desktop' => {
+  const userAgent = navigator.userAgent.toLowerCase();
+  const width = window.innerWidth;
+
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
+    return 'tablet';
+  }
+  if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(userAgent)) {
+    return 'mobile';
+  }
+  if (width <= 768) {
+    return 'mobile';
+  }
+  if (width <= 1024) {
+    return 'tablet';
+  }
+  return 'desktop';
+};
+
+/**
+ * Detect browser name
+ */
+const getBrowserName = (): string => {
+  const userAgent = navigator.userAgent;
+  let browserName = 'Unknown';
+
+  if (userAgent.indexOf('Firefox') > -1) {
+    browserName = 'Firefox';
+  } else if (userAgent.indexOf('SamsungBrowser') > -1) {
+    browserName = 'Samsung Browser';
+  } else if (userAgent.indexOf('Opera') > -1 || userAgent.indexOf('OPR') > -1) {
+    browserName = 'Opera';
+  } else if (userAgent.indexOf('Trident') > -1) {
+    browserName = 'Internet Explorer';
+  } else if (userAgent.indexOf('Edge') > -1) {
+    browserName = 'Edge (Legacy)';
+  } else if (userAgent.indexOf('Edg') > -1) {
+    browserName = 'Edge';
+  } else if (userAgent.indexOf('Chrome') > -1) {
+    browserName = 'Chrome';
+  } else if (userAgent.indexOf('Safari') > -1) {
+    browserName = 'Safari';
+  }
+
+  return browserName;
+};
+
+/**
+ * Detect operating system
+ */
+const getOperatingSystem = (): string => {
+  const userAgent = navigator.userAgent;
+  let os = 'Unknown';
+
+  if (userAgent.indexOf('Win') > -1) os = 'Windows';
+  else if (userAgent.indexOf('Mac') > -1) os = 'macOS';
+  else if (userAgent.indexOf('Linux') > -1) os = 'Linux';
+  else if (userAgent.indexOf('Android') > -1) os = 'Android';
+  else if (userAgent.indexOf('like Mac') > -1) os = 'iOS';
+
+  return os;
+};
+
+/**
+ * Get or create persistent user ID
+ * This ID persists across sessions via localStorage
+ */
+export const getOrCreateUserId = (): string => {
+  try {
+    let userId = localStorage.getItem(STORAGE_KEYS.USER_ID);
+
+    if (!userId) {
+      userId = generateUserId();
+      localStorage.setItem(STORAGE_KEYS.USER_ID, userId);
+
+      if (import.meta.env.DEV) {
+        console.log('[Clarity] New user ID created:', userId);
+      }
+    }
+
+    return userId;
+  } catch (error) {
+    console.error('[Clarity] Error getting/creating user ID:', error);
+    return generateUserId(); // Fallback to session-only ID
+  }
+};
+
+/**
+ * Get or create user metadata with device/browser information
+ */
+export const getUserMetadata = (): UserMetadata => {
+  try {
+    const userId = getOrCreateUserId();
+    const storedMetadata = localStorage.getItem(STORAGE_KEYS.USER_METADATA);
+
+    // Get visit tracking data
+    const visitCount = parseInt(localStorage.getItem(STORAGE_KEYS.VISIT_COUNT) || '0', 10);
+    const firstVisit = localStorage.getItem(STORAGE_KEYS.FIRST_VISIT) || new Date().toISOString();
+    const lastVisit = localStorage.getItem(STORAGE_KEYS.LAST_VISIT) || new Date().toISOString();
+
+    // Detect device/browser info
+    const deviceType = getDeviceType();
+    const browser = getBrowserName();
+    const os = getOperatingSystem();
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const screenResolution = `${window.screen.width}x${window.screen.height}`;
+    const isReturningVisitor = visitCount > 1;
+
+    const metadata: UserMetadata = {
+      userId,
+      visitCount,
+      firstVisit,
+      lastVisit,
+      deviceType,
+      browser,
+      os,
+      timezone,
+      screenResolution,
+      isReturningVisitor,
+    };
+
+    return metadata;
+  } catch (error) {
+    console.error('[Clarity] Error getting user metadata:', error);
+    // Return minimal metadata
+    return {
+      userId: generateUserId(),
+      visitCount: 1,
+      firstVisit: new Date().toISOString(),
+      lastVisit: new Date().toISOString(),
+      deviceType: 'desktop',
+      browser: 'Unknown',
+      os: 'Unknown',
+      timezone: 'UTC',
+      screenResolution: '0x0',
+      isReturningVisitor: false,
+    };
+  }
+};
+
+/**
+ * Initialize user identification and track visit
+ * Call this at the start of each session
+ */
+export const initializeUserTracking = (): UserMetadata => {
+  try {
+    const userId = getOrCreateUserId();
+
+    // Increment visit count
+    const visitCount = parseInt(localStorage.getItem(STORAGE_KEYS.VISIT_COUNT) || '0', 10) + 1;
+    localStorage.setItem(STORAGE_KEYS.VISIT_COUNT, visitCount.toString());
+
+    // Set first visit date if not exists
+    if (!localStorage.getItem(STORAGE_KEYS.FIRST_VISIT)) {
+      localStorage.setItem(STORAGE_KEYS.FIRST_VISIT, new Date().toISOString());
+    }
+
+    // Update last visit date
+    localStorage.setItem(STORAGE_KEYS.LAST_VISIT, new Date().toISOString());
+
+    // Get full metadata
+    const metadata = getUserMetadata();
+
+    // Store metadata
+    localStorage.setItem(STORAGE_KEYS.USER_METADATA, JSON.stringify(metadata));
+
+    // Identify user in Clarity
+    identifyUser(userId, undefined, undefined, `Visitor #${visitCount}`);
+
+    // Tag session with user metadata
+    setMultipleTags({
+      visitor_id: userId,
+      visit_count: visitCount,
+      is_returning_visitor: metadata.isReturningVisitor,
+      device_type: metadata.deviceType,
+      browser: metadata.browser,
+      os: metadata.os,
+      timezone: metadata.timezone,
+      screen_resolution: metadata.screenResolution,
+    });
+
+    if (import.meta.env.DEV) {
+      console.log('[Clarity] User tracking initialized:', metadata);
+    }
+
+    return metadata;
+  } catch (error) {
+    console.error('[Clarity] Error initializing user tracking:', error);
+    return getUserMetadata();
+  }
+};
+
+/**
+ * Get days since first visit
+ */
+export const getDaysSinceFirstVisit = (): number => {
+  try {
+    const firstVisit = localStorage.getItem(STORAGE_KEYS.FIRST_VISIT);
+    if (!firstVisit) return 0;
+
+    const firstVisitDate = new Date(firstVisit);
+    const now = new Date();
+    const diffTime = Math.abs(now.getTime() - firstVisitDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    return diffDays;
+  } catch (error) {
+    return 0;
+  }
+};
+
+/**
+ * Track user loyalty based on visit frequency
+ */
+export const getUserLoyaltyLevel = (): 'new' | 'casual' | 'regular' | 'loyal' => {
+  const visitCount = parseInt(localStorage.getItem(STORAGE_KEYS.VISIT_COUNT) || '0', 10);
+  const daysSinceFirst = getDaysSinceFirstVisit();
+
+  if (visitCount === 1) return 'new';
+  if (visitCount >= 10) return 'loyal';
+  if (visitCount >= 5 || (visitCount >= 3 && daysSinceFirst <= 7)) return 'regular';
+  return 'casual';
 };
