@@ -89,6 +89,22 @@ export interface SessionMetrics {
   interactions: number; // clicks, form submissions, etc.
 }
 
+/**
+ * User metadata for persistent tracking across sessions
+ */
+export interface UserMetadata {
+  userId: string;
+  visitCount: number;
+  firstVisit: string; // ISO date string
+  lastVisit: string; // ISO date string
+  deviceType: 'mobile' | 'tablet' | 'desktop';
+  browser: string;
+  os: string;
+  timezone: string;
+  screenResolution: string;
+  isReturningVisitor: boolean;
+}
+
 // ============================================================================
 // Core Clarity Functions
 // ============================================================================
@@ -112,20 +128,13 @@ export const isClarityAvailable = (): boolean => {
  */
 export const setTag = (key: string, value: string | number | boolean): void => {
   if (!isClarityAvailable()) {
-    if (import.meta.env.DEV) {
-      console.warn('[Clarity] Not available. Tag not set:', key, value);
-    }
     return;
   }
 
   try {
     window.clarity!('set', key, value);
-
-    if (import.meta.env.DEV) {
-      console.log(`[Clarity] Tagged session: ${key}=${value}`);
-    }
   } catch (error) {
-    console.error('[Clarity] Error setting tag:', error);
+    // Silent fail
   }
 };
 
@@ -165,20 +174,13 @@ export const identifyUser = (
   friendlyName?: string
 ): void => {
   if (!isClarityAvailable()) {
-    if (import.meta.env.DEV) {
-      console.warn('[Clarity] Not available. User not identified:', userId);
-    }
     return;
   }
 
   try {
     window.clarity!('identify', userId, sessionId, pageId, friendlyName);
-
-    if (import.meta.env.DEV) {
-      console.log(`[Clarity] Identified user: ${userId}`);
-    }
   } catch (error) {
-    console.error('[Clarity] Error identifying user:', error);
+    // Silent fail
   }
 };
 
@@ -192,12 +194,8 @@ export const requestConsent = (): void => {
 
   try {
     window.clarity!('consent');
-
-    if (import.meta.env.DEV) {
-      console.log('[Clarity] Consent requested');
-    }
   } catch (error) {
-    console.error('[Clarity] Error requesting consent:', error);
+    // Silent fail
   }
 };
 
@@ -216,12 +214,8 @@ export const upgradeSession = (reason: string): void => {
 
   try {
     window.clarity!('upgrade', reason);
-
-    if (import.meta.env.DEV) {
-      console.log(`[Clarity] Session upgraded: ${reason}`);
-    }
   } catch (error) {
-    console.error('[Clarity] Error upgrading session:', error);
+    // Silent fail
   }
 };
 
@@ -265,10 +259,6 @@ export const trackUTMParameters = (utmParams: UTMParameters = getUTMParameters()
 
   if (Object.keys(tags).length > 0) {
     setMultipleTags(tags);
-
-    if (import.meta.env.DEV) {
-      console.log('[Clarity] UTM parameters tracked:', tags);
-    }
   }
 };
 
@@ -304,6 +294,106 @@ export const getTrafficSource = (
 
   // No referrer = direct traffic
   return 'direct';
+};
+
+/**
+ * Get detailed referral information
+ * Automatically extracts platform, domain, and full URL
+ */
+export const getReferralDetails = (referrer: string = document.referrer): {
+  platform: string;
+  domain: string;
+  fullUrl: string;
+} | null => {
+  if (!referrer) return null;
+
+  try {
+    const url = new URL(referrer);
+    const domain = url.hostname.replace('www.', '');
+    let platform = 'other';
+
+    // Detect specific platforms
+    if (domain.includes('linkedin.com')) platform = 'linkedin';
+    else if (domain.includes('github.com')) platform = 'github';
+    else if (domain.includes('twitter.com') || domain.includes('x.com')) platform = 'twitter';
+    else if (domain.includes('facebook.com')) platform = 'facebook';
+    else if (domain.includes('instagram.com')) platform = 'instagram';
+    else if (domain.includes('reddit.com')) platform = 'reddit';
+    else if (domain.includes('hackernews.com') || domain.includes('ycombinator.com')) platform = 'hackernews';
+    else if (domain.includes('medium.com')) platform = 'medium';
+    else if (domain.includes('dev.to')) platform = 'devto';
+    else if (domain.includes('google.com')) platform = 'google';
+    else if (domain.includes('bing.com')) platform = 'bing';
+    else if (domain.includes('duckduckgo.com')) platform = 'duckduckgo';
+    else if (domain.includes('yahoo.com')) platform = 'yahoo';
+
+    return {
+      platform,
+      domain,
+      fullUrl: referrer,
+    };
+  } catch (error) {
+    return null;
+  }
+};
+
+/**
+ * Track referral details automatically
+ */
+export const trackReferralDetails = (): void => {
+  const referralInfo = getReferralDetails();
+
+  if (referralInfo) {
+    setMultipleTags({
+      ref_platform: referralInfo.platform,
+      ref_domain: referralInfo.domain,
+      has_referrer: true,
+    });
+  } else {
+    setTag('has_referrer', false);
+  }
+};
+
+/**
+ * Get landing page (first page visited in session)
+ */
+export const getLandingPage = (): string => {
+  try {
+    const landingPage = sessionStorage.getItem('clarity_landing_page');
+    if (landingPage) return landingPage;
+
+    const currentPath = window.location.pathname;
+    sessionStorage.setItem('clarity_landing_page', currentPath);
+    return currentPath;
+  } catch (error) {
+    return window.location.pathname;
+  }
+};
+
+/**
+ * Get time-based context
+ */
+export const getTimeContext = (): {
+  hour: number;
+  timeOfDay: 'morning' | 'afternoon' | 'evening' | 'night';
+  dayOfWeek: 'weekday' | 'weekend';
+  dayName: string;
+} => {
+  const now = new Date();
+  const hour = now.getHours();
+  const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+
+  let timeOfDay: 'morning' | 'afternoon' | 'evening' | 'night';
+  if (hour >= 5 && hour < 12) timeOfDay = 'morning';
+  else if (hour >= 12 && hour < 17) timeOfDay = 'afternoon';
+  else if (hour >= 17 && hour < 21) timeOfDay = 'evening';
+  else timeOfDay = 'night';
+
+  const dayOfWeek = day === 0 || day === 6 ? 'weekend' : 'weekday';
+  const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+  const dayName = dayNames[day];
+
+  return { hour, timeOfDay, dayOfWeek, dayName };
 };
 
 // ============================================================================
@@ -427,10 +517,6 @@ export const classifyUserType = (visitedPages: PageCategory[]): UserType => {
 export const trackPageView = (pathname: string): void => {
   const category = getPageCategory(pathname);
   setTag('page_category', category);
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] Page view tracked: ${pathname} -> ${category}`);
-  }
 };
 
 /**
@@ -447,10 +533,6 @@ export const trackBlogPostView = (slug: string, title: string): void => {
   });
 
   upgradeSession('blog_post_view');
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] Blog post viewed: ${title} (${slug})`);
-  }
 };
 
 /**
@@ -467,10 +549,6 @@ export const trackCaseStudyView = (studyId: string, title: string): void => {
   });
 
   upgradeSession('case_study_view');
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] Case study viewed: ${title} (${studyId})`);
-  }
 };
 
 /**
@@ -483,10 +561,6 @@ export const trackContactFormAction = (action: 'opened' | 'filled' | 'submitted'
 
   if (action === 'submitted') {
     upgradeSession('contact_form_submission');
-  }
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] Contact form: ${action}`);
   }
 };
 
@@ -501,10 +575,6 @@ export const trackExternalLinkClick = (url: string, context?: string): void => {
     external_link_clicked: url,
     ...(context && { link_context: context }),
   });
-
-  if (import.meta.env.DEV) {
-    console.log(`[Clarity] External link clicked: ${url} (${context || 'no context'})`);
-  }
 };
 
 // ============================================================================
@@ -516,6 +586,12 @@ const STORAGE_KEYS = {
   SESSION_START: 'clarity_session_start',
   INTERACTIONS: 'clarity_interactions',
   MAX_SCROLL: 'clarity_max_scroll',
+  // Persistent user identification (localStorage)
+  USER_ID: 'clarity_user_id',
+  VISIT_COUNT: 'clarity_visit_count',
+  FIRST_VISIT: 'clarity_first_visit',
+  LAST_VISIT: 'clarity_last_visit',
+  USER_METADATA: 'clarity_user_metadata',
 } as const;
 
 /**
@@ -527,7 +603,7 @@ export const recordVisitedPage = (category: PageCategory): void => {
     visited.push(category);
     sessionStorage.setItem(STORAGE_KEYS.VISITED_PAGES, JSON.stringify(visited));
   } catch (error) {
-    console.error('[Clarity] Error recording visited page:', error);
+    // Silent fail
   }
 };
 
@@ -568,7 +644,7 @@ export const recordInteraction = (): void => {
     const count = parseInt(sessionStorage.getItem(STORAGE_KEYS.INTERACTIONS) || '0', 10);
     sessionStorage.setItem(STORAGE_KEYS.INTERACTIONS, (count + 1).toString());
   } catch (error) {
-    console.error('[Clarity] Error recording interaction:', error);
+    // Silent fail
   }
 };
 
@@ -593,7 +669,7 @@ export const updateMaxScrollDepth = (depth: number): void => {
       sessionStorage.setItem(STORAGE_KEYS.MAX_SCROLL, Math.floor(depth).toString());
     }
   } catch (error) {
-    console.error('[Clarity] Error updating scroll depth:', error);
+    // Silent fail
   }
 };
 
@@ -636,12 +712,248 @@ export const updateEngagementTags = (): void => {
     time_on_site: metrics.timeOnSite,
     max_scroll_depth: metrics.scrollDepth,
   });
+};
 
-  if (import.meta.env.DEV) {
-    console.log('[Clarity] Engagement tags updated:', {
-      engagementLevel,
-      userType,
-      metrics,
-    });
+// ============================================================================
+// Persistent User Identification (Cross-Session Tracking)
+// ============================================================================
+
+/**
+ * Generate a unique user ID
+ * Uses a combination of timestamp and random values for uniqueness
+ */
+const generateUserId = (): string => {
+  const timestamp = Date.now().toString(36);
+  const randomStr = Math.random().toString(36).substring(2, 15);
+  return `user_${timestamp}_${randomStr}`;
+};
+
+/**
+ * Detect device type from user agent and screen size
+ */
+const getDeviceType = (): 'mobile' | 'tablet' | 'desktop' => {
+  const userAgent = navigator.userAgent.toLowerCase();
+  const width = window.innerWidth;
+
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(userAgent)) {
+    return 'tablet';
   }
+  if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(userAgent)) {
+    return 'mobile';
+  }
+  if (width <= 768) {
+    return 'mobile';
+  }
+  if (width <= 1024) {
+    return 'tablet';
+  }
+  return 'desktop';
+};
+
+/**
+ * Detect browser name
+ */
+const getBrowserName = (): string => {
+  const userAgent = navigator.userAgent;
+  let browserName = 'Unknown';
+
+  if (userAgent.indexOf('Firefox') > -1) {
+    browserName = 'Firefox';
+  } else if (userAgent.indexOf('SamsungBrowser') > -1) {
+    browserName = 'Samsung Browser';
+  } else if (userAgent.indexOf('Opera') > -1 || userAgent.indexOf('OPR') > -1) {
+    browserName = 'Opera';
+  } else if (userAgent.indexOf('Trident') > -1) {
+    browserName = 'Internet Explorer';
+  } else if (userAgent.indexOf('Edge') > -1) {
+    browserName = 'Edge (Legacy)';
+  } else if (userAgent.indexOf('Edg') > -1) {
+    browserName = 'Edge';
+  } else if (userAgent.indexOf('Chrome') > -1) {
+    browserName = 'Chrome';
+  } else if (userAgent.indexOf('Safari') > -1) {
+    browserName = 'Safari';
+  }
+
+  return browserName;
+};
+
+/**
+ * Detect operating system
+ */
+const getOperatingSystem = (): string => {
+  const userAgent = navigator.userAgent;
+  let os = 'Unknown';
+
+  if (userAgent.indexOf('Win') > -1) os = 'Windows';
+  else if (userAgent.indexOf('Mac') > -1) os = 'macOS';
+  else if (userAgent.indexOf('Linux') > -1) os = 'Linux';
+  else if (userAgent.indexOf('Android') > -1) os = 'Android';
+  else if (userAgent.indexOf('like Mac') > -1) os = 'iOS';
+
+  return os;
+};
+
+/**
+ * Get or create persistent user ID
+ * This ID persists across sessions via localStorage
+ */
+export const getOrCreateUserId = (): string => {
+  try {
+    let userId = localStorage.getItem(STORAGE_KEYS.USER_ID);
+
+    if (!userId) {
+      userId = generateUserId();
+      localStorage.setItem(STORAGE_KEYS.USER_ID, userId);
+    }
+
+    return userId;
+  } catch (error) {
+    return generateUserId(); // Fallback to session-only ID
+  }
+};
+
+/**
+ * Get or create user metadata with device/browser information
+ */
+export const getUserMetadata = (): UserMetadata => {
+  try {
+    const userId = getOrCreateUserId();
+    const storedMetadata = localStorage.getItem(STORAGE_KEYS.USER_METADATA);
+
+    // Get visit tracking data
+    const visitCount = parseInt(localStorage.getItem(STORAGE_KEYS.VISIT_COUNT) || '0', 10);
+    const firstVisit = localStorage.getItem(STORAGE_KEYS.FIRST_VISIT) || new Date().toISOString();
+    const lastVisit = localStorage.getItem(STORAGE_KEYS.LAST_VISIT) || new Date().toISOString();
+
+    // Detect device/browser info
+    const deviceType = getDeviceType();
+    const browser = getBrowserName();
+    const os = getOperatingSystem();
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const screenResolution = `${window.screen.width}x${window.screen.height}`;
+    const isReturningVisitor = visitCount > 1;
+
+    const metadata: UserMetadata = {
+      userId,
+      visitCount,
+      firstVisit,
+      lastVisit,
+      deviceType,
+      browser,
+      os,
+      timezone,
+      screenResolution,
+      isReturningVisitor,
+    };
+
+    return metadata;
+  } catch (error) {
+    return {
+      userId: generateUserId(),
+      visitCount: 1,
+      firstVisit: new Date().toISOString(),
+      lastVisit: new Date().toISOString(),
+      deviceType: 'desktop',
+      browser: 'Unknown',
+      os: 'Unknown',
+      timezone: 'UTC',
+      screenResolution: '0x0',
+      isReturningVisitor: false,
+    };
+  }
+};
+
+/**
+ * Initialize user identification and track visit
+ * Call this at the start of each session
+ */
+export const initializeUserTracking = (): UserMetadata => {
+  try {
+    const userId = getOrCreateUserId();
+
+    // Increment visit count
+    const visitCount = parseInt(localStorage.getItem(STORAGE_KEYS.VISIT_COUNT) || '0', 10) + 1;
+    localStorage.setItem(STORAGE_KEYS.VISIT_COUNT, visitCount.toString());
+
+    // Set first visit date if not exists
+    if (!localStorage.getItem(STORAGE_KEYS.FIRST_VISIT)) {
+      localStorage.setItem(STORAGE_KEYS.FIRST_VISIT, new Date().toISOString());
+    }
+
+    // Update last visit date
+    localStorage.setItem(STORAGE_KEYS.LAST_VISIT, new Date().toISOString());
+
+    // Get full metadata
+    const metadata = getUserMetadata();
+
+    // Store metadata
+    localStorage.setItem(STORAGE_KEYS.USER_METADATA, JSON.stringify(metadata));
+
+    // Identify user in Clarity
+    identifyUser(userId, undefined, undefined, `Visitor #${visitCount}`);
+
+    // Get time context
+    const timeContext = getTimeContext();
+
+    // Get landing page
+    const landingPage = getLandingPage();
+    const landingCategory = getPageCategory(landingPage);
+
+    // Track referral details automatically
+    trackReferralDetails();
+
+    // Tag session with user metadata
+    setMultipleTags({
+      visitor_id: userId,
+      visit_count: visitCount,
+      is_returning_visitor: metadata.isReturningVisitor,
+      device_type: metadata.deviceType,
+      browser: metadata.browser,
+      os: metadata.os,
+      timezone: metadata.timezone,
+      screen_resolution: metadata.screenResolution,
+      time_of_day: timeContext.timeOfDay,
+      day_of_week: timeContext.dayOfWeek,
+      day_name: timeContext.dayName,
+      visit_hour: timeContext.hour,
+      landing_page: landingCategory,
+    });
+
+    return metadata;
+  } catch (error) {
+    return getUserMetadata();
+  }
+};
+
+/**
+ * Get days since first visit
+ */
+export const getDaysSinceFirstVisit = (): number => {
+  try {
+    const firstVisit = localStorage.getItem(STORAGE_KEYS.FIRST_VISIT);
+    if (!firstVisit) return 0;
+
+    const firstVisitDate = new Date(firstVisit);
+    const now = new Date();
+    const diffTime = Math.abs(now.getTime() - firstVisitDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    return diffDays;
+  } catch (error) {
+    return 0;
+  }
+};
+
+/**
+ * Track user loyalty based on visit frequency
+ */
+export const getUserLoyaltyLevel = (): 'new' | 'casual' | 'regular' | 'loyal' => {
+  const visitCount = parseInt(localStorage.getItem(STORAGE_KEYS.VISIT_COUNT) || '0', 10);
+  const daysSinceFirst = getDaysSinceFirstVisit();
+
+  if (visitCount === 1) return 'new';
+  if (visitCount >= 10) return 'loyal';
+  if (visitCount >= 5 || (visitCount >= 3 && daysSinceFirst <= 7)) return 'regular';
+  return 'casual';
 };

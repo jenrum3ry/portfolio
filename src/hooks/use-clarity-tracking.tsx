@@ -21,6 +21,8 @@ import {
   updateMaxScrollDepth,
   updateEngagementTags,
   getPageCategory,
+  initializeUserTracking,
+  getUserLoyaltyLevel,
 } from '@/lib/clarity';
 
 // ============================================================================
@@ -58,9 +60,6 @@ export const useClarityTracking = () => {
     // Cleanup after 10 seconds if Clarity doesn't load
     const timeout = setTimeout(() => {
       clearInterval(initInterval);
-      if (import.meta.env.DEV) {
-        console.warn('[Clarity] Failed to initialize - timeout');
-      }
     }, 10000);
 
     return () => {
@@ -84,15 +83,13 @@ export const useClarityTracking = () => {
 
     // Update engagement tags
     updateEngagementTags();
-
-    if (import.meta.env.DEV) {
-      console.log(`[Clarity Hook] Page tracked: ${pathname} -> ${category}`);
-    }
   }, [location.pathname]);
 
-  // Track scroll depth
+  // Track scroll depth with milestone tracking
   useEffect(() => {
     if (!isClarityAvailable()) return;
+
+    const milestonesReached = new Set<number>();
 
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -101,23 +98,36 @@ export const useClarityTracking = () => {
 
       updateMaxScrollDepth(scrollPercent);
 
-      // Update engagement tags at key milestones
-      if (scrollPercent >= 25 || scrollPercent >= 50 || scrollPercent >= 75) {
-        updateEngagementTags();
-      }
+      // Update engagement tags at key milestones (only once per milestone)
+      const milestones = [25, 50, 75, 100];
+      milestones.forEach((milestone) => {
+        if (scrollPercent >= milestone && !milestonesReached.has(milestone)) {
+          milestonesReached.add(milestone);
+          updateEngagementTags();
+        }
+      });
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Track interactions (clicks)
+  // Track interactions (clicks) - update engagement tags periodically, not on every click
   useEffect(() => {
     if (!isClarityAvailable()) return;
 
+    let clickCount = 0;
+    const ENGAGEMENT_UPDATE_THRESHOLD = 3; // Update engagement every 3 clicks
+
     const handleClick = () => {
       recordInteraction();
-      updateEngagementTags();
+      clickCount++;
+
+      // Only update engagement tags every N clicks to reduce overhead
+      if (clickCount >= ENGAGEMENT_UPDATE_THRESHOLD) {
+        updateEngagementTags();
+        clickCount = 0;
+      }
     };
 
     document.addEventListener('click', handleClick, { passive: true });
@@ -129,9 +139,8 @@ export const useClarityTracking = () => {
  * Initialize Clarity session with UTM parameters and traffic source
  */
 const initializeSession = () => {
-  if (import.meta.env.DEV) {
-    console.log('[Clarity] Initializing session...');
-  }
+  // Initialize user identification and visit tracking
+  const userMetadata = initializeUserTracking();
 
   // Record session start time
   recordSessionStart();
@@ -143,12 +152,12 @@ const initializeSession = () => {
   const source = getTrafficSource();
   setTag('traffic_source', source);
 
+  // Track user loyalty level
+  const loyaltyLevel = getUserLoyaltyLevel();
+  setTag('user_loyalty', loyaltyLevel);
+
   // Initial engagement update
   updateEngagementTags();
-
-  if (import.meta.env.DEV) {
-    console.log('[Clarity] Session initialized with traffic source:', source);
-  }
 };
 
 // ============================================================================
@@ -314,10 +323,6 @@ export const useScrollDepthTracking = (
 
           // Update engagement tags
           updateEngagementTags();
-
-          if (import.meta.env.DEV) {
-            console.log(`[Clarity] Scroll milestone reached: ${milestone}%`);
-          }
         }
       });
     };
@@ -361,30 +366,18 @@ export const useFormTracking = (formName: string) => {
         setTag(`${formName}_opened`, true);
         recordInteraction();
         updateEngagementTags();
-
-        if (import.meta.env.DEV) {
-          console.log(`[Clarity] Form opened: ${formName}`);
-        }
       }
     };
 
     const handleInput = () => {
       setTag(`${formName}_filled`, true);
       recordInteraction();
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Form filled: ${formName}`);
-      }
     };
 
     const handleSubmit = () => {
       setTag(`${formName}_submitted`, true);
       recordInteraction();
       updateEngagementTags();
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Form submitted: ${formName}`);
-      }
     };
 
     form.addEventListener('focus', handleFocus, true);
@@ -440,10 +433,6 @@ export const useExternalLinkTracking = () => {
         setTag('external_link_clicked', href);
         setTag('link_context', context);
         recordInteraction();
-
-        if (import.meta.env.DEV) {
-          console.log(`[Clarity] External link clicked: ${href} (${context})`);
-        }
       }
     };
 
@@ -488,10 +477,6 @@ export const useTimeOnPageTracking = (
       if (onInterval) {
         onInterval(timeOnPage);
       }
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Time on page: ${timeOnPage}s`);
-      }
     }, intervalSeconds * 1000);
 
     return () => clearInterval(interval);
@@ -516,10 +501,6 @@ export const useVisibilityTracking = () => {
     const handleVisibilityChange = () => {
       const isVisible = document.visibilityState === 'visible';
       setTag('page_visible', isVisible);
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Page visibility: ${isVisible ? 'visible' : 'hidden'}`);
-      }
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -563,10 +544,6 @@ export const useEventTracking = (eventName: string) => {
 
       recordInteraction();
       updateEngagementTags();
-
-      if (import.meta.env.DEV) {
-        console.log(`[Clarity] Event tracked: ${eventName}`, metadata);
-      }
     },
     [eventName]
   );
