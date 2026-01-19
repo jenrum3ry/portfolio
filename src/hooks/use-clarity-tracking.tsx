@@ -90,9 +90,11 @@ export const useClarityTracking = () => {
     }
   }, [location.pathname]);
 
-  // Track scroll depth
+  // Track scroll depth with milestone tracking
   useEffect(() => {
     if (!isClarityAvailable()) return;
+
+    const milestonesReached = new Set<number>();
 
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -101,23 +103,40 @@ export const useClarityTracking = () => {
 
       updateMaxScrollDepth(scrollPercent);
 
-      // Update engagement tags at key milestones
-      if (scrollPercent >= 25 || scrollPercent >= 50 || scrollPercent >= 75) {
-        updateEngagementTags();
-      }
+      // Update engagement tags at key milestones (only once per milestone)
+      const milestones = [25, 50, 75, 100];
+      milestones.forEach((milestone) => {
+        if (scrollPercent >= milestone && !milestonesReached.has(milestone)) {
+          milestonesReached.add(milestone);
+          updateEngagementTags();
+
+          if (import.meta.env.DEV) {
+            console.log(`[Clarity] Scroll milestone reached: ${milestone}%`);
+          }
+        }
+      });
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Track interactions (clicks)
+  // Track interactions (clicks) - update engagement tags periodically, not on every click
   useEffect(() => {
     if (!isClarityAvailable()) return;
 
+    let clickCount = 0;
+    const ENGAGEMENT_UPDATE_THRESHOLD = 3; // Update engagement every 3 clicks
+
     const handleClick = () => {
       recordInteraction();
-      updateEngagementTags();
+      clickCount++;
+
+      // Only update engagement tags every N clicks to reduce overhead
+      if (clickCount >= ENGAGEMENT_UPDATE_THRESHOLD) {
+        updateEngagementTags();
+        clickCount = 0;
+      }
     };
 
     document.addEventListener('click', handleClick, { passive: true });
