@@ -11,8 +11,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-serif mb-4">Jennifer Rumery</h3>
             <p className="text-gray-300 text-sm">
-              PM and writer exploring what it looks like to build products that truly serve users —
-              with 15+ years in the field and AI as a thought partner.
+              Product manager with 15+ years in complex domains. Researcher. Builder. This site is one of my side projects.
             </p>
           </div>
 
