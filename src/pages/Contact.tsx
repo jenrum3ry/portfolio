@@ -1,4 +1,4 @@
-import { Mail, Linkedin, ExternalLink, MapPin, Calendar } from 'lucide-react';
+import { Mail, Linkedin, ExternalLink, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import SEO from '@/components/SEO';
@@ -48,8 +48,8 @@ export default function Contact() {
   return (
     <Layout>
       <SEO
-        title="Contact | Jen Rumery - AI Product Manager"
-        description="Get in touch to discuss product strategy, user research methodologies, or opportunities in AI and healthcare technology."
+        title="Contact | Jen Rumery"
+        description="Get in touch to discuss product strategy, user research methodologies, or building thoughtfully with AI."
         url={ROUTES.CONTACT}
       />
       <div className="bg-[#FAF8F5]">
@@ -60,8 +60,8 @@ export default function Contact() {
             Let's Connect
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            I'm always interested in discussing product strategy, user research 
-            methodologies, or opportunities in AI and healthcare technology.
+            I'm always interested in discussing product strategy, user research
+            methodologies, and what it looks like to build thoughtfully with AI.
           </p>
         </div>
 
@@ -90,33 +90,6 @@ export default function Contact() {
                   </p>
                   <p className="text-[#B8733E] font-medium text-sm">
                     jennifer-rumery@outlook.com
-                  </p>
-                </div>
-              </div>
-            </a>
-
-            {/* Schedule a Meeting Card */}
-            <a
-              href="https://cal.com/jennifer-rumery-zxvpsw/meeting"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackExternalLink('https://cal.com/jennifer-rumery-zxvpsw/meeting', 'Cal.com Scheduling')}
-              className="group bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border border-gray-200 hover:border-[#B8733E] block"
-            >
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-[#B8733E]/10 rounded-lg group-hover:bg-[#B8733E]/20 transition-colors">
-                  <Calendar className="w-6 h-6 text-[#B8733E]" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-[#B8733E] transition-colors flex items-center gap-2">
-                    Schedule a Meeting
-                    <ExternalLink className="w-4 h-4" />
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-2">
-                    Book a 30-120 minute consultation
-                  </p>
-                  <p className="text-[#B8733E] font-medium text-sm">
-                    cal.com/jennifer-rumery
                   </p>
                 </div>
               </div>
