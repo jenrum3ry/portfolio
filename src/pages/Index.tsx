@@ -25,12 +25,12 @@ const Index = () => {
               Product Manager
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
-              I've spent 15 years shipping products for real users.{" "}
-              <span className="text-primary italic">I'm still building.</span>
+              I've shipped a lot of products.{" "}
+              <span className="text-primary italic">I'm still figuring out what makes them work.</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-6 max-w-3xl">
-              From enterprise veterinary platforms to 0-to-1 AI products. I research obsessively,
-              ship what I learn, and build on the side. This site is one of those.
+              15 years across complex domains, from enterprise veterinary platforms to 0-to-1 AI products.
+              I research, build, and write about what I'm learning.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="font-body">
