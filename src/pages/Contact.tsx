@@ -60,8 +60,7 @@ export default function Contact() {
             Let's Connect
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            I'm always interested in discussing product strategy, user research
-            methodologies, and what it looks like to build thoughtfully with AI.
+            Happy to talk product strategy, user research, or whatever you're currently working through.
           </p>
         </div>
 

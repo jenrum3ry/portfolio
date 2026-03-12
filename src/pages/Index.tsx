@@ -12,8 +12,8 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="Jen Rumery - Product Manager & Writer"
-        description="15+ years building products in complex domains. Writing about what it looks like to build for real users — with AI as a thought partner, not a magic wand."
+        title="Jen Rumery - Product Manager"
+        description="15+ years building products in complex domains. Researcher, builder, and occasional writer. See the work, read the thinking."
         url={ROUTES.HOME}
       />
       {/* Hero Section */}
@@ -22,15 +22,15 @@ const Index = () => {
         <div className="container mx-auto px-6 py-16 md:py-28 lg:py-40 relative">
           <div className="max-w-4xl animate-fade-in">
             <p className="font-body text-sm md:text-base font-bold text-primary uppercase tracking-[0.2em] mb-6">
-              Product Manager & Writer
+              Product Manager
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] mb-8">
-              Building real products for real people —{" "}
-              <span className="text-primary italic">and writing honestly about what that takes</span>
+              I've spent 15 years shipping products for real users.{" "}
+              <span className="text-primary italic">I'm still building.</span>
             </h1>
             <p className="font-body text-lg md:text-xl text-foreground/80 leading-[1.7] mb-6 max-w-3xl">
-              15+ years shipping products in complex domains. I use AI as a thought partner, not a magic wand —
-              and I write about what building well actually looks like in practice.
+              From enterprise veterinary platforms to 0-to-1 AI products. I research obsessively,
+              ship what I learn, and build on the side. This site is one of those.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="font-body">
@@ -119,10 +119,8 @@ const Index = () => {
                 Most recently, I led AI product development at a veterinary startup, shipping three products from concept to production and managing a platform with 40+ vendor integrations.
               </p>
               <p>
-                These days I'm still doing that same work — shipping products in complex domains — and writing
-                about what I'm learning along the way. I'm particularly interested in how AI changes the craft
-                of product management when used as a genuine thought partner: not as a shortcut, but as a way
-                to think harder and build better. If you're working through similar problems, I'd love to connect.
+                I'm still doing that work. I also build things on the side (this site is one of them) and
+                write about what I'm figuring out as I go.
               </p>
             </div>
           </div>
@@ -294,11 +292,10 @@ const Index = () => {
       <section className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 py-24 md:py-32 text-center">
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 leading-tight max-w-3xl mx-auto">
-            Thinking about the same problems?
+            Working through something similar?
           </h2>
           <p className="font-body text-lg md:text-xl opacity-95 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Whether you want to dig into an article, share what you're working on, or just connect with
-            someone who cares about building products for real users — reach out.
+            Happy to compare notes.
           </p>
           <Button
             asChild
