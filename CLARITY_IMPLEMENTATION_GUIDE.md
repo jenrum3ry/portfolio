@@ -69,7 +69,7 @@ Create a `.env.local` file in your project root:
 VITE_WEB3FORMS_ACCESS_KEY=your-existing-key
 
 # Microsoft Clarity Project ID (required)
-VITE_CLARITY_PROJECT_ID=uubt9mzh1r
+VITE_CLARITY_PROJECT_ID=uubt9mzhi1
 
 # Clarity API Token (optional - for data export)
 VITE_CLARITY_API_TOKEN=your-api-token-here
@@ -79,7 +79,7 @@ VITE_CLARITY_API_TOKEN=your-api-token-here
 1. Go to [clarity.microsoft.com](https://clarity.microsoft.com/)
 2. Select your project
 3. Click **Settings** > **Setup**
-4. Copy the **Project ID** (e.g., `uubt9mzh1r`)
+4. Copy the **Project ID** (e.g., `uubt9mzhi1`)
 
 **Obtaining an API Token (optional):**
 1. In Clarity dashboard, go to **Settings** > **API**
@@ -123,7 +123,7 @@ Add the Clarity script to your `index.html` in the `<head>` section:
 </html>
 ```
 
-**Replace `"YOUR_PROJECT_ID"`** with your actual Clarity Project ID (e.g., `"uubt9mzh1r"`).
+**Replace `"YOUR_PROJECT_ID"`** with your actual Clarity Project ID (e.g., `"uubt9mzhi1"`).
 
 ---
 

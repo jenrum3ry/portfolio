@@ -314,7 +314,7 @@ function App() {
 # .env.local
 
 # Required: Clarity Project ID
-VITE_CLARITY_PROJECT_ID=uubt9mzh1r
+VITE_CLARITY_PROJECT_ID=uubt9mzhi1
 
 # Optional: API Token for data export
 VITE_CLARITY_API_TOKEN=eyJhbGci...
