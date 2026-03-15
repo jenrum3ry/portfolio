@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -419,11 +419,6 @@ const EducationCertifications = () => {
               <Link to={ROUTES.CONTACT}>
                 Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="font-body bg-primary-foreground/10 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <a href={`${import.meta.env.BASE_URL}Jennifer%20Rumery%20SrPM%20Resume.pdf`} download className="flex items-center">
-                <Download className="mr-2 h-4 w-4" /> Download Resume
-              </a>
             </Button>
           </div>
         </div>
